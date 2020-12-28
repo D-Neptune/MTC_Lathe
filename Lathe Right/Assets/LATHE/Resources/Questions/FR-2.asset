@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f500407be70d0c644a82c4610cbe0354, type: 3}
+  m_Name: FR-2
+  m_EditorClassIdentifier: 
+  _info: 'Quelle est la partie essentielle de l''installation de vos outils sur le
+    tour? '
+  _answers:
+  - _info: "R\xE9gler vos outils \xE0 la hauteur appropri\xE9e "
+    _isCorrect: 1
+  - _info: 'Serrez correctement vos outils dans le mandrin '
+    _isCorrect: 0
+  - _info: 'Verrouillage de l''axe X pendant l''usinage '
+    _isCorrect: 0
+  - _info: "Toutes les r\xE9ponses sont bonnes "
+    _isCorrect: 0
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 1

@@ -1,0 +1,747 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6514887594a1703478cd02d95eb763bf, type: 3}
+  m_Name: LatheOperations
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Lathe Right's Training Workshop
+    frenchName: Simulation de la Tour de Lathe Right
+    sentences:
+    - Welcome to the Basic Lathe Training Workshop
+    - The lathe machine is an advanced piece of machinery used in substrative manufacturing
+    - It is a machine used for the removal of material from a workpiece by gripping
+      it securely in a holding device and rotating it under power against a suitable
+      cutting tool.
+    - 'In this tutorial we will learn 3 fundamental operations that can be performed
+      on the lathe: Facing, Turning, and Drilling. While it is possible to perform
+      a multitude of operations on a lathe such as grinding, boring, and knurling,
+      we will be focusing on those three operations.'
+    - This tutorial will allow you to sequentially go through each step to perform
+      an operation. You will go through all the different operations and prompt the
+      next steps by following the clues given. After finishing all the operations,
+      you can either move on to the next phase or retry an operation if there is
+      something you didn't understand.
+    - Similarly, to the previous tutorial, the hint button will activate only if
+      your struggling with steps.
+    - To get started select the facing operation button on the right-hand side. A
+      video will show up to explain the operation. After finishing the video, a button
+      will be made accessible to try out the operation for yourself. Good Luck!
+    sentencesFR:
+    - "Bienvenue \xE0 l'atelier de formation de base sur les tours"
+    - "La tour est une machine avanc\xE9e utilis\xE9e dans la fabrication soustractive"
+    - "Celle-ci est une machine d\u2019outil destin\xE9e \xE0 usiner des pi\xE8ces
+      de r\xE9volution par enl\xE8vement de mati\xE8re."
+    - "Dans ce tutoriel, nous apprendrons 3 op\xE9rations fondamentales qui peuvent
+      \xEAtre effectu\xE9es sur la tour: le surfa\xE7age, le tournage de surface
+      et le per\xE7age. M\xEAme s'il est possible de r\xE9aliser une multitude d'op\xE9rations
+      sur une tour comme le meulage, l\u2019al\xE9sage et le moletage, nous nous
+      concentrerons sur ces trois op\xE9rations."
+    - "Ce tutoriel vous permettra de parcourir s\xE9quentiellement chaque \xE9tape
+      pour effectuer une op\xE9ration. Vous allez entreprendre les op\xE9rations
+      en suivant les conseils donn\xE9s. Apr\xE8s avoir termin\xE9 toutes les op\xE9rations,
+      vous pouvez passer \xE0 la phase suivante ou r\xE9essayer une op\xE9ration
+      s'il y a quelque chose que vous n'avez pas compris."
+    - "De la m\xEAme mani\xE8re que le didacticiel pr\xE9c\xE9dent, le bouton d'indication
+      ne sera activ\xE9 que si vous avez vraiment besoin de celui-ci."
+    - "Pour commencer, s\xE9lectionnez le bouton d'op\xE9ration de surfa\xE7age sur
+      le c\xF4t\xE9 droit. Une vid\xE9o appara\xEEtra pour expliquer l'op\xE9ration.
+      Apr\xE8s avoir termin\xE9 la vid\xE9o, un bouton sera rendu accessible pour
+      essayer l'op\xE9ration par vous-m\xEAme. Bonne chance!"
+    images:
+    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
+    - {fileID: 21300000, guid: 39dd51e12e188414b8f448d7b2e98deb, type: 3}
+    - {fileID: 21300000, guid: 5ef570f60d92f2c498314b04a2bff279, type: 3}
+    - {fileID: 21300000, guid: bef9a4ee8d45eda419a1521c9f44de5c, type: 3}
+    - {fileID: 21300000, guid: 462d9ed28ec66f94a8143b87a4237572, type: 3}
+    - {fileID: 21300000, guid: c94657301ef508a4388ab6ac9c33bdbc, type: 3}
+    - {fileID: 21300000, guid: 07432d451aa02d74e93e6537d16791cd, type: 3}
+  - name: Getting Started - Facing
+    frenchName: "Mise en route - Surfa\xE7age"
+    sentences:
+    - 'Facing is the operation of machining the end of a workpiece to make the end
+      square with the axis or center line.
+
+'
+    - 'Our first steps consist in the setup of our workpiece. The workpiece will
+      be placed inside the 3-jaw chuck and spun at high speed during the machining
+      process. '
+    - 'To place the workpiece, we need to first open the safety guard. It will make
+      the workpiece setup easier.
+
+
+      Hint: Click on Guard to open it'
+    - 'With the guard opened, we can now place the workpiece inside the chuck.
+
+
+      Hint:
+      Click on workpiece to place it inside chuck'
+    - When placing the piece, we want to make sure that the end part of the workpiece
+      is far enough away so that we do not end up machining the jaws of the vise.
+    - 'The next step is to tighten the workpiece inside the chuck. To perform this
+      feat, we use what is called a chuck key. Chuck keys are used to tighten or
+      loosen machining equipment. We will use the chuck key that is located on the
+      chuck to that exactly.
+
+
+      Hint: Click on chuck key to tighten the workpiece'
+    - 'Now that we placed our workpiece securely, we can close the guard.
+
+
+      Hint
+      Click on Guard to close it'
+    - The next thing we want to do is setup the cutting tool we will use to perform
+      this operation. We will mount the cutting tool on a tool holder. The tool holder
+      is used to hold cutting tools. It can be easily placed on the tool post.
+    - "The tool post was designed to allow for rapid tool changeover as such the
+      tool holder can be easily placed and removed from the tool post. \n\nHint: 
+      Click on tool holder to place it on tool post"
+    - 'To place the tool holder on the tool post we use the handle on the top of
+      the tool post. It is used to lock and unlock the tool holder because it is
+      possible to adjust the height of the tool holder on the tool post. It is currently
+      unlocked as we will look to center our cutting tool. '
+    - The reason we want to center our tool is to ensure that we machine the entire
+      surface plane of the workpiece.
+    - For us to center our cutting tool we will use what is known as a live center.
+      A live center has a lot of functionalities, but it is often used for centering
+      cutting tools. The live center is the tool that is attached to the spindle
+      on the tailstock.
+    - In order to center our workpiece, we will have to compare directly the height
+      of the live center with the height of the cutting tool.
+    - 'As such, we will rotate our tool post so can accurately compare and center
+      our cutting tool. A wrench is used to untighten the tool post. Depending on
+      where you setup the tool holder, the rotation of the tool post will change.
+
+
+      Hint:
+      Click on wrench to untighten tool post'
+    - "Now that the tool post is untightened, rotate the tool post so that it\u2019s
+      in line with the live center\n\nHint: Click on tool post to rotate it"
+    - "Next, let\u2019s bring the tailstock closer to accurately center our tool.
+      \n\nHint: Click on Tailstock to move it closer to tool post"
+    - "We can finally center our tool. You can use the camera controller or the camera
+      view 3 to get a better view of the cutter and the live center. \n\nHint: Click
+      on increase height button in tool post panel to adjust height"
+    - "Now that we centered our tool, we can lock the tool holder at that position
+      using the tool post handle mentioned previously. \n\nHint: Click on tool post
+      handle to lock tool holder at current height"
+    - 'Let us bring the tailstock back to its initial location.
+
+
+      Hint: Click
+      on Tailstock to move it back to original position'
+    - 'We can also rotate back the tool post to its initial position.
+
+
+      Hint:
+      Click on tool post to rotate back to original position'
+    - "Use the wrench to lock the tool post to ensure that it does not rotate during
+      machining. \n\nHint: Click on the wrench to tighten the tool post"
+    - Good job! You have finished the setup process. We will now move on to the machining
+      process of this operation.
+    - 'We will start by bringing the cutter closer. We will move the entire carriage
+      closer to the workpiece.
+
+
+      Hint: Click on Carriage Feed Wheel to move
+      Carriage'
+    - "Next, let\u2019s turn ON the machine. The power button is located on the headstock
+      as seen in the previous tutorial.\n\nHint: Click on ON Button on the Lathe
+      Machine to start it"
+    - 'The next step is to set our contact point. We will use the cross slide and
+      carriage to set the contact point.
+
+
+      Hint: Click on Cross Feed Wheel
+      to set contact point'
+    - "Now, let\u2019s retreat our cutter using the cross slide in order for us to
+      set our depth of cut.\n\nHint: Click on Cross Feed Wheel to retreat cutter
+      slightly"
+    - 'Now using the carriage, we can set our depth of cut. Essentially, the depth
+      of cut is the point where we will set the cutter. It will indicate the amount
+      of material we are removing from the surface of the workpiece.
+
+
+      Hint:
+      Click on Carriage Feed Wheel to set depth of cut'
+    - Before machining the workpiece. We need to keep a few things in mind. When
+      machining we need to keep the same feed rate (same speed) for us to have a
+      good surface finish as opposed to a rugged surface.
+    - 'Another important detail is that due to the rotation of the workpiece, we
+      only need to reach halfway to surface the entire workpiece. '
+    - "We are now ready to begin machining the workpiece. \n\nHint: Click on Cross
+      Feed Wheel to machine across surface of the workpiece"
+    - 'Before turning off the machine, retreat the cutter using the carriage wheel.
+
+
+      Hint:
+      Click on Carriage Feed Wheel to retreat cutter'
+    - "Now we can turn OFF the machine safely. \n\nHint: Click on Stop Button on
+      the Lathe Machine to turn it OFF "
+    - This process may be repeated until the desired amount of material is removed
+      from the workpiece.
+    - 'Well done! Next, we will learn how to perform the turning operation. Click
+      on the turning operation button on the right-hand side to start. '
+    sentencesFR:
+    - "L\u2019op\xE9ration de surfa\xE7age consistent \xE0 produire une surface plane
+      par d\xE9placement d\u2019un outil perpendiculaire \xE0 l\u2019axe du tour."
+    - "Nos premi\xE8res \xE9tapes consistent en la configuration de notre pi\xE8ce.
+      Celle-ci sera plac\xE9e \xE0 l'int\xE9rieur du mandrin \xE0 combinaison et
+      tourn\xE9e \xE0 grande vitesse pendant le processus d'usinage."
+    - "Pour placer la pi\xE8ce \xE0 usiner, notre premi\xE8re \xE9tape consiste \xE0
+      ouvrir le panneau de s\xE9curit\xE9 afin de faciliter la mise en place de la
+      pi\xE8ce.\n\nIndice: Cliquer sur le panneau de s\xE9curit\xE9 pour l'ouvrir"
+    - "Avec le panneau de s\xE9curit\xE9 ouvert, nous pouvons maintenant placer la
+      pi\xE8ce \xE0 l'int\xE9rieur du mandrin.\n\nIndice: Cliquer sur la pi\xE8ce
+      \xE0 usinage pour le placer dans le mandrin"
+    - "Lors de la mise en place de la pi\xE8ce, nous voulons nous assurer que l'extr\xE9mit\xE9
+      de la pi\xE8ce est suffisamment \xE9loign\xE9e pour ne pas finir par usiner
+      les m\xE2choires de l'\xE9tau."
+    - "L'\xE9tape suivante consiste \xE0 serrer la pi\xE8ce \xE0 l'int\xE9rieur du
+      mandrin. Pour r\xE9aliser cet exploit, nous utilisons ce qu'on appelle une
+      cl\xE9 de mandrin. Les cl\xE9s de mandrin sont utilis\xE9es pour serrer ou
+      desserrer l'\xE9quipement d'usinage. Nous utiliserons la cl\xE9 de mandrin
+      situ\xE9e sur le mandrin pour cela exactement.\n\nIndice: Cliquer sur la cl\xE9
+      de mandrin pour serrer la pi\xE8ce \xE0 usinage"
+    - "Maintenant que nous avons plac\xE9 notre pi\xE8ce, nous pouvons fermer le
+      panneau de s\xE9curit\xE9.\n\nIndice: Cliquer sur le panneau de s\xE9curit\xE9
+      pour le fermer"
+    - "La prochaine chose que nous voulons faire est de configurer l'outil de coupe
+      que nous utiliserons pour effectuer cette op\xE9ration. Nous monterons l'outil
+      de coupe sur un porte-outil. Celui-ci sert \xE0 contenir les outils de coupe.
+      Il peut \xEAtre facilement plac\xE9 sur le support porte-outil."
+    - "Le support porte-outil a \xE9t\xE9 con\xE7u pour permettre un changement d'outil
+      rapide, car le porte-outil peut \xEAtre facilement placer et retir\xE9 du support
+      porte-outil.\n\nIndice: Cliquer sur le porte-outil pour placer le support porte-outil"
+    - "Pour placer le porte-outil sur le support porte-outil, nous utilisons la poign\xE9e
+      sur le dessus du support porte-outil. Il est utilis\xE9 pour verrouiller et
+      d\xE9verrouiller le porte-outil car il est possible de r\xE9gler la hauteur
+      du porte-outil sur le support porte-outil. Il est actuellement d\xE9verrouill\xE9
+      car nous chercherons \xE0 centrer notre outil de coupe."
+    - "La raison pour laquelle nous voulons centrer notre outil est de nous assurer
+      d'usiner tout le plan de surface de la pi\xE8ce."
+    - "Pour centrer notre outil de coupe, nous utiliserons ce que l'on appelle une
+      pointe vive. Une pointe vive a beaucoup de fonctionnalit\xE9s, mais il est
+      souvent utilis\xE9 pour centrer les outils de coupe. C'est l'outil qui est
+      actuellement attach\xE9 \xE0 la broche sur la poup\xE9e mobile."
+    - "Afin de centrer notre pi\xE8ce, nous devrons comparer directement la hauteur
+      du centre dynamique avec la hauteur de l'outil de coupe."
+    - "En tant que tel, nous allons faire pivoter notre poste d'outil afin de pouvoir
+      comparer et centrer avec pr\xE9cision notre outil de coupe. Une cl\xE9 est
+      utilis\xE9e pour desserrer le support porte-outil. Selon l'endroit o\xF9 vous
+      installez le porte-outil, la rotation du support porte-outil changera.\n\nIndice:
+      Cliquer sur la cl\xE9 de serrage pour desserer le support porte-outil "
+    - "Maintenant que le support porte-outil n'est pas serr\xE9, faites pivoter le
+      support porte-outil de sorte qu'il soit align\xE9 avec la pointe vive\n\nIndice:
+      Cliquer sur le support porte-outil pour le pivoter"
+    - "Ensuite, rapprochons la poup\xE9e mobile du support porte-outil\n\nIndice:
+      Cliquer sur la poup\xE9e mobile pour le rapprocher du support porte-outil"
+    - "Nous pouvons enfin centrer notre outil. Vous pouvez utiliser le contr\xF4leur
+      de cam\xE9ra  ou la vue de cam\xE9ra 3 pour obtenir une meilleure vue de l\u2019outil
+      de coupe et du pointe vive.\n\nIndice: Cliquez sur le bouton d'augmentation
+      de la hauteur dans le panneau de support porte-outil pour r\xE9gler la hauteur"
+    - "Maintenant que nous avons centr\xE9 notre outil, nous pouvons verrouiller
+      le porte-outil \xE0 cette position \xE0 l'aide de la poign\xE9e de support
+      porte-outil mentionn\xE9e pr\xE9c\xE9demment.\n\nIndice: Cliquez sur la poign\xE9e
+      du support porte-outil pour v\xE9rouiller le porte-outil \xE0 la hauteur actuelle"
+    - "Ramenons la poup\xE9e mobile \xE0 son emplacement initial.\n\nIndice: Cliquez
+      sur la poup\xE9e mobile pour la ramener \xE0 sa position d'origine"
+    - "Nous pouvons maintenant ramener le support porte-outil dans sa position initiale.\n\nIndice:
+      Cliquez sur le support porte-outil pour le ramener \xE0 la position d'origine"
+    - "Utilisez la cl\xE9 de serrage pour verrouiller le support porte-outil afin
+      de vous assurer qu'il ne tourne pas pendant l'usinage.\n\nIndice: Cliquer sur
+      la cl\xE9 de serrage pour serrer le support porte-outil"
+    - "Bon travail! Vous avez termin\xE9 le processus de configuration. Nous allons
+      maintenant passer au processus d'usinage de cette op\xE9ration."
+    - "Nous commencerons par rapprocher l'outil de coupe de la pi\xE8ce \xE0 usiner.
+      Nous allons accomplir ceci en utilisant le chariot principal.\n\nIndice: Cliquer
+      sur la roue d'alimentation de chariot pour bouger le chariot"
+    - "Allumons ensuite la machine. Le bouton d'alimentation est situ\xE9 sur la
+      poup\xE9e fixe comme indiqu\xE9 dans le didacticiel pr\xE9c\xE9dent.\n\nIndice:
+      Cliquez sur le bouton ON sur la tour pour d\xE9marrer la machine"
+    - "La prochaine \xE9tape consiste \xE0 d\xE9finir notre point de contact. Nous
+      utiliserons le chariot transversal et le chariot principale pour faire ceci.\n\nIndice:
+      Cliquer sur la roue d'alimentation transversale pour d\xE9finir le point de
+      contact"
+    - "Maintenant, reculons l\xE9g\xE8rement notre outil de coupe en utilisant le
+      chariot transversal pour que nous puissions d\xE9finir notre profondeur de
+      coupe.\n\nIndice: Cliquer sur la roue d'alimentation pour reculer l'outil de
+      coupe l\xE9g\xE8rement"
+    - "\xC0 l'aide du chariot principale, nous pouvons r\xE9gler notre profondeur
+      de coupe. Essentiellement, la profondeur de coupe indiquera la quantit\xE9
+      de mat\xE9riau que nous retirons de la surface de la pi\xE8ce.\n\nIndice: Cliquer
+      sur la roue d'alimentation de chariot pour d\xE9finir la profondeur de coupe"
+    - "Avant d'usiner la pi\xE8ce. Nous devons garder certaines choses \xE0 l'esprit.
+      Lors de l'usinage, nous devons conserver la m\xEAme vitesse de coupe pour avoir
+      une bonne finition de surface."
+    - "Une autre d\xE9taille importante est que la rotation de la pi\xE8ce \xE0 usiner,
+      fait en sorte qu'il suffit d'atteindre la moiti\xE9 de la pi\xE8ce pour usiner
+      la surface de la pi\xE8ce."
+    - "Nous sommes maintenant pr\xEAts \xE0 commencer l'usinage de la pi\xE8ce \xE0
+      l\u2019aide du chariot transversal.\n\nIndice: Cliquer sur la roue d'alimentation
+      transversale pour usiner la surface de la pi\xE8ce"
+    - "Avant d'\xE9teindre la machine, retirez l'outil de coupe de la zone d\u2019usinage
+      en utilisant la roue du chariot.\n\nIndice: Cliquer sur la roue d'alimentation
+      de chariot pour \xE9loigner l'outil de coupe de la zone d'usinage"
+    - "Nous pouvons maintenant \xE9teindre la machine en toute s\xE9curit\xE9.\n\nIndice:
+      Cliquer sur le bouton d'arr\xEAt sur la tour pour arr\xEAter la machine"
+    - "Ce processus peut \xEAtre r\xE9p\xE9t\xE9 jusqu'\xE0 ce que la quantit\xE9
+      souhait\xE9e de mat\xE9riau soit retir\xE9e de la pi\xE8ce."
+    - "Bravo! Ensuite, nous apprendrons comment effectuer l'op\xE9ration de tournage.
+      Cliquez sur le bouton d'op\xE9ration de tournage sur le c\xF4t\xE9 droit pour
+      commencer."
+    images:
+    - {fileID: 21300000, guid: 78d654f26370ca84eaca560899cfa4b6, type: 3}
+    - {fileID: 21300000, guid: 43d6c3f7daa52eb4f9e9adc8d050f027, type: 3}
+    - {fileID: 21300000, guid: 91d2007b7323dec4eaef615e61a59ccc, type: 3}
+    - {fileID: 21300000, guid: a30edabb945b9b74aacc425fb22ce76b, type: 3}
+    - {fileID: 21300000, guid: aae053bb5e64f5e4d9aafb19523fb4f5, type: 3}
+    - {fileID: 21300000, guid: 446cec598c9e1c0488d5ecdde08167d8, type: 3}
+    - {fileID: 21300000, guid: 55be8e988b4b89549b153ced8f1bf6ac, type: 3}
+    - {fileID: 21300000, guid: d38b6a387701963499aa72523cd870ed, type: 3}
+    - {fileID: 21300000, guid: 39b540b396308044aa874a7dd17e9be5, type: 3}
+    - {fileID: 21300000, guid: 52b2d0a10350f5944901a12df193eaad, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: afe524e964e726a4393c42b0fa96f09a, type: 3}
+    - {fileID: 21300000, guid: fe71865d81d7a1a4aa1c15f863862734, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: 976904e8e4178d147ae8078964924aaa, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 3586e3685d6623e4e930f892a551b1c9, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: 0fa75fbb43f33df47907d0c5a6178e70, type: 3}
+    - {fileID: 21300000, guid: 3dbcfcf6ae3ed534cae66ca6b239bc83, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: 9bfb2c872fcfeda43bb07f7d00f93e63, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: b7245a42f13c7c54e83fa7f370233f31, type: 3}
+    - {fileID: 21300000, guid: 061edef650e577d468060ed279580c01, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
+    - {fileID: 21300000, guid: f575135d2274a4e4a968e6e68e6585c5, type: 3}
+    - {fileID: 21300000, guid: 163d537f83803134ea30184589de387a, type: 3}
+  - name: Getting Started - Turning
+    frenchName: Mise en route - Tournage
+    sentences:
+    - Turning is the operation of removing stock from a piece of material while it
+      is being revolved in a lathe.
+    - Just like the facing operation, we will setup the workpiece first.
+    - "Let\u2019s open the guard.\n\nHint: Click on Guard to open it"
+    - 'Next, we place the workpiece inside the chuck.
+
+
+      Hint: Click on workpiece
+      to place it inside chuck'
+    - 'We use the chuck key to tighten the workpiece inside the chuck.
+
+
+      Hint:
+      Click on chuck key to tighten the workpiece'
+    - 'Lastly, we close the safety guard.
+
+
+      Hint: Click on Guard to close it'
+    - Next, we dive into the setup and centering of our cutting tool.
+    - 'Place the tool holder onto the tool post.
+
+
+      Hint: Click on tool holder
+      to place on tool post'
+    - 'Notice the position of the tool holder. We placed the tool holder at that
+      position because the turning operation will machine the workpiece longitudinally
+      (the facing operation machined the workpiece axially). '
+    - 'Next, we will use the wrench to untighten the tool post so we can rotate it.
+
+
+      Hint:
+      Click on wrench to untighten tool post'
+    - "Now we can rotate our tool post in the direction of the live center. Notice
+      that because we placed the tool holder in a different location, we only need
+      to rotate the tool post 90 degrees. \n\nHint: Click on tool post to rotate
+      it"
+    - "The next step is to bring the tailstock closer to adjust the height of our
+      cutting tool. \n\nHint: Click on Tailstock to move it closer to tool post"
+    - 'Now that we have better view to compare, we can adjust the cutting tool to
+      bring it in line with the live center. Use camera controller or camera view
+      3 to get a clear view of centering.
+
+
+      Hint: Click on increase height
+      button in tool post panel to adjust height'
+    - Good job! The cutting tool is now centered. Lock the tool holder at that height
+      using the tool post handle.
+    - 'Now that we centered our cutting tool, we can lock the tool holder at that
+      position using the tool post handle.
+
+
+      Hint: Click on tool post handle
+      to lock tool holder at the current position'
+    - 'We can now place the tailstock back to its original position.
+
+
+      Hint:
+      Click on Tailstock to move it back to starting position'
+    - "Let\u2019s rotate back the tool post.\n\nHint: Click on tool post to rotate
+      it"
+    - 'We can now lock the tool post using the wrench to prevent any rotation while
+      machining.
+
+
+      Hint: Click on the wrench to tighten tool post'
+    - Alright, now we can begin the machining process.
+    - 'We begin by moving the carriage closer to the workpiece.
+
+
+      Hint: Click
+      on the Carriage Feed Wheel to move carriage'
+    - "Before turning the machine ON, let\u2019s bring a bit closer to the workpiece
+      using the cross slide.\n\nHint: Click on the Cross Feed Wheel to move tool
+      post closer to workpiece"
+    - 'Now turn ON the lathe machine
+
+
+      Hint: Click on ON Button on the Lathe
+      Machine to start it'
+    - "Let\u2019s now use the carriage wheel to make light contact with the workpiece.\n\nHint:
+      Click on the Carriage Feed Wheel to make contact with workpiece"
+    - Next, we set our depth of cut.
+    - "During the facing operation, we used the carriage to set our depth of cut
+      since we were machining axially. But for this operation, we are using the cross
+      slide because we\u2019re machining in longitude. \n\nHint: Click on Cross Feed
+      Wheel to set depth of cut"
+    - 'Finally, use the carriage wheel and machine the workpiece while making sure
+      to keep the same cutting speed.
+
+
+      Hint: Click on Carriage Feed Wheel
+      to perform turning operation'
+    - "To make sure to securely turn OFF the machine, retreat the cutting tool out
+      of the machining zone first using the cross slide. \n\nHint: Click on the Cross
+      Feed Wheel to retreat cutting tool"
+    - 'We can now turn OFF the lathe.
+
+
+      Hint: Click on Stop Button on the lathe
+      to turn it off'
+    - This process may be repeated until the desired amount of material is removed
+      from the workpiece.
+    - 'Excellent work! Next, we will learn how to perform the drilling operation
+      on a lathe. Click on the drilling operation button on the right-hand side to
+      start. '
+    sentencesFR:
+    - "L\u2019op\xE9ration de tournage consiste \xE0 ouvrager sur une grande vari\xE9t\xE9
+      de corps de r\xE9volution des filetages de tous profils."
+    - "Tout comme l'op\xE9ration de surfa\xE7age, nous installerons d'abord la pi\xE8ce
+      dans le mandrin."
+    - "Ouvrons d\u2019abord le panneau de s\xE9curit\xE9.\n\nIndice: Cliquer sur
+      le panneau de s\xE9curit\xE9 pour l'ouvrir"
+    - "Ensuite, pla\xE7ons la pi\xE8ce \xE0 usiner dans le mandrin.\n\nIndice: Cliquer
+      sur la pi\xE8ce \xE0 usinage pour le placer dans le mandrin"
+    - "Nous utilisons la cl\xE9 de mandrin pour serrer la pi\xE8ce \xE0 l'int\xE9rieur
+      du mandrin.\n\nIndice: Cliquer sur la cl\xE9 de mandrin pour serrer la pi\xE8ce
+      \xE0 usinage"
+    - "Enfin, nous fermons le panneau de s\xE9curit\xE9.\n\nIndice: Cliquer sur le
+      panneau de s\xE9curit\xE9 pour le fermer"
+    - Nous allons maintenant entreprendre le centrage de notre outil de coupe.
+    - 'Placez le porte-outil sur le support porte-outil.
+
+
+      Indice: Cliquer
+      sur le porte outil pour le placer sur le support porte-outil'
+    - "Notez la position du porte-outil. Nous avons plac\xE9 le porte-outil \xE0
+      cette position car l'op\xE9ration de tournage usinera la pi\xE8ce longitudinalement
+      (l'op\xE9ration de surfa\xE7age usine la pi\xE8ce axialement)."
+    - "Ensuite, nous utiliserons la cl\xE9 de serrage pour desserrer le support de
+      porte-outil afin de pouvoir le pivoter.\n\nIndice: Cliquer sur la cl\xE9 de
+      serrage pour desserer le support porte-outil "
+    - "Nous pouvons maintenant faire pivoter notre support porte-outil dans la direction
+      de la pointe vive. Notez que, comme nous avons plac\xE9 le porte-outil \xE0
+      un emplacement diff\xE9rent, il nous suffit de faire pivoter le support porte-outil
+      90 degr\xE9s.\n\nIndice: Cliquer sur le support porte-outil pour le pivoter"
+    - "L'\xE9tape suivante consiste \xE0 rapprocher la poup\xE9e mobile pour ajuster
+      la hauteur de notre outil de coupe.\n\nIndice: Cliquer sur la poup\xE9e mobile
+      pour rapprocher celle-ci"
+    - "Maintenant que nous avons une meilleure vue, nous pouvons ajuster l'outil
+      de coupe pour l'aligner avec la pointe vive. Utilisez le contr\xF4leur de cam\xE9ra
+      ou la vue de la cam\xE9ra pour obtenir une vue claire du centrage.\n\nIndice:
+      Cliquez sur le bouton d'augmentation de la hauteur dans le panneau de support
+      porte-outil pour r\xE9gler la hauteur"
+    - "Bon travail! L'outil de coupe est maintenant centr\xE9. Verrouillez le porte-outil
+      \xE0 cette hauteur \xE0 l'aide de la poign\xE9e du support porte-outil."
+    - "Maintenant que nous avons centr\xE9 notre outil de coupe, nous pouvons verrouiller
+      le porte-outil \xE0 cette position \xE0 l'aide de la poign\xE9e du support
+      porte-outil.\n\nIndice: Cliquez sur la poign\xE9e du support porte-outil pour
+      verrouiller le porte-outil \xE0 la position actuelle"
+    - "Nous pouvons maintenant remettre la poup\xE9e mobile dans sa position d'origine.\n\nIndice:
+      Cliquez sur la poup\xE9e mobile pour la ramener \xE0 sa position d'origine"
+    - "Remettons le support porte-outil dans son orientation initiale.\n\nIndice:
+      Cliquez sur le support porte-outil pour le ramener \xE0 la position d'origine"
+    - "Nous pouvons maintenant verrouiller le support porte-outil \xE0 l'aide de
+      la cl\xE9 de serrage pour emp\xEAcher toute rotation pendant l'usinage.\n\nIndice:
+      Cliquez sur la cl\xE9 de serrage pour v\xE9rouiller le support porte-outil"
+    - "Tr\xE8s bien, nous pouvons maintenant commencer le processus d'usinage."
+    - "Nous commen\xE7ons par rapprocher le chariot de la pi\xE8ce.\n\nIndice: Cliquer
+      sur la roue d'alimentation du chariot pour bouger le chariot"
+    - "Avant d\u2019allumer la machine, rapprochez l\u2019outil de coupe un peu plus
+      de la pi\xE8ce \xE0 l\u2019aide de le chariot transversale.\n\nIndice: Cliquer
+      sur la roue d'alimentation transversale pour bouger le support porte-outil
+      plus pr\xE8s de la pi\xE8ce \xE0 usiner"
+    - "Allumez maintenant la machine de tour\n\nIndice: Cliquez sur le bouton ON
+      sur la tour pour d\xE9marrer la machine"
+    - "Utilisons maintenant la roue du chariot pour \xE9tablir un l\xE9ger contact
+      avec la pi\xE8ce.\n\nIndice: Cliquez sur la roue d'alimentation du chariot
+      pour entrer en contact avec la pi\xE8ce"
+    - "Ensuite, nous d\xE9finissons notre profondeur de coupe."
+    - "Lors de l'op\xE9ration de surfa\xE7age, nous avons utilis\xE9 le chariot pour
+      r\xE9gler notre profondeur de coupe puisque nous usinions axialement. Mais
+      pour cette op\xE9ration, nous utilisons le chariot transversal car nous usinons
+      en longitude.\n\nIndice: Cliquez sur la roue d'alimentation transversale pour
+      d\xE9finir la profondeur de coupe"
+    - "Enfin, utilisez la roue du chariot et usinez la pi\xE8ce en vous assurant
+      de garder la m\xEAme vitesse de coupe.\n\nIndice: Cliquez sur la roue d'alimentation
+      du chariot pour perfomer l'op\xE9ration de tournage "
+    - "Pour vous assurer d'arr\xEAter correctement la machine, retirez l'outil de
+      coupe de la zone d'usinage \xE0 l'aide du chariot transversal.\r\n\r\nIndice:
+      Cliquez sur la roue d'alimentation transversale pour \xE9loigner l'outil de
+      coupe"
+    - "Nous pouvons maintenant \xE9teindre la tour.\n\nIndice: Cliquer sur le bouton
+      d'arr\xEAt sur la tour pour arr\xEAter la machine"
+    - "Ce processus peut \xEAtre r\xE9p\xE9t\xE9 jusqu'\xE0 ce que la quantit\xE9
+      souhait\xE9e de mat\xE9riau soit retir\xE9e de la pi\xE8ce."
+    - "Excellent travail! La prochaine op\xE9ration est le per\xE7age. Cliquez sur
+      le bouton d'op\xE9ration de per\xE7age sur le c\xF4t\xE9 droit pour commencer."
+    images:
+    - {fileID: 21300000, guid: 0f98411c53268e54eb4989cb73ef4a10, type: 3}
+    - {fileID: 21300000, guid: c87eda925a6b1c94ca927abf3094db91, type: 3}
+    - {fileID: 21300000, guid: 91d2007b7323dec4eaef615e61a59ccc, type: 3}
+    - {fileID: 21300000, guid: a30edabb945b9b74aacc425fb22ce76b, type: 3}
+    - {fileID: 21300000, guid: 446cec598c9e1c0488d5ecdde08167d8, type: 3}
+    - {fileID: 21300000, guid: 55be8e988b4b89549b153ced8f1bf6ac, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: 39b540b396308044aa874a7dd17e9be5, type: 3}
+    - {fileID: 21300000, guid: 830bf7255af159b4d8daab392d17001f, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: 976904e8e4178d147ae8078964924aaa, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 3586e3685d6623e4e930f892a551b1c9, type: 3}
+    - {fileID: 21300000, guid: 52512d8627d119947811d0a14b178ce4, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 3dbcfcf6ae3ed534cae66ca6b239bc83, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: acfe2f871ffa35643a330a44ae78768e, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: 0f98411c53268e54eb4989cb73ef4a10, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
+    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
+    - {fileID: 21300000, guid: 164dca76e3dc6ea4387f270b9e4400fe, type: 3}
+  - name: Getting Started - Drilling
+    frenchName: "Mise en route - Per\xE7age"
+    sentences:
+    - Drilling is the operation of producing a hole in solid material by means of
+      a center drill.
+    - To perform the drilling operation, we use the tailstock.
+    - The first step just like the previous operations is the workpiece setup
+    - 'We open the safety guard
+
+
+      Hint: Click on Guard to open it'
+    - 'Place the workpiece into the chuck.
+
+
+      Hint: Click on workpiece to place
+      it inside chuck'
+    - 'Use the chuck key and tighten the jaws to make sure it grips the workpiece
+      rigidly
+
+
+      Hint: Click on chuck key to tighten the workpiece'
+    - 'Close the safety guard
+
+
+      Hint: Click on Guard to close it'
+    - 'Now we have to setup the tailstock and drill chuck. Notice that we replaced
+      the live center with a drill chuck. '
+    - "We will begin by placing a center drill inside the drill chuck. Since we want
+      to use a larger drill bit, we need to use a center drill to create the starting
+      hole before using our larger drill bit. \n\nHint: Click on drill bit 1 in tailstock
+      tools panel to place center drill in the drill chuck"
+    - "The next step is to tighten the drill bit and make sure it is secured rigidly
+      inside the drill chuck. For that reason, we will use a chuck key specific to
+      that drill chuck to tighten it. \n\nHint: Click on chuck key on the drill chuck
+      to tighten drill bit"
+    - Good job! The initial setup is done.
+    - "The next step is to move the carriage closer to the workpiece but not too
+      close. Since we want to work with the tailstock, the carriage should be at
+      an adequate distance that it does not interfere with the headstock nor the
+      tailstock. \n\nHint: Click on Carriage Feed Wheel to move carriage"
+    - "Now let\u2019s bring the tailstock closer to the workpiece.\n\nHint: Click
+      on tailstock to move it closer to workpiece "
+    - 'Since we do not want the tailstock to move during the operation, we should
+      use the tailtock handle located on the side of the tailstock and lock the tailstock
+      at the current position.
+
+
+      Hint: Click on tailstock handle to lock tailstock
+      at the current position'
+    - "Next, we\u2019ll use the quill feed wheel on the tailstock and the bring the
+      center drill very close to the workpiece.\r\n\nHint: Click on quill feed wheel
+      to move center drill closer to workpiece"
+    - 'With everything set, turn ON milling machine.
+
+
+      Hint: Click on ON Button
+      on the Lathe Machine to start it'
+    - 'Use a pecking motion while drilling in the material with the quill feed wheel.
+
+
+      Hint:
+      Click on quill feed wheel to drill into workpiece'
+    - 'Turn OFF the machine and switch to a larger drill bit.
+
+
+      Hint: Click
+      on Stop Button on Lathe Machine to turn it OFF '
+    - "Untighten the drill chuck using the chuck key\r.\n\nHint: Click on chuck key
+      to untighten drill chuck"
+    - "Swap the center drill with the other drill bit\r.\n\nHint: Click on drill
+      bit 2 in tailstock tools panel to swap drill bits"
+    - "Tighten the drill bit with the chuck key\r.\n\nHint: Click on chuck key to
+      tighten drill chuck"
+    - 'Turn ON the machine again
+
+
+      Hint: Click on ON Button on the Lathe Machine
+      to start it'
+    - 'Remove material from the workpiece in increments by using a pecking motion
+
+
+      Hint:
+      Click on quill feed wheel to drill into workpiece'
+    - 'Turn OFF the machine
+
+
+      Hint: Click on Stop Button on Lathe Machine to
+      turn it OFF '
+    - "This process may be repeated until the desired amount of material is removed
+      from the workpiece.\r\r\n"
+    - 'Fantastic work! You finished all the operations. You can retry any of the
+      operations before moving on to the next part. '
+    sentencesFR:
+    - "L\u2019op\xE9ration de per\xE7age est essentiellement la r\xE9alisation en
+      pleine mati\xE8re d\u2019un trou cylindrique \xE0 l\u2019aide du foret \xE0
+      centrer."
+    - "Pour effectuer l'op\xE9ration de per\xE7age, nous utilisons la poup\xE9e mobile."
+    - "La premi\xE8re \xE9tape, tout comme les op\xE9rations pr\xE9c\xE9dentes, est
+      la configuration de la pi\xE8ce."
+    - "Nous ouvrons le panneau de s\xE9curit\xE9.\n\nIndice: Cliquez sur le panneau
+      de s\xE9curit\xE9 pour l'ouvrir"
+    - "Placez la pi\xE8ce \xE0 usiner dans le mandrin\r.\n\nIndice: Cliquer sur la
+      pi\xE8ce \xE0 usinage pour le placer dans le mandrin"
+    - "Utilisez la cl\xE9 de mandrin et serrez les m\xE2choires du mandrin pour vous
+      assurer qu'elle saisit la pi\xE8ce de mani\xE8re rigide.\r\n\nIndice: Cliquer
+      sur la cl\xE9 de mandrin pour serrer la pi\xE8ce \xE0 usinage"
+    - "Fermez le panneau de s\xE9curit\xE9.\r\n\nIndice: Cliquer sur le panneau de
+      s\xE9curit\xE9 pour le fermer"
+    - "Nous devons maintenant pr\xE9parer la poup\xE9e mobile pour l'op\xE9ration
+      de per\xE7age. Notez que nous avons remplac\xE9 la pointe vive par un mandrin
+      de per\xE7age."
+    - "Nous commencerons par placer un foret \xE0 centrer \xE0 l'int\xE9rieur du
+      mandrin de per\xE7age. Puisque nous voulons utiliser un foret plus grand, nous
+      devons utiliser un foret \xE0 centrer pour cr\xE9er le trou de d\xE9part avant
+      d'utiliser notre foret plus grand.\n\nIndice: Cliquez sur le foret 1 dans le
+      panneau d'outil de la poup\xE9e fixe pour ins\xE9rer le foret \xE0 centrer
+      dans le mandrin \xE0 per\xE7age"
+    - "L'\xE9tape suivante consiste \xE0 serrer le foret et \xE0 s'assurer qu'il
+      est solidement fix\xE9 \xE0 l'int\xE9rieur du mandrin de per\xE7age. Pour cette
+      raison, nous utiliserons une cl\xE9 de mandrin sp\xE9cifique \xE0 ce mandrin
+      de per\xE7age pour le serrer.\n\nIndice: Cliquez sur la cl\xE9 de mandrin sur
+      le mandrin \xE0 per\xE7age pour serrer le foret"
+    - "Bon travail! La configuration initiale est termin\xE9e."
+    - "L'\xE9tape suivante consiste \xE0 rapprocher le chariot de la pi\xE8ce \xE0
+      travailler, mais pas trop pr\xE8s. Puisque nous voulons travailler avec la
+      poup\xE9e mobile, le chariot doit \xEAtre \xE0 une distance ad\xE9quate pour
+      ne pas g\xEAner la poup\xE9e fixe ni la poup\xE9e mobile.\n\nIndice: Cliquez
+      sur la roue d'alimentation du chariot pour bouger le chariot"
+    - "Rapprochons maintenant la poup\xE9e mobile de la pi\xE8ce \xE0 usiner.\r\n\nIndice:
+      Cliquez sur la poup\xE9e mobile pour la rapprocher de la pi\xE8ce"
+    - "Puisque nous ne voulons pas que la poup\xE9e mobile se d\xE9place pendant
+      l'op\xE9ration, nous devons utiliser la poign\xE9e sur le c\xF4t\xE9 de la
+      poup\xE9e mobile et la verrouiller \xE0 la position actuelle.\r\n\nIndice:
+      Cliquez sur la poign\xE9e de la poup\xE9e mobile pour verrouiller la poup\xE9e
+      mobile \xE0 la position actuelle"
+    - "Ensuite, nous allons utiliser la roue de fourreau sur la poup\xE9e mobile
+      et amener le foret central tr\xE8s pr\xE8s de la pi\xE8ce.\r\n\nIndice: Cliquez
+      sur la roue de fourreau pour bouger le foret \xE0 centrer plus pr\xE8s de la
+      pi\xE8ce"
+    - "Nous pouvons maintenant allumer la tour\r.\n\nIndice: Cliquez sur le bouton
+      ON sur la tour pour d\xE9marrer la machine"
+    - "Utilisez un mouvement de picage pendant le per\xE7age du mat\xE9riau avec
+      la roue de fourreau.\r\n\nIndice: Cliquez sur la roue de fourreau pour per\xE7er
+      la pi\xE8ce \xE0 usiner"
+    - "\xC9teignez la machine et passons \xE0 un foret plus gros.\r\n\nIndice: Cliquer
+      sur le bouton d'arr\xEAt sur la tour pour arr\xEAter la machine"
+    - "Desserrez le mandrin de per\xE7age \xE0 l'aide de la cl\xE9 de mandrin\r.\n\nIndice:
+      Cliquez sur la cl\xE9 de mandrin pour desserrer le mandrin de per\xE7age"
+    - "\xC9changez le foret \xE0 centrer avec l'autre foret\r.\n\nIndice: Cliquez
+      sur le foret 2 dans le panneau des outils de poup\xE9e mobile pour \xE9changer
+      les forets"
+    - "Serrez le foret avec la cl\xE9 de mandrin\r.\n\nIndice: Cliquez sur la cl\xE9
+      de mandrin pour serrer le mandrin de per\xE7age"
+    - "Rallumez la machine\r.\n\nIndice: Cliquez sur le bouton ON sur la tour pour
+      d\xE9marrer la machine"
+    - "Retirez le mat\xE9riau de la pi\xE8ce par incr\xE9ments en utilisant un mouvement
+      de picage\n\nIndice: Cliquez sur la roue de fourreau pour per\xE7er la pi\xE8ce
+      \xE0 usiner"
+    - "\xC9teignez la machine\r.\n\nIndice: Cliquer sur le bouton d'arr\xEAt sur
+      la tour pour arr\xEAter la machine"
+    - "Ce processus peut \xEAtre r\xE9p\xE9t\xE9 jusqu'\xE0 ce que la quantit\xE9
+      souhait\xE9e de mat\xE9riau soit retir\xE9e de la pi\xE8ce.\r"
+    - "Travail fantastique! Vous avez termin\xE9 toutes les op\xE9rations. Vous pouvez
+      r\xE9essayer l'une des op\xE9rations avant de passer \xE0 la partie suivante.\r"
+    images:
+    - {fileID: 21300000, guid: c039b8e70f9887044b7a1cc530154445, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 6b3332ac5106d7d4a94346b2b31eb71e, type: 3}
+    - {fileID: 21300000, guid: 91d2007b7323dec4eaef615e61a59ccc, type: 3}
+    - {fileID: 21300000, guid: a30edabb945b9b74aacc425fb22ce76b, type: 3}
+    - {fileID: 21300000, guid: 446cec598c9e1c0488d5ecdde08167d8, type: 3}
+    - {fileID: 21300000, guid: 55be8e988b4b89549b153ced8f1bf6ac, type: 3}
+    - {fileID: 21300000, guid: 02bbd1ab9368672479c12430cebcd0c5, type: 3}
+    - {fileID: 21300000, guid: c6df7c820c244c04387b66835b4a20a7, type: 3}
+    - {fileID: 21300000, guid: 860c26a6bfa3760419cbae98aa0fcc18, type: 3}
+    - {fileID: 21300000, guid: 58f800628730cf643b8ca093f1427d47, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: e093a410e35be924cb2f8d9b4269b029, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: c039b8e70f9887044b7a1cc530154445, type: 3}
+    - {fileID: 21300000, guid: bed322a4a6f78c44cb9aafebe2999eb9, type: 3}
+    - {fileID: 21300000, guid: 860c26a6bfa3760419cbae98aa0fcc18, type: 3}
+    - {fileID: 21300000, guid: f6e1040c23035cd4cbc7ecc7fa972255, type: 3}
+    - {fileID: 21300000, guid: 860c26a6bfa3760419cbae98aa0fcc18, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: c039b8e70f9887044b7a1cc530154445, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
+    - {fileID: 21300000, guid: f575135d2274a4e4a968e6e68e6585c5, type: 3}
+    - {fileID: 21300000, guid: 47b1e3218429da34b8fd19335bbefdec, type: 3}

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f500407be70d0c644a82c4610cbe0354, type: 3}
+  m_Name: FR-15
+  m_EditorClassIdentifier: 
+  _info: "De quoi devons-nous nous souvenir lors du tournage d'une pi\xE8ce"
+  _answers:
+  - _info: "\xC9loigner l'outil de la pi\xE8ce avant de revenir le long du chemin
+      de coupe"
+    _isCorrect: 0
+  - _info: "N'oubliez pas que vous coupez des deux c\xF4t\xE9s de la pi\xE8ce, donc
+      chaque pas en avant dans la pi\xE8ce doit \xEAtre compt\xE9 deux fois (0,1
+      \"vers l'int\xE9rieur correspond \xE0 0,2\" du diam\xE8tre)"
+    _isCorrect: 0
+  - _info: L'utilisation d'une vitesse d'avance constante est cruciale pour une bonne
+      finition de surface
+    _isCorrect: 0
+  - _info: "Prendre trop ou trop peu de mat\xE9riel \xE0 la fois est aussi mauvais
+      l\u2019un l\u2019autre"
+    _isCorrect: 0
+  - _info: "Tout ce qui pr\xE9c\xE8de "
+    _isCorrect: 1
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 1

@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288b3ad9a3683cc4ebce607e447e3cca, type: 3}
+  m_Name: Lathe Component Details
+  m_EditorClassIdentifier: 
+  components:
+  - partName: Carriage
+    partNameFR: Chariot
+    sentence: The carriage is responsible for guiding the tool post as it cuts or
+      manipulates the workpiece. The operator can control the carriage via the handwheel.
+      It is found between the headstock and the tailstock.
+    sentenceFR: "Le chariot est responsable du guidage du poteau d\u2019outil lors
+      de la manipulation de la pi\xE8ce. L'op\xE9rateur peut contr\xF4ler le chariot
+      via la roue d\u2019alimentation. Il se trouve entre la poup\xE9e fixe et la
+      poup\xE9e mobile."
+    image: {fileID: 21300000, guid: 4dc15a8f61a681e4fbd53560bb31fc13, type: 3}
+  - partName: Carriage Feed Wheel
+    partNameFR: Roue d'alimentation de chariot
+    sentence: The carriage handwheel is used to manually position and/or hand feed
+      the carriage in the longitudinal or Z axis.
+    sentenceFR: "La roue d\u2019alimentation du chariot est utilis\xE9e pour positionner
+      et / ou alimenter manuellement le chariot dans l'axe longitudinal ou Z."
+    image: {fileID: 21300000, guid: dee5e8e55025eb544bb9e4c3ba666583, type: 3}
+  - partName: Safety Guard
+    partNameFR: "Panneau de s\xE9curit\xE9"
+    sentence: "The lathe guard prevents the operator\u2019s hand or clothing from
+      getting caught in the chuck while it is turning. For additional security, the
+      chuck guard is designed in such a way that one cannot \u201Cforget\u201D the
+      chuck key by omission."
+    sentenceFR: "Le panneau de s\xE9curit\xE9 emp\xEAche la main ou les v\xEAtements
+      de l\u2019op\xE9rateur de se coincer dans le mandrin pendant qu\u2019il tourne.
+      Pour plus de s\xE9curit\xE9, la protection du mandrin est con\xE7ue de mani\xE8re
+      \xE0 ne pas \xAB oublier \xBB la cl\xE9 du mandrin par omission."
+    image: {fileID: 21300000, guid: aa21d19f3f65ef74b8ffffa7bb5a24ab, type: 3}
+  - partName: Headstock
+    partNameFR: "Poup\xE9e Fixe"
+    sentence: The headstock houses the spindle and the components which drive the
+      spindle and the feed gears.
+    sentenceFR: "La poup\xE9e fixe abrite le mandrin et les composants qui entra\xEEnent
+      le mandrin et les engrenages d'alimentation."
+    image: {fileID: 21300000, guid: d8c53a1246a2bf34585f7195d37d5df7, type: 3}
+  - partName: Control Box
+    partNameFR: "Bo\xEEte de contr\xF4le"
+    sentence: The control box contains the motor start button and the emergency stop
+      button. It starts the electric drive motor for the machine. The motor start
+      button does not control the spindle; however, it does supply the power. The
+      emergency stop button turns off the power to the machine.
+    sentenceFR: "La bo\xEEte de commande contient le bouton de d\xE9marrage du moteur
+      et le bouton d'arr\xEAt d'urgence. Il d\xE9marre le moteur d'entra\xEEnement
+      \xE9lectrique de la machine. Le bouton de d\xE9marrage du moteur ne contr\xF4le
+      pas la broche; cependant, il fournit le courant. Le bouton d'arr\xEAt d'urgence
+      coupe l'alimentation de la machine."
+    image: {fileID: 21300000, guid: 91274a2f6b512554cb355632ef00b36b, type: 3}
+  - partName: Forward/Reverse Switch
+    partNameFR: "Int\xE9rrupteur du sens de rotation"
+    sentence: The forward/reverse switch allows the operator to reverse the motor.
+    sentenceFR: "L'interrupteur du sens de rotation permet \xE0 l'op\xE9rateur d'inverser
+      le moteur."
+    image: {fileID: 21300000, guid: d2e213979c129384a8feacdbf7480b51, type: 3}
+  - partName: Feed Direction Dial
+    partNameFR: Cadran de direction d'alimentation
+    sentence: 'The feed direction dial controls the direction of automatic feed on
+      the lathe. '
+    sentenceFR: "Le levier de direction d'avance ou de marche arri\xE8re contr\xF4le
+      la direction de l'avance automatique sur le tour."
+    image: {fileID: 21300000, guid: b78f6467d8ac6b7478767721aa2b9470, type: 3}
+  - partName: Gear Selector Dial
+    partNameFR: Cadran de selection de vitesse
+    sentence: 'The gear selector dial is used to change the gears in the headstock.  '
+    sentenceFR: "Le cadran du s\xE9lecteur de vitesse est utilis\xE9 pour changer
+      les engrenages dans la poup\xE9e."
+    image: {fileID: 21300000, guid: 7e1b77c67a168194bba84aab2824d645, type: 3}
+  - partName: Speed Indicator
+    partNameFR: Indicateur de vitesse
+    sentence: 'The speed indicator is used to show the spindle speed of the machine '
+    sentenceFR: "L'indicateur de vitesse est utilis\xE9 pour afficher la vitesse
+      de broche de la machine"
+    image: {fileID: 21300000, guid: 85d684bc91d249547a27155cdc5fd2ab, type: 3}
+  - partName: Variable Speed Dial
+    partNameFR: Cadran de vitesse variable
+    sentence: The speed selector allows the operator to adjust the spindle speed
+      of the machine.
+    sentenceFR: "Le s\xE9lecteur de vitesse permet \xE0 l'op\xE9rateur de r\xE9gler
+      la vitesse de broche de la machine."
+    image: {fileID: 21300000, guid: 22968fb9dcef03149bfa8fe5ecb57efd, type: 3}
+  - partName: Half Nut Lever
+    partNameFR: "\xC9crou de filetage"
+    sentence: The half nut lever engages the carriage directly to the lead screw.
+      It is used only for threading and will only engage when the feed is set in
+      the neutral position.
+    sentenceFR: "L\u2019\xE9crou de filetage engage le chariot directement sur la
+      vis m\xE8re.Celui-ci est utilis\xE9 uniquement pour le filetage et il ne s'engage
+      que lorsque l'avance est r\xE9gl\xE9e sur la position neutre."
+    image: {fileID: 21300000, guid: b874b350357b4ae45bff0cadfcced1d7, type: 3}
+  - partName: Power Feed Engagement Lever
+    partNameFR: "Levier d'alimentation \xE9lectrique"
+    sentence: The power feed lever controls the automatic movement of the axes. The
+      two axes of movement associated with the lathe are the Z and X axes.
+    sentenceFR: "Le levier d'alimentation \xE9lectrique contr\xF4le le mouvement
+      automatique des axes. Les deux axes de d\xE9placement associ\xE9s au tour sont
+      les axes Z et X."
+    image: {fileID: 21300000, guid: b7d246c3a4c6b444e9a5e316e69628c6, type: 3}
+  - partName: Thread Chaser
+    partNameFR: Suiveur de filetage
+    sentence: The thread chaser is used for threading. The thread chaser works off
+      the leadscrew and is used as a tracking device. The thread chaser dial tells
+      you when to engage the half nut lever, so the tool follows the same thread
+      groove every time.
+    sentenceFR: "Le chasseur de fils est utilis\xE9 pour le filetage. Le chasseur
+      de fil fonctionne \xE0 partir de la vis-m\xE8re et est utilis\xE9 comme dispositif
+      de suivi. Le cadran du chasseur de fil vous indique quand engager l\u2019\xE9crou
+      de filetage pour que l'outil suive la m\xEAme rainure de fil \xE0 chaque fois."
+    image: {fileID: 21300000, guid: 21905f506fb498344990e4064ba29e44, type: 3}
+  - partName: Cross Feed Wheel
+    partNameFR: Roue d'alimentation tranversale
+    sentence: The cross feed handwheel is used to manually position and/or hand feed
+      the compound rest in the X axis.
+    sentenceFR: "Le roue d\u2019alimentation crois\xE9e est utilis\xE9 pour positionner
+      et / ou alimenter manuellement le support compos\xE9 dans l'axe X."
+    image: {fileID: 21300000, guid: d64cec637f49ec349b60bdb3bba6ac06, type: 3}
+  - partName: Tailstock Quill Feed Wheel
+    partNameFR: Roue de fourreau
+    sentence: Tailstock quill feed wheel is used to control the quill feed in longitude
+      (along the z-axis).
+    sentenceFR: "La roue d'alimentation du fourreau de la poup\xE9e mobile est utilis\xE9e
+      pour contr\xF4ler le fourreau en longitude (le long de l'axe z)."
+    image: {fileID: 21300000, guid: 79d4018c8501ac941b161e6c395f772a, type: 3}
+  - partName: Tool Post
+    partNameFR: Poteau d'outil
+    sentence: 'The tool post is used to mount tool holders in which the cutting bits
+      are clamped. It is situated on the compound rest. '
+    sentenceFR: "Le poteau d'outil est utilis\xE9 pour monter et serrer l\u2019outil
+      de coupe. Il est situ\xE9 sur le support compos\xE9"
+    image: {fileID: 21300000, guid: cf1d9a0fcfa3ca645a0a254b4c6c9279, type: 3}
+  - partName: Compound Slide
+    partNameFR: "Glissi\xE8re Compos\xE9e"
+    sentence: The compound slide is mounted on the cross slide and can be swiveled
+      to any angle. The compound is typically used for cutting chamfers or tapers.
+    sentenceFR: "La glissi\xE8re compos\xE9 est mont\xE9 sur la glissi\xE8re transversale
+      et peut \xEAtre pivot\xE9 \xE0 n'importe quel angle. Le compos\xE9 est g\xE9n\xE9ralement
+      utilis\xE9 pour couper des chanfreins ou des c\xF4nes."
+    image: {fileID: 21300000, guid: 51dd3a9e425e49a4dbef974913ef2956, type: 3}
+  - partName: Tailstock
+    partNameFR: "Poup\xE9e Mobile"
+    sentence: The tailstock is used to support the right end of the work. The tailstock
+      is also used for tool-holding for machining operations, such as drilling, reaming,
+      and tapping. It is also used for centering the job when a long workpiece is
+      tied on the chuck. It provides a good support to damp the vibration. It is
+      generally mounted on the inner ways.
+    sentenceFR: "La poup\xE9e mobile est utilis\xE9e pour soutenir l'extr\xE9mit\xE9
+      droite du travail. Celle-ci est \xE9galement utilis\xE9e pour le maintien d'outils
+      pour les op\xE9rations d'usinage, telles que le per\xE7age, l'al\xE9sage et
+      le taraudage. Il est \xE9galement utilis\xE9 pour centrer le travail lorsqu'une
+      longue pi\xE8ce est attach\xE9e sur le mandrin. Il fournit un bon support pour
+      amortir les vibrations. Il est g\xE9n\xE9ralement mont\xE9 sur les voies int\xE9rieures."
+    image: {fileID: 21300000, guid: 64af7509bebcfb4468fc6cda1e89cff3, type: 3}
+  - partName: Tailstock Quill Lock
+    partNameFR: Serrure de fourreau
+    sentence: The tailstock quill lock is used to prevent the handwheel from movement
+      the quill.
+    sentenceFR: "La serrure du fourreau de la poup\xE9e mobile est utilis\xE9e pour
+      emp\xEAcher la roue d\u2019alimentation de bouger le fourreau."
+    image: {fileID: 21300000, guid: 492dd517c39201447ae6b202dbd2a541, type: 3}
+  - partName: Tailstock Quill
+    partNameFR: Fourreau
+    sentence: ' The quill on the tailstock does not rotate but travels longitudinally
+      under the action of the handwheel. It includes a Morse taper to hold drill
+      chucks, centers, and other tools. '
+    sentenceFR: "Le fourreau sur la poup\xE9e mobile ne tourne pas mais il se d\xE9place
+      longitudinalement sous l'action de la roue d\u2019alimentation. Il comprend
+      un c\xF4ne d\u2019emmanchement Morse pour tenir les mandrins de forage, les
+      centres et autres outils."
+    image: {fileID: 21300000, guid: 1ac1018918ac0a24cbe550f4ecdbc50e, type: 3}
+  - partName: Tailstock Lock Handle
+    partNameFR: "Poign\xE9e de verrouillage de la poup\xE9e mobile"
+    sentence: 'The tailstock lock handle is used to prevent the operator from moving
+      the tailstock. '
+    sentenceFR: "La poign\xE9e de verrouillage de la poup\xE9e mobile est utilis\xE9e
+      pour emp\xEAcher l'op\xE9rateur de d\xE9placer la poup\xE9e mobile."
+    image: {fileID: 21300000, guid: fdb18ca2f6a1b1e43ba9850e5155b1b0, type: 3}
+  - partName: Bed Ways
+    partNameFR: Chemins de banc
+    sentence: 'The bed ways align the components of the lathe. The bed is the back
+      bone of the machine. '
+    sentenceFR: Les chemins de banc alignent les composants de la tour. Le lit est
+      le support principal de la machine.
+    image: {fileID: 21300000, guid: 86a01b37062d53a4e8a8879d525fda2a, type: 3}
+  - partName: Chuck With Spindle
+    partNameFR: Mandrin
+    sentence: The spindle is in the headstock which rotates a shaft which is connected
+      to the chuck. This chuck holds a work piece, so the workpiece also rotate.
+    sentenceFR: "La broche se trouve dans la poup\xE9e fixe qui fait tourner un arbre
+      m\xE9canique qui est reli\xE9 au mandrin. Ce mandrin contient une pi\xE8ce
+      de travail, de sorte que la pi\xE8ce de travail tourne \xE9galement."
+    image: {fileID: 21300000, guid: 3ea4d47a705c91e4fac006f711fd2a2d, type: 3}
+  - partName: Lead Screw
+    partNameFR: "Vis m\xE8re"
+    sentence: The lead screw transmits power from the headstock to the carriage for
+      screw thread cutting operations. On some lesser types of lathes the feed rod
+      and the lead screw are used for both the feed and the screw cutting power transmission.
+    sentenceFR: "La vis m\xE8re transmet la puissance de la poup\xE9e fixe au chariot
+      pour les op\xE9rations de filetage de vis. "
+    image: {fileID: 21300000, guid: 2bd89a3b52d3b054fa86544498aa9596, type: 3}
+  - partName: Cross Slide
+    partNameFR: Chariot Transversale
+    sentence: The cross slide allows for tool travel 90 degrees to the bed of the
+      lathe. The cross slide makes up the X axis of the machine. The X axis of the
+      machine controls the diameter of your work.
+    sentenceFR: "La chariot transversale permet un d\xE9placement de l'outil de 90
+      degr\xE9s par rapport au banc de la tour. Le chariot transversal constitue
+      l'axe X de la machine. L'axe X de la machine contr\xF4le le diam\xE8tre de
+      votre travail."
+    image: {fileID: 21300000, guid: 4e501ea4b02d45c4d81963eb372f7e58, type: 3}

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f500407be70d0c644a82c4610cbe0354, type: 3}
+  m_Name: FR-5
+  m_EditorClassIdentifier: 
+  _info: "Pourquoi ne coupons-nous que la moiti\xE9 de la distance frontale face
+    \xE0 une pi\xE8ce sur le tour?"
+  _answers:
+  - _info: "Parce que l'autre moiti\xE9 sera usin\xE9e lors de notre deuxi\xE8me
+      passage"
+    _isCorrect: 0
+  - _info: "Parce que la pi\xE8ce tourne donc ce que nous coupons d'un c\xF4t\xE9
+      est par cons\xE9quent coup\xE9 de l'autre c\xF4t\xE9 en m\xEAme temps"
+    _isCorrect: 1
+  - _info: "Il faut d'abord changer la direction du tour avant de couper l'autre
+      moiti\xE9"
+    _isCorrect: 0
+  - _info: La magie
+    _isCorrect: 0
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 1

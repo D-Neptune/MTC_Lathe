@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f500407be70d0c644a82c4610cbe0354, type: 3}
+  m_Name: FR-3
+  m_EditorClassIdentifier: 
+  _info: "Quel outil devez-vous toujours utiliser en premier lorsque vous percez
+    une pi\xE8ce sur le tour?"
+  _answers:
+  - _info: Pointe
+    _isCorrect: 0
+  - _info: "Poin\xE7on central"
+    _isCorrect: 0
+  - _info: "Foret \xE0 centrer"
+    _isCorrect: 1
+  - _info: Foret
+    _isCorrect: 0
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 1

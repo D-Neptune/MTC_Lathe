@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f500407be70d0c644a82c4610cbe0354, type: 3}
+  m_Name: FR-7
+  m_EditorClassIdentifier: 
+  _info: "Pourquoi est-il si important d'avoir vos outils de coupe \xE0 la bonne
+    hauteur?"
+  _answers:
+  - _info: "Si l'outil est trop haut, le bas de l\u2019outil de coupe heurtera la
+      pi\xE8ce"
+    _isCorrect: 0
+  - _info: "Si l\u2019outil de coupe est trop bas, la pi\xE8ce \xE0 usiner essaiera
+      de grimper au-dessus du couteau"
+    _isCorrect: 0
+  - _info: "Si l'outil n'est pas \xE0 la bonne hauteur, vous ne pourrez pas effectuer
+      une passe de dressage compl\xE8te"
+    _isCorrect: 0
+  - _info: "Tout ce qui pr\xE9c\xE8de "
+    _isCorrect: 1
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 1

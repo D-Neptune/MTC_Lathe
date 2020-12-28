@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f500407be70d0c644a82c4610cbe0354, type: 3}
+  m_Name: FR-11
+  m_EditorClassIdentifier: 
+  _info: "Quelle est la diff\xE9rence entre un outil de coupe gaucher et droitier?"
+  _answers:
+  - _info: L'un est pour le monde droitiers et l'autre pour les gauchers
+    _isCorrect: 0
+  - _info: "Il n'y a pas de diff\xE9rence"
+    _isCorrect: 0
+  - _info: L'angle avec lequel le couteau pointe
+    _isCorrect: 1
+  - _info: "Le premi\xE8re consiste \xE0 couper les fils \xE0 gauche et l\u2019autres
+      \xE0 droite"
+    _isCorrect: 0
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 1

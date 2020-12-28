@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6514887594a1703478cd02d95eb763bf, type: 3}
+  m_Name: Controller Instructions
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Welcome
+    frenchName: Bienvenue
+    sentences:
+    - Welcome to the Lathe Simulator. In this tutorial you will learn the different
+      components that make up the Lathe.
+    - 'Throughout these tutorials you will learn about the different parts of the
+      lathe, the different operations and how to setup different tool holders. '
+    - Before diving into the first activity, you'll need to learn how to control 
+      the camera.
+    - The default camera can be controlled with your mouse. Pressing and holding
+      the left mouse button with accompanying mouse movement will drag the camera
+      around the scene accordingly.
+    - Pressing and holding the right mouse button with accompanying mouse movement
+      will orbit the camera around the center of the scene.
+    - 'Pressing and holding the LEFT shift key while scrolling the mouse wheel will
+      zoom the camera in or out. '
+    - You may switch to different camera perspectives by clicking the button on the
+      bottom left of the screen.
+    - Please note that only camera 1 can be controlled as described previously. The
+      remaining cameras offer stationary perspectives only.
+    - 'Now you are set to start. Good luck and have fun. '
+    sentencesFR:
+    - "Bienvenue dans le simulateur de la tour. Dans ce didacticiel, vous allez apprendre
+      \xE0 propos des diff\xE9rentes composantes qui composent cet machine."
+    - "Tout au long de ces tutoriels, vous d\xE9couvrirez les diff\xE9rentes parties
+      de la tour, les diff\xE9rentes op\xE9rations et comment configurer diff\xE9rents
+      porte-outils."
+    - "Avant de plonger dans la premi\xE8re activit\xE9, vous devrez apprendre \xE0
+      contr\xF4ler la cam\xE9ra."
+    - "La cam\xE9ra principale peut \xEAtre contr\xF4l\xE9e avec votre souris. Appuyer
+      et maintenir le bouton gauche de la souris en bougeant la souris fera glisser
+      la cam\xE9ra autour de la sc\xE8ne."
+    - "Maintenez le bouton droit de la souris en d\xE9pla\xE7ant celle-ci pour faire
+      pivoter la cam\xE9ra par rapport \xE0 la tour."
+    - "Maintenez la touche Maj gauche tout en utilisant la molette de d\xE9filement
+      de la souris pour zoom vers l'avant ou l'arri\xE8re avec la cam\xE9ra."
+    - "Vous pouvez passer \xE0 diff\xE9rentes perspectives de cam\xE9ra en cliquant
+      sur le bouton en bas \xE0 gauche de l'\xE9cran."
+    - "Veuillez noter que seule la cam\xE9ra 1 peut \xEAtre contr\xF4l\xE9e comme
+      d\xE9crit pr\xE9c\xE9demment. Les cam\xE9ras restantes n'offrent que des perspectives
+      fixes."
+    - "Vous \xEAtes maintenant pr\xEAt \xE0 commencer. Bonne chance et amusez-vous
+      bien."
+    images:
+    - {fileID: 21300000, guid: 841326bc6756b39488f64efecc9893a9, type: 3}
+    - {fileID: 21300000, guid: 39dd51e12e188414b8f448d7b2e98deb, type: 3}
+    - {fileID: 21300000, guid: 09f1a35a2f9125e4b95d6265650ba414, type: 3}
+    - {fileID: 21300000, guid: d78e1ecb5fb882e4897c921dae6fbd72, type: 3}
+    - {fileID: 21300000, guid: 00de86b5b56ae66448c3cf68fcdd3850, type: 3}
+    - {fileID: 21300000, guid: 1cb492967cdc01742aef3407e9565b7a, type: 3}
+    - {fileID: 21300000, guid: f59f6696da7d05749aea7930a7cec594, type: 3}
+    - {fileID: 21300000, guid: b4666515b8331da4d871ac3f3ab27a9b, type: 3}
+    - {fileID: 21300000, guid: 58f800628730cf643b8ca093f1427d47, type: 3}

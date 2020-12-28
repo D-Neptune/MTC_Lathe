@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f500407be70d0c644a82c4610cbe0354, type: 3}
+  m_Name: FR-4
+  m_EditorClassIdentifier: 
+  _info: "Qu'est-ce qui diff\xE9rencie le tour de la plupart des machines de l'atelier?"
+  _answers:
+  - _info: "Votre travail est tenu lat\xE9ralement pendant l'usinage"
+    _isCorrect: 0
+  - _info: "La pi\xE8ce tourne alors que l'outil est stationnaire"
+    _isCorrect: 1
+  - _info: "Le tour peut couper du bois ainsi que du m\xE9tal"
+    _isCorrect: 0
+  - _info: "Tout ce qui pr\xE9c\xE8de "
+    _isCorrect: 0
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 1

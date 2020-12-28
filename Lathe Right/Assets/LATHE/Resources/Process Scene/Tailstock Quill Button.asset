@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee79008135f12f4591841e430f1f2cf, type: 3}
+  m_Name: Tailstock Quill Button
+  m_EditorClassIdentifier: 
+  triggers:
+  - TriggerControllerName: Lathe (Centered) Operations
+    anim: 2
+    transitionParams:
+    - Quill Forward
+    - Pecking
+    - Pecking 2
+    animationName:
+    - Lock Tailstock
+    - Turn ON
+    - Turn ON 2
+    index: 090000000b00000011000000
+    sentenceIndex: 0e0000001000000016000000
