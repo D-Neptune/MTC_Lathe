@@ -9,10 +9,11 @@ public class VideoManager : MonoBehaviour
     [SerializeField] private ProcessController operationController;
     [SerializeField] private TriggerDialogueInterface dialogueInterface;
     [SerializeField] private GameObject VideoPanel;
+    [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private Text title;
-    [SerializeField] private List<VideoClip> videoClips, videoClipsFR;
+    [SerializeField] private List<string> videoClips, videoClipsFR;
     [SerializeField] private List<Sprite> operationSprite;
     [SerializeField] private List<int> animatorIndex;
     [SerializeField] private List<int> dialogueIndex;
@@ -135,6 +136,9 @@ public class VideoManager : MonoBehaviour
             VideoPanel.SetActive(true);
             
             exitImage.sprite = operationSprite[index]; //Change exit button sprite depending on operation performed
+            youtubePlayer.Links(videoClips[index], videoClipsFR[index]);
+            youtubePlayer.Lang = language;
+
             if (!playedOnces[index])
             {
                 StopVideoButton.interactable = false;
@@ -148,18 +152,14 @@ public class VideoManager : MonoBehaviour
             }
             if (language)
             {
-                m_index = index;
                 title.text = titles[index];
-                videoPlayer.clip = videoClips[index];
-                videoPlayer.Play();
             }
             else
             {
-                m_index = index;
                 title.text = titlesFR[index];
-                videoPlayer.clip = videoClipsFR[index];
-                videoPlayer.Play();
             }
+            m_index = index;
+            youtubePlayer.PlayYoutubeVid();
         }
     }
 

@@ -6504,6 +6504,7 @@ MonoBehaviour:
   camera_Toggle: {fileID: 6162113169864912054}
   languageScene: {fileID: 1403452342}
   VideoPanel: {fileID: 348071742}
+  youtubePlayer: {fileID: 0}
   videoPlayer: {fileID: 1941499489}
   StopVideoButton: {fileID: 65609375}
   playButton: {fileID: 2016799940}
@@ -6511,11 +6512,11 @@ MonoBehaviour:
   stopButton: {fileID: 1551503692}
   title: {fileID: 342329160}
   videoClips:
-  - {fileID: 32900000, guid: 3bad35b9791d42048a9760d216e359ff, type: 3}
-  - {fileID: 32900000, guid: f89aa4b1f979c7d49809344d101bf7a3, type: 3}
+  - https://www.youtube.com/watch?v=hw3ApTyIcrw&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&ab_channel=CentreforEntrepreneurshipandEngineeringDesign
+  - https://www.youtube.com/watch?v=b4XZjX_X85M&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&index=9&ab_channel=CentreforEntrepreneurshipandEngineeringDesign
   videoClipsFR:
-  - {fileID: 32900000, guid: f89aa4b1f979c7d49809344d101bf7a3, type: 3}
-  - {fileID: 32900000, guid: 3bad35b9791d42048a9760d216e359ff, type: 3}
+  - https://www.youtube.com/watch?v=hw3ApTyIcrw&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&ab_channel=CentreforEntrepreneurshipandEngineeringDesign
+  - https://www.youtube.com/watch?v=b4XZjX_X85M&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&index=9&ab_channel=CentreforEntrepreneurshipandEngineeringDesign
   indexes: 0000000001000000
   titles:
   - Introduction to Lathe
@@ -6523,10 +6524,11 @@ MonoBehaviour:
   titlesFR:
   - "Introduction \xE0 la tour"
   - Tenir nos outils
-  onStart: 1
   exitImage: {fileID: 712600229}
   exit: {fileID: 21300000, guid: 41361638808006b42b3a9c0fde909f68, type: 3}
   language: 1
+  playOnAwake: 0
+  VideoIndexOnStart: 0
 --- !u!1 &891618599
 GameObject:
   m_ObjectHideFlags: 0
@@ -13793,8 +13795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  youtubeUrl: https://www.youtube.com/watch?v=ieTitApEY_g
-  youtubeLink: {fileID: 2045909785}
+  youtubeUrlEN: 
+  youtubeUrlFR: 
 --- !u!114 &1941499491
 MonoBehaviour:
   m_ObjectHideFlags: 0

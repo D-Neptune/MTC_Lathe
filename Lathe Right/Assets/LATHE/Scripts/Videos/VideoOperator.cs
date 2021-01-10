@@ -9,41 +9,45 @@ public class VideoOperator : MonoBehaviour
     [SerializeField] private Camera_Toggle camera_Toggle;
     [SerializeField] private LanguageSceneSwitcher languageScene;
     [SerializeField] private GameObject VideoPanel;
+    [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private Text title;
-    [SerializeField] private List<VideoClip> videoClips, videoClipsFR;
+    [SerializeField] private List<string> videoClips, videoClipsFR;
     [SerializeField] private List<int> indexes;
     [SerializeField] private List<string> titles, titlesFR;
-    [SerializeField] private bool onStart = false;
     [SerializeField] private Image exitImage;
     [SerializeField] private Sprite exit;
 
-    private List<bool> playedOnces;
+    private bool[] playedOnces;
     private int m_index = -1;
     public bool language;
+
+    [SerializeField] private bool playOnAwake = false;
+    [SerializeField] private int VideoIndexOnStart;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        playedOnces = new List<bool>();
+        playedOnces = new bool[videoClips.Count];
         for (int i = 0; i < videoClips.Count; i++)
         {
-            playedOnces.Add(false);
+            playedOnces[i] = false;
         }
         StopVideoButton.interactable = false;
         stopButton.interactable = false;
         VideoPanel.SetActive(false);
         videoPlayer.loopPointReached += VideoPlayed;
-        VideoEvents.current.youtubePlayerException += SentLink;
-        if (languageScene != null)
+        if (PlayOnAwake)
         {
-            if (onStart && !languageScene.languageScene.getLanguage())
-            {
-                PlayVideoClip(0);
-            }
+            PlayVideoClip(VideoIndexOnStart);
         }
+    }
+
+    public bool PlayOnAwake
+    {
+        get => playOnAwake;
     }
 
     public void SentLink()
@@ -94,11 +98,6 @@ public class VideoOperator : MonoBehaviour
         videoPlayer.Pause();
     }
 
-    public void StartVideo()
-    {
-        VideoPanel.SetActive(true);
-    }
-
     public void ExitVideo()
     {
         camera_Toggle.ChangeCamForVid(false);
@@ -127,6 +126,9 @@ public class VideoOperator : MonoBehaviour
             exitImage.sprite = exit;
             VideoPanel.SetActive(true);
 
+
+            youtubePlayer.Links(videoClips[index], videoClipsFR[index]);
+            youtubePlayer.Lang = language;
             if (!playedOnces[index])
             {
                 StopVideoButton.interactable = false;
@@ -140,19 +142,16 @@ public class VideoOperator : MonoBehaviour
             }
             if (language)
             {
-                m_index = index;
                 title.text = titles[index];
-                videoPlayer.clip = videoClips[index];
-                videoPlayer.Play();
 
             }
             else
             {
-                m_index = index;
                 title.text = titlesFR[index];
-                videoPlayer.clip = videoClipsFR[index];
-                videoPlayer.Play();
             }
+            m_index = index;
+            youtubePlayer.PlayYoutubeVid();
+
 
         }
     }
