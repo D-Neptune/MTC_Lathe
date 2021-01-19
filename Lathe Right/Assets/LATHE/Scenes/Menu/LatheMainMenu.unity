@@ -1446,12 +1446,12 @@ MonoBehaviour:
   dialogueOperator: {fileID: 0}
   languageScene: {fileID: 833299586}
   toggleLangManager: {fileID: 0}
-  warningLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 118416715}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 715902249}
   videoManager: {fileID: 0}
+  videoOperator: {fileID: 0}
 --- !u!114 &833299586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   infoWarning: {fileID: 648687888}
   panel: {fileID: 900961349}
   begin: {fileID: 1284852147}
-  SceneName: Discovery Scene
+  SceneName: FR_Quiz
 --- !u!114 &900961352
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -35,6 +35,26 @@ public class Trigger
         return val;
     }
 
+    public Boolean PlaySequence(AnimController controller)
+    {
+        Boolean val = false;
+        if (animIndex < transitionParams.Length)
+        {
+
+            if (index[animIndex] == controller.Index)
+            {
+                val = controller.PlayAnimation(transitionParams[animIndex], animationName[animIndex]);
+
+                if (val)
+                {
+                    animIndex++;
+                }
+            }
+        }
+
+        return val;
+    }
+
     public int Anim
     {
         get => anim;

@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6514887594a1703478cd02d95eb763bf, type: 3}
+  m_Name: Tool Holding Dialog
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Lathe Right - Tool Holding
+    frenchName: Lathe Right - Tenir nos outils
+    sentences:
+    - Welcome to the section dedicated to tool holding and work holding on the lathe.
+    - In this section, we will discuss the different tools available on the lathe
+      and their functions. Some clues will be placed sporadically through this tutorial,
+      follow them to prompt the next step.
+    - 'Similarly, to the previous tutorial, the hint button will activate only if
+      you are struggling with steps. '
+    - Well, let us get started!
+    - The key difference found in the lathe compared to its counterparts is the fact
+      that the machining process is done by turning the workpiece not the tool.
+    - 'Most of the cutting tools used on the Lathe are called inserts tools. They
+      obtained this name because of the ability to easily interchange them. These
+      tools come in different variety and their usage depends on the application. '
+    - Inserts tools are held in a tool holder. As the name implies, a tool holder
+      is a device that holds the cutting tool of a lathe.
+    - "The tool holder features a dovetail that allows it to easily slide into the
+      tool post. The tool post itself has two faces that the tool holder can slide
+      into. \n\nHint: Click on tool holder to place on tool post"
+    - "To lock the tool holder in place, we use the handle on top of the tool post.
+      The main reason we lock the tool holder is so it can withstand the cutting
+      forces. \n\nHint: Click the lock handle to lock the tool holder"
+    - "Another very important feature of the tool post is its ability to rotate around
+      the compound slide. Essentially by loosening the nut on top of the tool post
+      (with a wrench), the user can easily adjust the angle and position of the tools. 
+      \n\nHint: Click on the wrench to rotate the tool post"
+    - The general idea of this feature is to allow the user the ability to rotate
+      the tool post at the desired position/angle and locking it into place (with
+      a wrench).
+    - During the machining process, the height of the cutting tool will be very crucial
+      to the finishing results. The ideal height for the cutting tool is along the
+      center line. The leading edge on the cutting tool should be the first part
+      of the insert tool that touches the stock material.
+    - 'If the tool is a bit too high, the stock material will be in contact with
+      the front face of the tool rather than the cutting edge which will lead to
+      bad finish results. '
+    - 'If the tool is a bit too low, the stock is contacting the cutting edge at
+      negative angle which will either cause it to break off or leave a bad finish
+      result. '
+    - 'The user can adjust the height of the tool using the thumbscrew on the tool
+      holder. But, to center accurately the cutting tool, we will use what is called
+      a live center. '
+    - 'The live center is a very sharp point which is mainly used to support workpieces.
+      However, it can also be used to aid in centering the height of the cutting
+      tool. In the next section, we will go through step by step how to adjust the
+      height of the tool cutting tool. '
+    - 'The live center is placed inside the tailstock quill. This quill uses what
+      is known as morse taper to hold in place. A morse is a tapered spindle used
+      to mount tools. The taper on the shank of the tool (ex: drill chuck, live center,
+      etc.) will mount perfectly with the quill to keep it in place using pure friction. '
+    - "Firstly, we bring the quill out a bit and then we can insert the live center
+      \n\nHint: Click on live center to place inside tailstock"
+    - "To remove a tool from the tailstock, the user simply must retract the quill
+      completely and the tool will eventually be forced out of the tailstock. \n\nHint:
+      Click on Tailstock Quill Feed Wheel to remove live center"
+    - 'Terrific work! If there is anything you did not understand, you can restart
+      this tutorial before moving on to the next part. '
+    sentencesFR:
+    - "Bienvenue \xE0 la section d\xE9di\xE9e au maintien des outils sur le tour."
+    - "Dans cette section, nous aborderons les diff\xE9rents outils disponibles sur
+      le tour et leurs fonctions. Certains indices seront plac\xE9s sporadiquement
+      dans ce didacticiel, suivez-les pour passer \xE0 l'\xE9tape suivante."
+    - "De m\xEAme, pour le didacticiel pr\xE9c\xE9dent, le bouton d'indication ne
+      s'activera que si vous avez des difficult\xE9s avec les \xE9tapes."
+    - "Eh bien, commen\xE7ons!"
+    - "La principale diff\xE9rence trouv\xE9e dans le tour par comparer \xE0 la perceuse
+      et la fraiseuse est le fait que le processus d'usinage est effectu\xE9 en tournant
+      la pi\xE8ce et non l'outil."
+    - "La plupart des outils de coupe utilis\xE9s sur le tour sont appel\xE9s outils
+      d'insertion. Ils ont obtenu ce nom en raison de la capacit\xE9 de les \xE9changer
+      facilement. Ces outils sont disponibles dans diff\xE9rentes vari\xE9t\xE9s
+      et leur utilisation d\xE9pend de l'application."
+    - Les outils d'insertion sont maintenus dans un porte-outil. Comme son nom l'indique,
+      un porte-outil est un dispositif qui tient l'outil de coupe d'un tour.
+    - "Le porte-outil est dot\xE9 d'une queue d'aronde qui lui permet de glisser
+      facilement dans le montant de l'outil. Le support porte-outil lui-m\xEAme a
+      deux faces dans lesquelles le porte-outil peut glisser. \n\nIndice: cliquez
+      sur le porte-outil pour le placer sur le support porte-outil"
+    - "Pour verrouiller le porte-outil en place, nous utilisons la poign\xE9e sur
+      le dessus du support porte-outil. La principale raison pour laquelle nous verrouillons
+      le porte-outil est pour qu'il r\xE9siste aux forces de coupe. \n\nIndice: cliquez
+      sur la poign\xE9e de verrouillage pour verrouiller le porte-outil"
+    - "Une autre caract\xE9ristique tr\xE8s importante du support porte-outil est
+      sa capacit\xE9 \xE0 tourner du chariot pivotant. Essentiellement en desserrant
+      l'\xE9crou sur le dessus du support porte-outil (avec une cl\xE9), l'utilisateur
+      peut facilement ajuster l'angle et la position des outils. \n\nIndice: Cliquez
+      sur la cl\xE9 pour faire pivoter le support porte-outil"
+    - "L'id\xE9e g\xE9n\xE9rale de cette fonction est de permettre \xE0 l'utilisateur
+      de faire pivoter le montant de l'outil \xE0 la position/l'angle souhait\xE9
+      et de le verrouiller en place (avec une cl\xE9)."
+    - "Pendant le processus d'usinage, la hauteur de l'outil de coupe sera tr\xE8s
+      cruciale pour les r\xE9sultats de finition. La hauteur id\xE9ale de l'outil
+      de coupe est le long de la ligne m\xE9diane. En autre mot, la pointe avant
+      de l'outil de coupe doit \xEAtre la premi\xE8re partie de l'outil qui touche
+      la pi\xE8ce de travail."
+    - "Si l'outil est un peu trop haut, la pi\xE8ce sera en contact avec la face
+      avant de l'outil plut\xF4t qu'avec la pointe de coupe, ce qui entra\xEEnera
+      de mauvais r\xE9sultats de finition."
+    - "Si l'outil est un peu trop bas, la pi\xE8ce de travail entre en contact avec
+      la pointe de l'outil de coupe \xE0 un angle n\xE9gatif, ce qui causera l'outil
+      de coupe de d\xE9river ou laissera un mauvais r\xE9sultat de finition."
+    - "L'utilisateur peut r\xE9gler la hauteur de l'outil \xE0 l'aide de la vis molet\xE9e
+      sur le porte-outil. Mais, pour centrer avec pr\xE9cision l'outil de coupe,
+      nous utiliserons ce qu'on appelle une pointe vive."
+    - "La pointe vice est principalement utilis\xE9e pour supporter des pi\xE8ces.
+      Cependant, il peut \xE9galement \xEAtre utilis\xE9 pour aider au centrage de
+      la hauteur de l'outil de coupe. Dans la section suivante, nous verrons \xE9tape
+      par \xE9tape comment r\xE9gler la hauteur de l'outil de coupe."
+    - "La pointe vive est plac\xE9 \xE0 l'int\xE9rieur du fourreau de la poup\xE9e
+      mobile. Ce fourreau utilise ce que l'on appelle un c\xF4ne d'emmanchement pour
+      tenir en place ces outils. Un c\xF4ne d'emmanchement est utilis\xE9 pour monter
+      des outils. Le c\xF4ne sur la tige de l'outil (ex: mandrin de per\xE7age, centre
+      en direct, etc.) se montera parfaitement avec le c\xF4ne \xE0 l'int\xE9rieur
+      du fourreau pour le maintenir en place en utilisant seulement de la friction. "
+    - "En premier nous avan\xE7ons le fourreau un peu et ensuite nos pouvons ins\xE9rer
+      le centre en direct \n\nIndice: Cliquez sur le fourreau pour placer \xE0 l'int\xE9rieur
+      de la poup\xE9e mobile"
+    - "Pour retirer un outil de la poup\xE9e mobile, l'utilisateur doit simplement
+      r\xE9tracter compl\xE8tement le fourreau et l'outil sera finalement forc\xE9
+      hors de la poup\xE9e mobile. \n\nIndice: Cliquez sur la roue de fourreau de
+      la poup\xE9e mobile pour retirer la pointe vive"
+    - "Un travail formidable! S'il y a quelque chose que vous n'avez pas compris,
+      vous pouvez red\xE9marrer ce didacticiel avant de passer \xE0 la partie suivante."
+    images:
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+    - {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}

@@ -142,10 +142,10 @@ MonoBehaviour:
       de coupe. Il est situ\xE9 sur le support compos\xE9"
     image: {fileID: 21300000, guid: cf1d9a0fcfa3ca645a0a254b4c6c9279, type: 3}
   - partName: Compound Slide
-    partNameFR: "Glissi\xE8re Compos\xE9e"
+    partNameFR: Chariot Pivotant
     sentence: The compound slide is mounted on the cross slide and can be swiveled
       to any angle. The compound is typically used for cutting chamfers or tapers.
-    sentenceFR: "La glissi\xE8re compos\xE9 est mont\xE9 sur la glissi\xE8re transversale
+    sentenceFR: "La chariot pivotant est mont\xE9 sur la glissi\xE8re transversale
       et peut \xEAtre pivot\xE9 \xE0 n'importe quel angle. Le compos\xE9 est g\xE9n\xE9ralement
       utilis\xE9 pour couper des chanfreins ou des c\xF4nes."
     image: {fileID: 21300000, guid: 51dd3a9e425e49a4dbef974913ef2956, type: 3}
