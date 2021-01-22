@@ -14,6 +14,7 @@ namespace YoutubePlayer
         /// <summary>
         /// Is seeking through the video enabled?
         /// </summary>
+        ///
         public bool SeekingEnabled;
         
         /// <summary>
