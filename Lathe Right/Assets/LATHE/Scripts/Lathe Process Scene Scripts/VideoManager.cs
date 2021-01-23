@@ -5,6 +5,7 @@ using UnityEngine.Video;
 
 public class VideoManager : MonoBehaviour
 {
+    [SerializeField] private YoutubeExceptionListener LinkDisplayer;
     [SerializeField] private Camera_Toggle camera_Toggle;
     [SerializeField] private ProcessController operationController;
     [SerializeField] private TriggerDialogueInterface dialogueInterface;
@@ -22,6 +23,7 @@ public class VideoManager : MonoBehaviour
     private List<bool> playedOnces;
     private int m_index = -1;
     public bool language = true;
+    private bool playing = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,16 @@ public class VideoManager : MonoBehaviour
             playedOnces[m_index] = true;
             StopVideoButton.interactable = true;
         }
+    }
+
+    public int Index
+    {
+        get => m_index;
+    }
+
+    public bool Playing
+    {
+        get => playing;
     }
 
 
@@ -86,6 +98,7 @@ public class VideoManager : MonoBehaviour
                 }
 
             }
+            playing = false;
         }
     }
 
@@ -106,6 +119,7 @@ public class VideoManager : MonoBehaviour
             }
             playButton.gameObject.SetActive(true);
             pauseButton.gameObject.SetActive(false);
+            playing = false;
         }
     }
 
@@ -126,6 +140,7 @@ public class VideoManager : MonoBehaviour
 
             }
         }
+        playing = true;
     }
 
     public void PlayVideoClip(int index)
@@ -158,8 +173,10 @@ public class VideoManager : MonoBehaviour
             {
                 title.text = titlesFR[index];
             }
+            playing = true;
             m_index = index;
             youtubePlayer.PlayYoutubeVid();
+            LinkDisplayer.DisplayLink(language);
         }
     }
 

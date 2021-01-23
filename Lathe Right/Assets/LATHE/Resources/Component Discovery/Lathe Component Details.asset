@@ -181,7 +181,7 @@ MonoBehaviour:
       centres et autres outils."
     image: {fileID: 21300000, guid: 1ac1018918ac0a24cbe550f4ecdbc50e, type: 3}
   - partName: Tailstock Lock Handle
-    partNameFR: "Poign\xE9e de verrouillage de la poup\xE9e mobile"
+    partNameFR: "Poign\xE9e de la poup\xE9e mobile"
     sentence: 'The tailstock lock handle is used to prevent the operator from moving
       the tailstock. '
     sentenceFR: "La poign\xE9e de verrouillage de la poup\xE9e mobile est utilis\xE9e

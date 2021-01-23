@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: "pour avoir termin\xE9 l'atelier de la tour de Lathe Right aliment\xE9
-    par CEED"
+    par CGEC"
   toggleOptionText2: for completing Lathe Right's Lathe Workshop Powered by CEED
   currentText: {fileID: 223218618}
 --- !u!114 &223218618
@@ -635,13 +635,15 @@ MonoBehaviour:
   - {fileID: 1110018258}
   - {fileID: 1475377577}
   toggleHint: {fileID: 0}
+  dialogueOperator: {fileID: 0}
   languageScene: {fileID: 1074556737}
   toggleLangManager: {fileID: 0}
-  warningLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
+  videoManager: {fileID: 0}
+  videoOperator: {fileID: 0}
 --- !u!114 &1074556737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: Certificate of Completion
-  toggleOptionText2: "Certificat d'ach\xE8vement"
+  toggleOptionText2: "Certificat de r\xE9ussite"
   currentText: {fileID: 1108174289}
 --- !u!114 &1108174289
 MonoBehaviour:

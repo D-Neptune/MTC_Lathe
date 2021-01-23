@@ -6,6 +6,8 @@ using UnityEngine.Video;
 
 public class VideoOperator : MonoBehaviour
 {
+    [SerializeField] private Camera dummyCamera;
+    [SerializeField] private YoutubeExceptionListener LinkDisplayer;
     [SerializeField] private Camera_Toggle camera_Toggle;
     [SerializeField] private LanguageSceneSwitcher languageScene;
     [SerializeField] private GameObject VideoPanel;
@@ -22,10 +24,11 @@ public class VideoOperator : MonoBehaviour
     private bool[] playedOnces;
     private int m_index = -1;
     public bool language;
+    private bool playing = false;
 
     [SerializeField] private bool playOnAwake = false;
     [SerializeField] private int VideoIndexOnStart;
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +51,16 @@ public class VideoOperator : MonoBehaviour
     public bool PlayOnAwake
     {
         get => playOnAwake;
+    }
+
+    public int Index
+    {
+        get => m_index;
+    }
+
+    public bool Playing
+    {
+        get => playing;
     }
 
     public void SentLink()
@@ -76,7 +89,9 @@ public class VideoOperator : MonoBehaviour
 
             }
         }
+        playing = true;
     }
+
 
     public void VideoPlayed(VideoPlayer video)
     {
@@ -90,6 +105,7 @@ public class VideoOperator : MonoBehaviour
             }
             playButton.gameObject.SetActive(true);
             pauseButton.gameObject.SetActive(false);
+            playing = false;
         }
     }
 
@@ -98,11 +114,25 @@ public class VideoOperator : MonoBehaviour
         videoPlayer.Pause();
     }
 
+    public void LinkSent() //Method called if error with video playback occurs
+    {
+        if (m_index > -1)
+        {
+            playedOnces[m_index] = true;
+            StopVideoButton.interactable = true;
+        }
+    }
+
     public void ExitVideo()
     {
         camera_Toggle.ChangeCamForVid(false);
         VideoPanel.SetActive(false);
         m_index = -1;
+        playing = false;
+        if(dummyCamera != null)
+        {
+            dummyCamera.enabled = false;
+        }
     }
 
     public void StopVideo()
@@ -150,14 +180,16 @@ public class VideoOperator : MonoBehaviour
                 title.text = titlesFR[index];
             }
             m_index = index;
+            playing = true;
             youtubePlayer.PlayYoutubeVid();
-
-
+            LinkDisplayer.DisplayLink(language);
+            if (dummyCamera != null)
+            {
+                camera_Toggle.getCurrentCam().enabled = false;
+                dummyCamera.enabled = true;
+            }
         }
     }
-
-
-
 
     public void SwitchLang()
     {

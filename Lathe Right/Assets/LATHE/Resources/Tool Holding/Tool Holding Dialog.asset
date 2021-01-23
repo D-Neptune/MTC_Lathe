@@ -65,7 +65,7 @@ MonoBehaviour:
       to mount tools. The taper on the shank of the tool (ex: drill chuck, live center,
       etc.) will mount perfectly with the quill to keep it in place using pure friction. '
     - "Firstly, we bring the quill out a bit and then we can insert the live center
-      \n\nHint: Click on live center to place inside tailstock"
+      \n\nHint: Click on Tailstock Quill Feed Wheel to place inside tailstock"
     - "To remove a tool from the tailstock, the user simply must retract the quill
       completely and the tool will eventually be forced out of the tailstock. \n\nHint:
       Click on Tailstock Quill Feed Wheel to remove live center"
@@ -129,8 +129,8 @@ MonoBehaviour:
       en direct, etc.) se montera parfaitement avec le c\xF4ne \xE0 l'int\xE9rieur
       du fourreau pour le maintenir en place en utilisant seulement de la friction. "
     - "En premier nous avan\xE7ons le fourreau un peu et ensuite nos pouvons ins\xE9rer
-      le centre en direct \n\nIndice: Cliquez sur le fourreau pour placer \xE0 l'int\xE9rieur
-      de la poup\xE9e mobile"
+      la pointe vive\n\nIndice: Cliquez sur la roue de fourreau pour placer la pointe
+      vive \xE0 l'int\xE9rieur de la poup\xE9e mobile"
     - "Pour retirer un outil de la poup\xE9e mobile, l'utilisateur doit simplement
       r\xE9tracter compl\xE8tement le fourreau et l'outil sera finalement forc\xE9
       hors de la poup\xE9e mobile. \n\nIndice: Cliquez sur la roue de fourreau de
@@ -142,19 +142,19 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 3bca8e3efc9616b4597f081b216f0e3a, type: 3}
     - {fileID: 21300000, guid: c94657301ef508a4388ab6ac9c33bdbc, type: 3}
     - {fileID: 21300000, guid: df75cfa5aca7d054ab0202358a1e154b, type: 3}
-    - {fileID: 21300000, guid: 5ca1bea715ae47d4ab7c11bf252c3d40, type: 3}
-    - {fileID: 21300000, guid: c95d08ec439661d4288ca9952720b19f, type: 3}
-    - {fileID: 21300000, guid: 638f2258808374040b4021c1670377f2, type: 3}
-    - {fileID: 21300000, guid: 62daaeb7ccbf82b4b80519424479b86d, type: 3}
-    - {fileID: 21300000, guid: 1fcd45078f53b1a4db642b6c3c93af8c, type: 3}
+    - {fileID: 21300000, guid: 4c9f52fd4118d0c449d36e9b4ad3b89a, type: 3}
+    - {fileID: 21300000, guid: 2ea7bf72ecee2aa42950f4e6f14acece, type: 3}
+    - {fileID: 21300000, guid: de8108066bc870743abce72e766c0d6a, type: 3}
+    - {fileID: 21300000, guid: 4ec47e5f10213ed43a9731d2e65c882b, type: 3}
+    - {fileID: 21300000, guid: 46c7f334d2c4f9c44879ac3519a306b6, type: 3}
     - {fileID: 21300000, guid: 3ddd8aa46e70c7949be84fa36d870a9e, type: 3}
     - {fileID: 21300000, guid: a9c77bdde295555428ebf3bf6a3d8b92, type: 3}
-    - {fileID: 21300000, guid: f11d99a344297e2449b00549611c2053, type: 3}
-    - {fileID: 21300000, guid: 470c35ceb218010449a753d1d6a867f7, type: 3}
-    - {fileID: 21300000, guid: 638f2258808374040b4021c1670377f2, type: 3}
-    - {fileID: 21300000, guid: d6b02cac3a408684ea08cb312b015344, type: 3}
-    - {fileID: 21300000, guid: 41d992918da802444bf95b6506d8116c, type: 3}
-    - {fileID: 21300000, guid: 997dfb4a6c4c66a45b4dc4f078fc3253, type: 3}
-    - {fileID: 21300000, guid: 17401bc1e021f2544887de10fc544b52, type: 3}
-    - {fileID: 21300000, guid: 618d5cad631b61e4f9f559ed230eafaf, type: 3}
+    - {fileID: 21300000, guid: cf42fc8e08f2d67499818dda71da35ae, type: 3}
+    - {fileID: 21300000, guid: 2d04543235e01fb458ee4563a1b034fd, type: 3}
+    - {fileID: 21300000, guid: de8108066bc870743abce72e766c0d6a, type: 3}
+    - {fileID: 21300000, guid: 39eccf760d9801a4b966e066846daf95, type: 3}
+    - {fileID: 21300000, guid: 4f8fa6a1879fb114583e8de91f9a1358, type: 3}
+    - {fileID: 21300000, guid: 0c9d736ddc3ff2a40ba4155223811ba3, type: 3}
+    - {fileID: 21300000, guid: e53627725d80dfd42ba66ada5346c119, type: 3}
+    - {fileID: 21300000, guid: 7048341dd9fec3743a2826ac4b6b1cfe, type: 3}
     - {fileID: 21300000, guid: e339feff4d4df90449dc816272659cd2, type: 3}
