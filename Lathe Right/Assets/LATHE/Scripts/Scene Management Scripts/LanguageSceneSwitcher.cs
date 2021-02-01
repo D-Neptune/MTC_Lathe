@@ -18,7 +18,7 @@ public class LanguageSceneSwitcher : MonoBehaviour
     public ToggleScene toggleScene;
     public VideoManager videoManager;
     public VideoOperator videoOperator;
-    void Start()
+    void Awake()
     {
         if (languageScene.getLanguage())
         {

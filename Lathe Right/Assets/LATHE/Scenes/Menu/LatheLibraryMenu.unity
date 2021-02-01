@@ -1029,8 +1029,8 @@ MonoBehaviour:
   - {fileID: 1366053422}
   - {fileID: 237825031}
   - {fileID: 805070757}
-  - {fileID: 1271905329}
   - {fileID: 1867587137}
+  - {fileID: 1271905329}
   toggleHint: {fileID: 0}
   dialogueOperator: {fileID: 0}
   languageScene: {fileID: 1232288752}
@@ -2063,6 +2063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleOptionSprite: {fileID: 21300000, guid: 61661ff68537e4d429ae1db658fa506f, type: 3}
   currentIMG: {fileID: 1634892711}
+  initialSprite: {fileID: 21300000, guid: 8d8d7d0f359fc4c45b59b4f48c60473a, type: 3}
 --- !u!114 &1634892711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2407,7 +2408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: "Op\xE9rations de la tour"
-  toggleOptionText2: 'Lathe Processes Tutorial '
+  toggleOptionText2: Lathe Processes Tutorial
   currentText: {fileID: 2034215698}
 --- !u!114 &1867587138
 MonoBehaviour:
@@ -2808,9 +2809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lathe Processes Tutorial
-
-'
+  m_Text: Lathe Processes Tutorial
 --- !u!222 &2034215699
 CanvasRenderer:
   m_ObjectHideFlags: 0
