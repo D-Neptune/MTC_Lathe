@@ -1,0 +1,552 @@
+1
+00:00:02,320 --> 00:00:03,760
+i did not remove
+
+2
+00:00:03,760 --> 00:00:05,839
+my piece from the chuck after i did my
+
+3
+00:00:05,839 --> 00:00:08,400
+turning operation
+
+4
+00:00:08,400 --> 00:00:11,360
+and that's going to ensure that the
+
+5
+00:00:11,360 --> 00:00:12,880
+drilling operation is going to be
+
+6
+00:00:12,880 --> 00:00:16,239
+co-centric with the outside surface of
+
+7
+00:00:16,239 --> 00:00:16,800
+my
+
+8
+00:00:16,800 --> 00:00:20,000
+cylinder here so now
+
+9
+00:00:20,000 --> 00:00:21,680
+what i want to do is i want to insert my
+
+10
+00:00:21,680 --> 00:00:23,199
+drill chuck into
+
+11
+00:00:23,199 --> 00:00:26,480
+the tail stock so i have a jacob's chuck
+
+12
+00:00:26,480 --> 00:00:28,240
+with a morse taper on the end that's
+
+13
+00:00:28,240 --> 00:00:30,080
+going to fit inside this tail stock
+
+14
+00:00:30,080 --> 00:00:33,520
+which i can then use to hold a drill bit
+
+15
+00:00:33,520 --> 00:00:38,000
+and push into my turning workpiece
+
+16
+00:00:38,000 --> 00:00:40,239
+i have moved the carriage all the way as
+
+17
+00:00:40,239 --> 00:00:42,239
+far as i can to the left
+
+18
+00:00:42,239 --> 00:00:44,000
+i also removed the tools post so you
+
+19
+00:00:44,000 --> 00:00:46,559
+guys can get a clear line of sight
+
+20
+00:00:46,559 --> 00:00:48,640
+however usually you want to move the
+
+21
+00:00:48,640 --> 00:00:49,920
+tool post as far
+
+22
+00:00:49,920 --> 00:00:53,280
+back as you can and away uh because
+
+23
+00:00:53,280 --> 00:00:56,079
+the tail stock can only reach so far so
+
+24
+00:00:56,079 --> 00:00:58,559
+in order for it to reach your
+
+25
+00:00:58,559 --> 00:01:01,199
+workpiece easily you want to move the
+
+26
+00:01:01,199 --> 00:01:03,920
+carriage as far away as you can
+
+27
+00:01:03,920 --> 00:01:06,960
+and you want to make sure that your tool
+
+28
+00:01:06,960 --> 00:01:08,560
+post isn't going to collide
+
+29
+00:01:08,560 --> 00:01:11,680
+with the three jaw chuck as soon as you
+
+30
+00:01:11,680 --> 00:01:12,880
+turn on the machine
+
+31
+00:01:12,880 --> 00:01:14,320
+because there's nothing preventing you
+
+32
+00:01:14,320 --> 00:01:17,280
+from ramming the carriage into the chuck
+
+33
+00:01:17,280 --> 00:01:20,400
+other than like
+
+34
+00:01:20,400 --> 00:01:22,000
+the carriage itself won't ram into the
+
+35
+00:01:22,000 --> 00:01:24,159
+truck but if you have a tool post and
+
+36
+00:01:24,159 --> 00:01:26,159
+you have a tool in the tool post
+
+37
+00:01:26,159 --> 00:01:27,920
+the tool can easily run into the chuck
+
+38
+00:01:27,920 --> 00:01:29,840
+the only thing stopping it is you
+
+39
+00:01:29,840 --> 00:01:31,040
+so you have to be sure that you're
+
+40
+00:01:31,040 --> 00:01:33,200
+always far enough away from the chuck
+
+41
+00:01:33,200 --> 00:01:37,920
+before you turn on the machine
+
+42
+00:01:38,240 --> 00:01:41,280
+now because i am drilling into metal i
+
+43
+00:01:41,280 --> 00:01:42,479
+am going to want to use
+
+44
+00:01:42,479 --> 00:01:45,920
+uh the center drill so same as we did
+
+45
+00:01:45,920 --> 00:01:49,439
+for the mill and drill press
+
+46
+00:01:49,439 --> 00:01:52,159
+this is going to be
+
+47
+00:01:52,479 --> 00:01:57,360
+very very similar not much changes
+
+48
+00:01:57,759 --> 00:01:59,759
+again use the chuck key to tighten it
+
+49
+00:01:59,759 --> 00:02:02,000
+down
+
+50
+00:02:07,439 --> 00:02:10,399
+and i'm going to turn on the machine
+
+51
+00:02:10,399 --> 00:02:13,200
+recalculate my speed because now i have
+
+52
+00:02:13,200 --> 00:02:16,560
+a tool with an actual diameter so before
+
+53
+00:02:16,560 --> 00:02:18,879
+my work piece was what i was using as a
+
+54
+00:02:18,879 --> 00:02:20,959
+diameter to calculate my speed
+
+55
+00:02:20,959 --> 00:02:23,520
+now however i'm using a drill bit which
+
+56
+00:02:23,520 --> 00:02:25,840
+does have a diameter and i am cutting
+
+57
+00:02:25,840 --> 00:02:28,720
+with its own circumference or its own
+
+58
+00:02:28,720 --> 00:02:29,520
+surface
+
+59
+00:02:29,520 --> 00:02:31,280
+therefore i need to use this diameter in
+
+60
+00:02:31,280 --> 00:02:33,040
+my calculations
+
+61
+00:02:33,040 --> 00:02:35,360
+so i need to adjust the speed position
+
+62
+00:02:35,360 --> 00:02:36,160
+myself
+
+63
+00:02:36,160 --> 00:02:41,040
+and get ready for the drilling operation
+
+64
+00:02:44,400 --> 00:02:46,879
+so same as previously i'm going to turn
+
+65
+00:02:46,879 --> 00:02:47,680
+the mission on
+
+66
+00:02:47,680 --> 00:02:50,400
+and i'm going to go in a pecking motion
+
+67
+00:02:50,400 --> 00:02:51,200
+until
+
+68
+00:02:51,200 --> 00:02:53,200
+i reach the tapered section of the
+
+69
+00:02:53,200 --> 00:02:54,319
+center drill
+
+70
+00:02:54,319 --> 00:02:56,080
+and then i'm going to retract switch my
+
+71
+00:02:56,080 --> 00:02:58,080
+drill bit to the final diameter
+
+72
+00:02:58,080 --> 00:03:05,840
+and drill the final hole
+
+73
+00:03:08,959 --> 00:03:12,000
+so touch the surface plunge
+
+74
+00:03:12,000 --> 00:03:15,120
+touch the surface plunge retract touch
+
+75
+00:03:15,120 --> 00:03:15,680
+the surface
+
+76
+00:03:15,680 --> 00:03:18,959
+plunge retract
+
+77
+00:03:18,959 --> 00:03:24,720
+until the beginning of my taper
+
+78
+00:03:24,720 --> 00:03:32,799
+starts going into my workpiece
+
+79
+00:03:32,799 --> 00:03:34,400
+so i have my new drill bit in i'm ready
+
+80
+00:03:34,400 --> 00:03:36,400
+to do the final diameter
+
+81
+00:03:36,400 --> 00:03:38,400
+uh one thing i want to mention is that
+
+82
+00:03:38,400 --> 00:03:39,680
+the tail stock is
+
+83
+00:03:39,680 --> 00:03:42,799
+independent from the carriage so the
+
+84
+00:03:42,799 --> 00:03:43,599
+dros
+
+85
+00:03:43,599 --> 00:03:46,560
+are not going to be of any use for us
+
+86
+00:03:46,560 --> 00:03:48,239
+during this operation
+
+87
+00:03:48,239 --> 00:03:51,920
+so if per say i wanted to control the
+
+88
+00:03:51,920 --> 00:03:53,040
+exact
+
+89
+00:03:53,040 --> 00:03:55,840
+distance that i drill into my workpiece
+
+90
+00:03:55,840 --> 00:03:57,280
+so it's not a hole that's going to go
+
+91
+00:03:57,280 --> 00:03:58,799
+all the way through my workpiece i want
+
+92
+00:03:58,799 --> 00:04:00,159
+to drill exactly one
+
+93
+00:04:00,159 --> 00:04:03,360
+inch into my work piece on the quill
+
+94
+00:04:03,360 --> 00:04:05,920
+inside the tail stock there are
+
+95
+00:04:05,920 --> 00:04:08,319
+graduations like a ruler
+
+96
+00:04:08,319 --> 00:04:11,360
+so you would use those to control
+
+97
+00:04:11,360 --> 00:04:16,238
+your depth of cut in this case the
+
+98
+00:04:16,238 --> 00:04:19,680
+depth of plunging and with the drill bit
+
+99
+00:04:19,680 --> 00:04:21,279
+so i'm going to turn the machine on and
+
+100
+00:04:21,279 --> 00:04:23,199
+i'm going to
+
+101
+00:04:23,199 --> 00:04:26,240
+do some peck drilling
+
+102
+00:04:26,240 --> 00:04:28,639
+what tends to happen on the lathe is
+
+103
+00:04:28,639 --> 00:04:29,759
+that as you're drilling
+
+104
+00:04:29,759 --> 00:04:32,960
+as you go more and more deep
+
+105
+00:04:32,960 --> 00:04:35,360
+into the workpiece your chips tend to
+
+106
+00:04:35,360 --> 00:04:36,720
+get stuck and they don't want to come
+
+107
+00:04:36,720 --> 00:04:37,440
+out
+
+108
+00:04:37,440 --> 00:04:39,600
+so what you're going to end up doing is
+
+109
+00:04:39,600 --> 00:04:40,479
+having to
+
+110
+00:04:40,479 --> 00:04:42,880
+back out completely and that way the
+
+111
+00:04:42,880 --> 00:04:45,440
+chips can evacuate from the hole
+
+112
+00:04:45,440 --> 00:04:49,840
+before plunging back in to keep going
+
+113
+00:04:52,990 --> 00:04:55,280
+[Music]
+
+114
+00:04:55,280 --> 00:04:58,479
+so i move forward touch the surface
+
+115
+00:04:58,479 --> 00:05:02,240
+plunge tracks
+
+116
+00:05:06,479 --> 00:05:07,840
+so every once in a while i'm going to
+
+117
+00:05:07,840 --> 00:05:09,520
+retract and
+
+118
+00:05:09,520 --> 00:05:12,960
+the trick is when you see the chips
+
+119
+00:05:12,960 --> 00:05:15,919
+not come out of the hole that's when you
+
+120
+00:05:15,919 --> 00:05:19,600
+know the hole is starting to get clogged
+
+121
+00:05:19,759 --> 00:05:21,120
+so you're going to want to back out
+
+122
+00:05:21,120 --> 00:05:23,600
+completely
+
+123
+00:05:23,600 --> 00:05:27,360
+uh in order to clear that debris
+
+124
+00:05:27,759 --> 00:05:29,759
+so i'm still seeing a flow of chips
+
+125
+00:05:29,759 --> 00:05:31,039
+coming out of the hole so i don't think
+
+126
+00:05:31,039 --> 00:05:32,720
+i'm clogged just yet i can continue in
+
+127
+00:05:32,720 --> 00:05:39,840
+my pecking motion
+
+128
+00:05:40,560 --> 00:05:45,360
+ah seems that i've been lucky today so
+
+129
+00:05:45,440 --> 00:05:53,840
+no clogging on my part
+
+130
+00:05:53,840 --> 00:05:55,680
+but basically if ever you notice that
+
+131
+00:05:55,680 --> 00:05:57,840
+the chips start stop coming out of the
+
+132
+00:05:57,840 --> 00:05:58,560
+hole
+
+133
+00:05:58,560 --> 00:06:00,720
+while you're drilling you just want to
+
+134
+00:06:00,720 --> 00:06:02,319
+back out completely come out of your
+
+135
+00:06:02,319 --> 00:06:04,479
+workpiece
+
+136
+00:06:04,479 --> 00:06:05,840
+make sure you get all the chips off your
+
+137
+00:06:05,840 --> 00:06:09,120
+drill bit and then you can go back in to
+
+138
+00:06:09,120 --> 00:06:13,520
+continue drilling your workpiece
+

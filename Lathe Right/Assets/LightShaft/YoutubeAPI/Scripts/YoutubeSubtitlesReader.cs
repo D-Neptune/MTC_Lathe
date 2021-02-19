@@ -36,7 +36,7 @@ public class YoutubeSubtitlesReader : MonoBehaviour
 
     private void Start()
     {
-        LoadSubtitle();
+        //LoadSubtitle();
     }
 
 
@@ -60,6 +60,12 @@ public class YoutubeSubtitlesReader : MonoBehaviour
         Debug.Log(request.url);
         yield return request.SendWebRequest();
         subtitleList = ParseStream(request.downloadHandler.data);
+        WhenSubtitleLoadAreReady(subtitleList);
+    }
+
+    public void LoadSubtitles(TextAsset textAsset)
+    {
+        subtitleList = ParseStream(textAsset.bytes);
         WhenSubtitleLoadAreReady(subtitleList);
     }
 

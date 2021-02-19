@@ -1,0 +1,412 @@
+1
+00:00:03,040 --> 00:00:04,400
+so this is going to be my setup
+
+2
+00:00:04,400 --> 00:00:07,600
+for face milling face milling
+
+3
+00:00:07,600 --> 00:00:10,719
+is the process of milling the face of an
+
+4
+00:00:10,719 --> 00:00:11,759
+object
+
+5
+00:00:11,759 --> 00:00:13,280
+so i'm going to use the same end mill as
+
+6
+00:00:13,280 --> 00:00:15,679
+i used for the side milling operation
+
+7
+00:00:15,679 --> 00:00:18,000
+now i have my work piece standing up
+
+8
+00:00:18,000 --> 00:00:19,680
+inside the vise
+
+9
+00:00:19,680 --> 00:00:21,359
+so what i'm going to do is machine this
+
+10
+00:00:21,359 --> 00:00:22,960
+top surface here
+
+11
+00:00:22,960 --> 00:00:24,480
+the process is going to be very very
+
+12
+00:00:24,480 --> 00:00:26,400
+similar to the
+
+13
+00:00:26,400 --> 00:00:28,320
+side milling operation what i'm going to
+
+14
+00:00:28,320 --> 00:00:29,760
+do is i'm simply going to lower my tool
+
+15
+00:00:29,760 --> 00:00:31,599
+until it touches the surface
+
+16
+00:00:31,599 --> 00:00:33,840
+set my reference point move off the
+
+17
+00:00:33,840 --> 00:00:34,960
+surface
+
+18
+00:00:34,960 --> 00:00:37,440
+lower the set or the depth of cut and
+
+19
+00:00:37,440 --> 00:00:41,200
+then walk across to the other side
+
+20
+00:00:41,520 --> 00:00:44,480
+so again i'm going to lower the head of
+
+21
+00:00:44,480 --> 00:00:46,879
+the machine
+
+22
+00:00:47,520 --> 00:00:51,360
+about as low as it'll go before
+
+23
+00:00:51,360 --> 00:00:53,760
+my guard hits the top of the vice so i
+
+24
+00:00:53,760 --> 00:00:54,800
+get a nice rigid
+
+25
+00:00:54,800 --> 00:00:59,840
+setup and then i'm going to position
+
+26
+00:01:00,239 --> 00:01:04,319
+my workpiece so that it's below
+
+27
+00:01:04,319 --> 00:01:07,840
+my tool and i'm going to lower
+
+28
+00:01:07,840 --> 00:01:10,799
+the quill feed so i'm not touching the
+
+29
+00:01:10,799 --> 00:01:12,240
+surface of the material i'm slightly
+
+30
+00:01:12,240 --> 00:01:13,119
+above
+
+31
+00:01:13,119 --> 00:01:16,000
+and then i'm going to lock the quill
+
+32
+00:01:16,000 --> 00:01:18,479
+feed in position
+
+33
+00:01:18,479 --> 00:01:21,920
+now what i'm going to do is turn on the
+
+34
+00:01:24,840 --> 00:01:27,840
+machine
+
+35
+00:01:39,680 --> 00:01:41,200
+once i've touched the surface i'm going
+
+36
+00:01:41,200 --> 00:01:43,520
+to set my reference point
+
+37
+00:01:43,520 --> 00:01:46,560
+i'm going to move the table in the x
+
+38
+00:01:46,560 --> 00:01:47,280
+direction
+
+39
+00:01:47,280 --> 00:01:50,240
+off my workpiece
+
+40
+00:01:52,320 --> 00:01:54,399
+now i'm going to set my controlled depth
+
+41
+00:01:54,399 --> 00:01:56,720
+of cut
+
+42
+00:01:57,360 --> 00:02:00,159
+and i'm going to come back across my
+
+43
+00:02:00,159 --> 00:02:09,840
+workpiece this way
+
+44
+00:02:19,200 --> 00:02:21,920
+so i've finished machining the top of
+
+45
+00:02:21,920 --> 00:02:23,040
+the surface
+
+46
+00:02:23,040 --> 00:02:24,879
+as you can see it's nice and smooth and
+
+47
+00:02:24,879 --> 00:02:26,800
+should be parallel to
+
+48
+00:02:26,800 --> 00:02:29,280
+the bottom the the surface that's on the
+
+49
+00:02:29,280 --> 00:02:30,160
+bottom
+
+50
+00:02:30,160 --> 00:02:33,440
+of the vise down here
+
+51
+00:02:33,440 --> 00:02:35,920
+important thing to note when machining
+
+52
+00:02:35,920 --> 00:02:36,560
+is
+
+53
+00:02:36,560 --> 00:02:39,519
+the feed rate across so how fast i'm
+
+54
+00:02:39,519 --> 00:02:41,360
+moving across the surface
+
+55
+00:02:41,360 --> 00:02:43,599
+and the depth of cut so how much i'm
+
+56
+00:02:43,599 --> 00:02:44,640
+taking off
+
+57
+00:02:44,640 --> 00:02:48,000
+in one pass is extremely crucial to
+
+58
+00:02:48,000 --> 00:02:50,879
+the results so if you take too much
+
+59
+00:02:50,879 --> 00:02:53,040
+material off
+
+60
+00:02:53,040 --> 00:02:56,239
+per revolution of the cutter
+
+61
+00:02:56,239 --> 00:02:57,519
+one there's a high chance that you
+
+62
+00:02:57,519 --> 00:02:59,760
+damage the tool and two your surface
+
+63
+00:02:59,760 --> 00:03:01,040
+finish on the
+
+64
+00:03:01,040 --> 00:03:03,920
+the top face of your workpiece is going
+
+65
+00:03:03,920 --> 00:03:05,200
+to be
+
+66
+00:03:05,200 --> 00:03:08,640
+very terrible so
+
+67
+00:03:08,640 --> 00:03:11,519
+this similarly goes the same thing for
+
+68
+00:03:11,519 --> 00:03:13,680
+side milling
+
+69
+00:03:13,680 --> 00:03:17,440
+so as you play around with machining
+
+70
+00:03:17,440 --> 00:03:21,200
+there are set values but it comes more
+
+71
+00:03:21,200 --> 00:03:21,519
+with
+
+72
+00:03:21,519 --> 00:03:25,280
+experience from machining for how fast
+
+73
+00:03:25,280 --> 00:03:26,959
+you should move across the surface and
+
+74
+00:03:26,959 --> 00:03:30,879
+how much material to take off at a time
+
+75
+00:03:31,280 --> 00:03:34,239
+and the constant feed rate so as you're
+
+76
+00:03:34,239 --> 00:03:35,760
+moving across
+
+77
+00:03:35,760 --> 00:03:38,159
+if you're moving at a constant speed
+
+78
+00:03:38,159 --> 00:03:39,599
+versus if you're
+
+79
+00:03:39,599 --> 00:03:42,080
+constantly accelerating decelerate and
+
+80
+00:03:42,080 --> 00:03:44,000
+changing speed as you go across
+
+81
+00:03:44,000 --> 00:03:46,480
+you'll see that show up on the surface
+
+82
+00:03:46,480 --> 00:03:48,799
+finish
+
+83
+00:03:48,959 --> 00:03:50,640
+now similarly to the side milling
+
+84
+00:03:50,640 --> 00:03:52,319
+operation i could do this face milling
+
+85
+00:03:52,319 --> 00:03:54,319
+operation many many times and continue
+
+86
+00:03:54,319 --> 00:03:55,920
+removing materials
+
+87
+00:03:55,920 --> 00:03:58,959
+material until i've reached my final
+
+88
+00:03:58,959 --> 00:04:00,239
+dimension
+
+89
+00:04:00,239 --> 00:04:02,480
+on my workpiece so this workpiece could
+
+90
+00:04:02,480 --> 00:04:03,840
+have initially started up to here and
+
+91
+00:04:03,840 --> 00:04:05,599
+i've continued donating passes so moving
+
+92
+00:04:05,599 --> 00:04:07,519
+back and forth removing material
+
+93
+00:04:07,519 --> 00:04:10,000
+until i've reached this final dimension
+
+94
+00:04:10,000 --> 00:04:12,239
+here
+
+95
+00:04:12,879 --> 00:04:16,320
+so that finalizes three of the main
+
+96
+00:04:16,320 --> 00:04:20,160
+and simple operations uh on the mill
+
+97
+00:04:20,160 --> 00:04:23,520
+this has been the face milling operation
+
+98
+00:04:23,520 --> 00:04:26,240
+there are countless of other operations
+
+99
+00:04:26,240 --> 00:04:28,080
+possible uh on the mill
+
+100
+00:04:28,080 --> 00:04:30,800
+but these are simply the most basic ones
+
+101
+00:04:30,800 --> 00:04:31,680
+and
+
+102
+00:04:31,680 --> 00:04:34,080
+the introductory ones to how to use a
+
+103
+00:04:34,080 --> 00:04:40,400
+mill properly
+

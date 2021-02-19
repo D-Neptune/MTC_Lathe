@@ -13,12 +13,14 @@ public class VideoManager : MonoBehaviour
     [SerializeField] private YoutubePlayer youtubePlayer;
     [SerializeField] private VideoPlayer videoPlayer;
     //[SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
-    //[SerializeField] private Text title;
+    [SerializeField] private Text title;
     [SerializeField] private List<string> videoClips, videoClipsFR;
+    [SerializeField] private List<TextAsset> subtitleClips, subtitleClipsFR;
     [SerializeField] private List<Sprite> operationSprite;
     [SerializeField] private List<int> animatorIndex;
     [SerializeField] private List<int> dialogueIndex;
     [SerializeField] private List<string> titles, titlesFR;
+    [SerializeField] private YoutubeSubtitlesReader subtitlesReader;
     //[SerializeField] private Image exitImage;
     private List<bool> playedOnces;
     private int m_index = -1;
@@ -161,13 +163,15 @@ public class VideoManager : MonoBehaviour
             }
             if (language)
             {
+                subtitlesReader.LoadSubtitles(subtitleClips[index]);
                 youtubePlayer.Play(videoClips[index]);
-                //title.text = titles[index];
+                title.text = titles[index];
             }
             else
             {
+                subtitlesReader.LoadSubtitles(subtitleClipsFR[index]);
                 youtubePlayer.Play(videoClipsFR[index]);
-                //title.text = titlesFR[index];
+                title.text = titlesFR[index];
             }
             playing = true;
             m_index = index;

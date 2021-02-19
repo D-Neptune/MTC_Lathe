@@ -14,12 +14,14 @@ public class VideoOperator : MonoBehaviour
     [SerializeField] private YoutubePlayer youtubePlayer;
     [SerializeField] private VideoPlayer videoPlayer;
     //[SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
-    //[SerializeField] private Text title;
+    [SerializeField] private Text title;
     [SerializeField] private List<string> videoClips, videoClipsFR;
+    [SerializeField] private List<TextAsset> subtitleClips, subtitleClipsFR;
     [SerializeField] private List<int> indexes;
     [SerializeField] private List<string> titles, titlesFR;
     //[SerializeField] private Image exitImage;
     [SerializeField] private Sprite exit;
+    [SerializeField] private YoutubeSubtitlesReader subtitlesReader;
 
     private bool[] playedOnces;
     private int m_index = -1;
@@ -172,14 +174,16 @@ public class VideoOperator : MonoBehaviour
             }
             if (language)
             {
+                subtitlesReader.LoadSubtitles(subtitleClips[index]);
                 youtubePlayer.Play(videoClips[index]);
-                //title.text = titles[index];
+                title.text = titles[index];
 
             }
             else
             {
+                subtitlesReader.LoadSubtitles(subtitleClipsFR[index]);
                 youtubePlayer.Play(videoClipsFR[index]);
-                //title.text = titlesFR[index];
+                title.text = titlesFR[index];
             }
             Debug.Log("Play Youtube Video");
             m_index = index;

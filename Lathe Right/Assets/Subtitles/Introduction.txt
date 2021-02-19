@@ -1,0 +1,452 @@
+1
+00:00:06,799 --> 00:00:08,160
+so this is the lathe
+
+2
+00:00:08,160 --> 00:00:10,240
+it's a complimentary to the mill in the
+
+3
+00:00:10,240 --> 00:00:11,920
+sense that it's another
+
+4
+00:00:11,920 --> 00:00:16,239
+more advanced manufacturing machine it's
+
+5
+00:00:16,239 --> 00:00:17,600
+another form of subtractive
+
+6
+00:00:17,600 --> 00:00:19,119
+manufacturing
+
+7
+00:00:19,119 --> 00:00:21,359
+contrary to most machines that will
+
+8
+00:00:21,359 --> 00:00:22,240
+encounter
+
+9
+00:00:22,240 --> 00:00:25,920
+inside the machine shop where usually
+
+10
+00:00:25,920 --> 00:00:28,080
+it's your tool that spins at high speed
+
+11
+00:00:28,080 --> 00:00:29,920
+and comes in contact with a fixed work
+
+12
+00:00:29,920 --> 00:00:30,320
+speed
+
+13
+00:00:30,320 --> 00:00:32,800
+work piece uh this is in fact the
+
+14
+00:00:32,800 --> 00:00:33,440
+opposite
+
+15
+00:00:33,440 --> 00:00:35,520
+so our work piece is going to be held
+
+16
+00:00:35,520 --> 00:00:36,559
+inside here
+
+17
+00:00:36,559 --> 00:00:39,040
+and spinned at high speed where our tool
+
+18
+00:00:39,040 --> 00:00:40,239
+is going to be fixed
+
+19
+00:00:40,239 --> 00:00:42,000
+and moved across the surface of our
+
+20
+00:00:42,000 --> 00:00:46,160
+workpiece removing the excess material
+
+21
+00:00:46,160 --> 00:00:49,200
+the lathe is composed of
+
+22
+00:00:49,200 --> 00:00:51,520
+these main components we have the
+
+23
+00:00:51,520 --> 00:00:52,960
+carriage which is
+
+24
+00:00:52,960 --> 00:00:55,760
+the center piece here which was going to
+
+25
+00:00:55,760 --> 00:00:58,559
+be moved across the waves the waves are
+
+26
+00:00:58,559 --> 00:00:59,760
+these metal rails
+
+27
+00:00:59,760 --> 00:01:03,600
+that span the entire bed of the machine
+
+28
+00:01:03,600 --> 00:01:06,640
+the carriage can be moved along the ways
+
+29
+00:01:06,640 --> 00:01:10,159
+from left to right using the big hand
+
+30
+00:01:10,159 --> 00:01:11,680
+wheel on the bottom here
+
+31
+00:01:11,680 --> 00:01:14,720
+so if we rotate the handle the carriage
+
+32
+00:01:14,720 --> 00:01:17,759
+is going to move left to right
+
+33
+00:01:17,759 --> 00:01:19,759
+we can move the carriage forward and
+
+34
+00:01:19,759 --> 00:01:20,960
+backwards using
+
+35
+00:01:20,960 --> 00:01:23,119
+the cross slide hand wheel on the top
+
+36
+00:01:23,119 --> 00:01:24,000
+here
+
+37
+00:01:24,000 --> 00:01:26,080
+so this is going to move your tool
+
+38
+00:01:26,080 --> 00:01:27,840
+forward and back
+
+39
+00:01:27,840 --> 00:01:29,520
+on top of the carriage we have what's
+
+40
+00:01:29,520 --> 00:01:30,880
+called a compound slide
+
+41
+00:01:30,880 --> 00:01:32,960
+the compound slide is a third axis of
+
+42
+00:01:32,960 --> 00:01:35,759
+movement which we can tilt to any angle
+
+43
+00:01:35,759 --> 00:01:37,040
+of degrees
+
+44
+00:01:37,040 --> 00:01:40,079
+which is going to help us machine tapers
+
+45
+00:01:40,079 --> 00:01:40,720
+or
+
+46
+00:01:40,720 --> 00:01:44,000
+other forms of processes on the machine
+
+47
+00:01:44,000 --> 00:01:46,000
+we can move the compound slide backwards
+
+48
+00:01:46,000 --> 00:01:47,840
+and forwards using this
+
+49
+00:01:47,840 --> 00:01:51,840
+smaller hand wheel on the back side
+
+50
+00:01:52,079 --> 00:01:54,320
+on the top of the compound slide we have
+
+51
+00:01:54,320 --> 00:01:55,920
+what's called our tool post
+
+52
+00:01:55,920 --> 00:01:57,920
+the tool post is what's going to hold on
+
+53
+00:01:57,920 --> 00:02:00,560
+to our tools
+
+54
+00:02:00,880 --> 00:02:05,680
+on the back end we have the tail stock
+
+55
+00:02:06,640 --> 00:02:08,959
+the tail stock can be moved along the
+
+56
+00:02:08,959 --> 00:02:09,840
+ways
+
+57
+00:02:09,840 --> 00:02:11,920
+backwards and forwards and can be locked
+
+58
+00:02:11,920 --> 00:02:13,840
+into position
+
+59
+00:02:13,840 --> 00:02:16,720
+using a lever on the back side and will
+
+60
+00:02:16,720 --> 00:02:17,360
+prevent it
+
+61
+00:02:17,360 --> 00:02:20,720
+from moving inside the tail stock we
+
+62
+00:02:20,720 --> 00:02:22,400
+have a quill so the quill
+
+63
+00:02:22,400 --> 00:02:25,040
+can come in and out of the tail stock
+
+64
+00:02:25,040 --> 00:02:26,959
+using the hand wheel on the back end of
+
+65
+00:02:26,959 --> 00:02:28,800
+the tail stock
+
+66
+00:02:28,800 --> 00:02:30,800
+the tail stock is also used to fixture
+
+67
+00:02:30,800 --> 00:02:32,400
+some of our tools so we can either throw
+
+68
+00:02:32,400 --> 00:02:33,760
+a jacob's chuck in there
+
+69
+00:02:33,760 --> 00:02:36,480
+a live center but we'll get to that a
+
+70
+00:02:36,480 --> 00:02:38,720
+little later
+
+71
+00:02:38,720 --> 00:02:41,200
+and on the full left of the machine we
+
+72
+00:02:41,200 --> 00:02:41,920
+have
+
+73
+00:02:41,920 --> 00:02:43,760
+what's called the headstock so the
+
+74
+00:02:43,760 --> 00:02:45,360
+headstock is where all the action
+
+75
+00:02:45,360 --> 00:02:46,160
+happens
+
+76
+00:02:46,160 --> 00:02:48,080
+we have our motor and all the
+
+77
+00:02:48,080 --> 00:02:50,080
+configurations inside
+
+78
+00:02:50,080 --> 00:02:53,680
+on the left hand side and we have our
+
+79
+00:02:53,680 --> 00:02:56,800
+chuck attached to the spindle so the
+
+80
+00:02:56,800 --> 00:02:57,760
+spindle
+
+81
+00:02:57,760 --> 00:03:00,159
+goes through the headstock which we've
+
+82
+00:03:00,159 --> 00:03:01,200
+affixed this
+
+83
+00:03:01,200 --> 00:03:04,319
+three jaw chuck the three jaw chuck is
+
+84
+00:03:04,319 --> 00:03:06,720
+going to hold on to our work piece
+
+85
+00:03:06,720 --> 00:03:10,319
+we have the on and off switch over here
+
+86
+00:03:10,319 --> 00:03:12,879
+the direction switch so this machine
+
+87
+00:03:12,879 --> 00:03:14,560
+similar to the mill can also run in
+
+88
+00:03:14,560 --> 00:03:15,360
+forward
+
+89
+00:03:15,360 --> 00:03:18,159
+and reverse we have our speed adjustment
+
+90
+00:03:18,159 --> 00:03:21,599
+knob on the front of the machine
+
+91
+00:03:21,920 --> 00:03:24,720
+and we also have the guard that will
+
+92
+00:03:24,720 --> 00:03:26,159
+prevent the machine from turning on
+
+93
+00:03:26,159 --> 00:03:29,840
+if opened as well as protect you from
+
+94
+00:03:29,840 --> 00:03:33,519
+anything flying towards you
+
+95
+00:03:33,519 --> 00:03:36,799
+the lathe seeing as
+
+96
+00:03:36,799 --> 00:03:38,799
+it's our work piece that's spinning at
+
+97
+00:03:38,799 --> 00:03:42,000
+high speed and not the tool
+
+98
+00:03:42,000 --> 00:03:43,840
+is mainly focused on machining
+
+99
+00:03:43,840 --> 00:03:46,080
+cylindrical pieces
+
+100
+00:03:46,080 --> 00:03:48,879
+whereas the mill since we control each
+
+101
+00:03:48,879 --> 00:03:50,720
+axis independently the x and the y
+
+102
+00:03:50,720 --> 00:03:54,000
+is much easier to machine square pieces
+
+103
+00:03:54,000 --> 00:03:54,319
+or
+
+104
+00:03:54,319 --> 00:03:58,640
+pieces with perpendicular faces
+
+105
+00:03:58,840 --> 00:04:02,480
+so the idea is that we would put our
+
+106
+00:04:02,480 --> 00:04:04,000
+workpiece inside
+
+107
+00:04:04,000 --> 00:04:05,760
+the chuck on the left hand side tighten
+
+108
+00:04:05,760 --> 00:04:07,280
+it into place
+
+109
+00:04:07,280 --> 00:04:10,000
+our tool being held in the tool post we
+
+110
+00:04:10,000 --> 00:04:10,560
+can then
+
+111
+00:04:10,560 --> 00:04:14,640
+move into contact with our workpiece
+
+112
+00:04:14,640 --> 00:04:18,560
+and then move it across to machine
+
+113
+00:04:19,199 --> 00:04:23,680
+the workpiece
+
