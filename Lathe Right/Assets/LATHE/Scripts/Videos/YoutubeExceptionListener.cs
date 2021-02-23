@@ -25,6 +25,8 @@ public class YoutubeExceptionListener : MonoBehaviour
         {
             linkArea.text = linkMessageFR + LinksFR[GetVidIndex()];
         }
+        linkArea.textComponent.horizontalOverflow = HorizontalWrapMode.Wrap;
+
     }
 
 
