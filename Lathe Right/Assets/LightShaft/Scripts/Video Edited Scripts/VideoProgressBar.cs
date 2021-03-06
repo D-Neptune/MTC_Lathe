@@ -24,6 +24,7 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
     {
         if (SeekingEnabled)
         {
+
             player.VideoSkipDrag = true;
             player.TrySkip(Input.mousePosition);
 
@@ -34,6 +35,7 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
     {
         if (SeekingEnabled)
         {
+            player.Play();
             player.VideoSkipDrag = false;
         }
     }
@@ -48,10 +50,11 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (SeekingEnabled) {
+        /*if (SeekingEnabled) {
             player.Play();
             player.VideoSkipDrag = false;
-        }
+        }*/
     }
+
 
 }
