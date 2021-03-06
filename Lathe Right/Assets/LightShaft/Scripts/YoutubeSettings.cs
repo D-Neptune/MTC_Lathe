@@ -526,8 +526,11 @@ public class YoutubeSettings : MonoBehaviour
 
             if (videoPlayer.frameCount > 0)
             {
-                if (progress != null)
+                if (progress != null && !videoSkipDrag)
+                {
+                    //Debug.Log("videoPlayerFrame - FixedUpdate: " + videoPlayer.frame);
                     progress.fillAmount = (float)videoPlayer.frame / (float)videoPlayer.frameCount;
+                }
             }
         }
 
@@ -1514,6 +1517,7 @@ public class YoutubeSettings : MonoBehaviour
     private float audioDuration;
     private bool showingPlaybackSpeed = false;
     private bool showingVolume = false;
+    private bool videoSkipDrag = false;
 
 
     private void Update()
@@ -1606,8 +1610,8 @@ public class YoutubeSettings : MonoBehaviour
             }
             else
             {
-                videoPlayer.playbackSpeed = playbackSpeed.value;
-                audioPlayer.playbackSpeed = playbackSpeed.value;
+                videoPlayer.playbackSpeed = playbackSpeed.value/10;
+                audioPlayer.playbackSpeed = playbackSpeed.value/10;
             }
         }
     }
@@ -2978,15 +2982,22 @@ public class YoutubeSettings : MonoBehaviour
 
     private bool waitAudioSeek = false;
 
-    public void TrySkip(PointerEventData eventData)
+    public void TrySkip(Vector2 cursorPosition)
     {
         Vector2 localPoint;
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            progress.rectTransform, eventData.position, eventData.pressEventCamera, out localPoint))
+            progress.rectTransform, cursorPosition, null, out localPoint))
         {
-            float pct = Mathf.InverseLerp(progress.rectTransform.rect.xMin, progress.rectTransform.rect.xMax, localPoint.x);
+            //float pct = Mathf.InverseLerp(progress.rectTransform.rect.xMin, progress.rectTransform.rect.xMax, localPoint.x);
+            float pct = (localPoint.x - progress.rectTransform.rect.x) / progress.rectTransform.rect.width;
             SkipToPercent(pct);
         }
+    }
+
+    public bool VideoSkipDrag
+    {
+        get => videoSkipDrag;
+        set => videoSkipDrag = value;
     }
 
     private float oldVolume;
@@ -3014,11 +3025,17 @@ public class YoutubeSettings : MonoBehaviour
         }
         else
         {
+            videoPlayer.frame = (long) frame;
             audioPlayer.frame = (long)frame;
         }
         videoPlayer.Pause();
         if (videoQuality != YoutubeVideoQuality.STANDARD)
             audioPlayer.Pause();
+
+        progress.fillAmount = pct;
+        Debug.Log("videoPlayerFrame - SKP: " + (float) videoPlayer.frame/(float) videoPlayer.frameCount);
+        Debug.Log("Progress - SKP: " + pct);
+
     }
 
     IEnumerator VideoSeekCall()

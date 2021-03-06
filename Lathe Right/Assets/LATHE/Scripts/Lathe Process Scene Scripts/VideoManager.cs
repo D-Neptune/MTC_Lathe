@@ -163,13 +163,15 @@ public class VideoManager : MonoBehaviour
             }
             if (language)
             {
-                subtitlesReader.LoadSubtitles(subtitleClips[index]);
+                subtitlesReader.Captions = subtitleClips[index];
+                subtitlesReader.LoadSubtitles();
                 youtubePlayer.Play(videoClips[index]);
                 title.text = titles[index];
             }
             else
             {
-                subtitlesReader.LoadSubtitles(subtitleClipsFR[index]);
+                subtitlesReader.Captions = subtitleClipsFR[index];
+                subtitlesReader.LoadSubtitles();
                 youtubePlayer.Play(videoClipsFR[index]);
                 title.text = titlesFR[index];
             }
