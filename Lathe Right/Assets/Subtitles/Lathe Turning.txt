@@ -1,0 +1,192 @@
+1
+00:00:04,560 --> 00:00:06,799
+so with this turning operation
+
+2
+00:00:06,799 --> 00:00:10,240
+the process is going to be pretty much
+
+3
+00:00:10,240 --> 00:00:12,160
+identical to
+
+4
+00:00:12,160 --> 00:00:14,799
+the facing operation i'm going to bring
+
+5
+00:00:14,799 --> 00:00:16,400
+my tool up against the surface
+
+6
+00:00:16,400 --> 00:00:19,600
+i'm going to touch off on the material
+
+7
+00:00:19,600 --> 00:00:21,520
+so i'm just going to move forward until
+
+8
+00:00:21,520 --> 00:00:22,800
+i start touching
+
+9
+00:00:22,800 --> 00:00:25,439
+and then i'm going to set my reference
+
+10
+00:00:25,439 --> 00:00:25,920
+on
+
+11
+00:00:25,920 --> 00:00:29,119
+the dro i'm going to move away
+
+12
+00:00:29,119 --> 00:00:32,079
+move forward my depth of cut and then
+
+13
+00:00:32,079 --> 00:00:35,360
+i'm going to move across the surface
+
+14
+00:00:35,360 --> 00:00:36,960
+an important thing to note is when you
+
+15
+00:00:36,960 --> 00:00:38,399
+get to the end
+
+16
+00:00:38,399 --> 00:00:42,399
+you want to pull out before moving away
+
+17
+00:00:42,399 --> 00:00:46,480
+if i were to move in reduce the diameter
+
+18
+00:00:46,480 --> 00:00:48,719
+and then simply come back on my own
+
+19
+00:00:48,719 --> 00:00:49,680
+tracks
+
+20
+00:00:49,680 --> 00:00:52,160
+without pulling back i'll end up
+
+21
+00:00:52,160 --> 00:00:54,079
+scratching the whole surface
+
+22
+00:00:54,079 --> 00:00:56,640
+as i come back because it's still on the
+
+23
+00:00:56,640 --> 00:00:58,000
+exact same
+
+24
+00:00:58,000 --> 00:01:00,320
+dimension and it's going to end up
+
+25
+00:01:00,320 --> 00:01:01,440
+rubbing
+
+26
+00:01:01,440 --> 00:01:04,559
+across the surface so one whenever
+
+27
+00:01:04,559 --> 00:01:05,840
+you're machining
+
+28
+00:01:05,840 --> 00:01:08,320
+you always want to avoid any type of
+
+29
+00:01:08,320 --> 00:01:09,760
+rubbing or friction
+
+30
+00:01:09,760 --> 00:01:11,200
+because it's going to cause a lot of
+
+31
+00:01:11,200 --> 00:01:12,720
+heat and it's going to start damaging
+
+32
+00:01:12,720 --> 00:01:13,920
+tools
+
+33
+00:01:13,920 --> 00:01:16,479
+and likely wreck the surface finish on
+
+34
+00:01:16,479 --> 00:01:17,840
+your workpiece
+
+35
+00:01:17,840 --> 00:01:20,400
+so when you're moving from left to right
+
+36
+00:01:20,400 --> 00:01:22,320
+you want to move into your work piece
+
+37
+00:01:22,320 --> 00:01:25,600
+pull out and then move across that way
+
+38
+00:01:25,600 --> 00:01:27,840
+you're not rubbing against the surface
+
+39
+00:01:27,840 --> 00:01:30,000
+as you're coming back
+
+40
+00:01:30,000 --> 00:01:32,720
+and that'll be more evident as you do
+
+41
+00:01:32,720 --> 00:01:41,840
+some machining yourself
+
+42
+00:01:47,360 --> 00:01:54,159
+nice and slow
+
+43
+00:01:54,159 --> 00:01:58,399
+across please set my zero
+
+44
+00:01:58,399 --> 00:02:09,840
+depth of cut and then move move across
+
+45
+00:02:34,840 --> 00:02:37,840
+so
+
+46
+00:02:40,080 --> 00:02:41,840
+don't forget to pull out before moving
+
+47
+00:02:41,840 --> 00:02:44,160
+away
+
+48
+00:02:45,280 --> 00:02:50,400
+and there you go
+

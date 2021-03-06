@@ -7,7 +7,8 @@ public class HintTrigger : MonoBehaviour
 {
 
     [SerializeField] private DialogueOperator manager;
-    [SerializeField] private ProcessController animationController;
+    [SerializeField] private ProcessController animationController
+        ;
     [SerializeField] private Button hint;
     [SerializeField] private Color HintColor;
     [SerializeField] private int NumOfFlashForHint;

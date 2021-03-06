@@ -1,0 +1,48 @@
+1
+00:00:03,120 --> 00:00:04,240
+so that concludes
+
+2
+00:00:04,240 --> 00:00:07,440
+the three main processes uh that are
+
+3
+00:00:07,440 --> 00:00:08,960
+used on the live
+
+4
+00:00:08,960 --> 00:00:10,719
+i think it's important for everyone to
+
+5
+00:00:10,719 --> 00:00:12,480
+know a little bit about the basics of
+
+6
+00:00:12,480 --> 00:00:13,840
+these machines
+
+7
+00:00:13,840 --> 00:00:16,480
+just to know what the capabilities are
+
+8
+00:00:16,480 --> 00:00:18,640
+when it comes to
+
+9
+00:00:18,640 --> 00:00:21,199
+manufacturing if you're going to design
+
+10
+00:00:21,199 --> 00:00:21,760
+something
+
+11
+00:00:21,760 --> 00:00:23,840
+you need to know how it's going to be
+
+12
+00:00:23,840 --> 00:00:31,519
+made in order to design it properly
+

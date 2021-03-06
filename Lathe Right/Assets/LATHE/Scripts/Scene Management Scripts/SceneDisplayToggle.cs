@@ -10,6 +10,7 @@ public class SceneDisplayToggle : MonoBehaviour
     public static Boolean done;
     public static Boolean testMode;
     public static Boolean submitDone;
+    public static Boolean adminMode;
 
     // Start is called before the first frame update
 
@@ -43,5 +44,11 @@ public class SceneDisplayToggle : MonoBehaviour
     {
         get => submitDone;
         set => submitDone = value;
+    }
+
+    public Boolean AdminMode
+    {
+        get => adminMode;
+        set => adminMode = value;
     }
 }

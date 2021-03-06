@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1434,7 +1434,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 0.2}
+    m_NormalColor: {r: 0.03773582, g: 0.029725859, b: 0.029725859, a: 0.41960785}
     m_HighlightedColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 0.5019608}
     m_PressedColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 0.2}
     m_SelectedColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 0.5019608}
@@ -3947,6 +3947,7 @@ GameObject:
   - component: {fileID: 1189528033}
   - component: {fileID: 1189528035}
   - component: {fileID: 1189528034}
+  - component: {fileID: 1189528036}
   m_Layer: 5
   m_Name: Button_[Exit]
   m_TagString: Untagged
@@ -4028,6 +4029,17 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1189528036}
+        m_MethodName: setLanguage
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1189528031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4091,7 +4103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneDisplay: {fileID: 1189528035}
   loadSceneScript: {fileID: 1189528033}
-  certificate: Certificate
+  certificate: Lathe Certificate
   mainMenu: LatheMainMenu
 --- !u!114 &1189528035
 MonoBehaviour:
@@ -4103,6 +4115,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d15e7a11f2e95ed40b397b22b7aaeb44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1189528036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189528028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08893aa5060b684b8c1e5c8515d4082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1279700871

@@ -6,44 +6,63 @@ using UnityEngine.Video;
 
 public class VideoOperator : MonoBehaviour
 {
+    [SerializeField] private Camera dummyCamera;
+    [SerializeField] private YoutubeExceptionListener LinkDisplayer;
     [SerializeField] private Camera_Toggle camera_Toggle;
     [SerializeField] private LanguageSceneSwitcher languageScene;
     [SerializeField] private GameObject VideoPanel;
+    [SerializeField] private YoutubePlayer youtubePlayer;
     [SerializeField] private VideoPlayer videoPlayer;
-    [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
+    //[SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private Text title;
-    [SerializeField] private List<VideoClip> videoClips, videoClipsFR;
+    [SerializeField] private List<string> videoClips, videoClipsFR;
+    [SerializeField] private List<TextAsset> subtitleClips, subtitleClipsFR;
     [SerializeField] private List<int> indexes;
     [SerializeField] private List<string> titles, titlesFR;
-    [SerializeField] private bool onStart = false;
-    [SerializeField] private Image exitImage;
+    //[SerializeField] private Image exitImage;
     [SerializeField] private Sprite exit;
+    [SerializeField] private YoutubeSubtitlesReader subtitlesReader;
 
-    private List<bool> playedOnces;
+    private bool[] playedOnces;
     private int m_index = -1;
     public bool language;
+    private bool playing = false;
 
+    [SerializeField] private bool playOnAwake = false;
+    [SerializeField] private int VideoIndexOnStart;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        playedOnces = new List<bool>();
+        playedOnces = new bool[videoClips.Count];
         for (int i = 0; i < videoClips.Count; i++)
         {
-            playedOnces.Add(false);
+            playedOnces[i] = false;
         }
-        StopVideoButton.interactable = false;
-        stopButton.interactable = false;
+        //StopVideoButton.interactable = false;
+        //stopButton.interactable = false;
         VideoPanel.SetActive(false);
         videoPlayer.loopPointReached += VideoPlayed;
-        VideoEvents.current.youtubePlayerException += SentLink;
-        if (languageScene != null)
+        if (PlayOnAwake)
         {
-            if (onStart && !languageScene.languageScene.getLanguage())
-            {
-                PlayVideoClip(0);
-            }
+            PlayVideoClip(VideoIndexOnStart);
         }
+    }
+
+    public bool PlayOnAwake
+    {
+        get => playOnAwake;
+    }
+
+    public int Index
+    {
+        get => m_index;
+    }
+
+    public bool Playing
+    {
+        get => playing;
     }
 
     public void SentLink()
@@ -51,7 +70,7 @@ public class VideoOperator : MonoBehaviour
         if (m_index > -1)
         {
             playedOnces[m_index] = true;
-            StopVideoButton.interactable = true;
+            //StopVideoButton.interactable = true;
         }
     }
 
@@ -62,17 +81,19 @@ public class VideoOperator : MonoBehaviour
         {
             if (!playedOnces[m_index])
             {
-                StopVideoButton.interactable = false;
-                stopButton.interactable = false;
+                //StopVideoButton.interactable = false;
+                //stopButton.interactable = false;
             }
             else
             {
-                StopVideoButton.interactable = true;
-                stopButton.interactable = true;
+                //StopVideoButton.interactable = true;
+                //stopButton.interactable = true;
 
             }
         }
+        playing = true;
     }
+
 
     public void VideoPlayed(VideoPlayer video)
     {
@@ -81,11 +102,12 @@ public class VideoOperator : MonoBehaviour
             if (!playedOnces[m_index])
             {
                 playedOnces[m_index] = true;
-                StopVideoButton.interactable = true;
-                stopButton.interactable = true;
+                //StopVideoButton.interactable = true;
+               // stopButton.interactable = true;
             }
-            playButton.gameObject.SetActive(true);
-            pauseButton.gameObject.SetActive(false);
+            //playButton.gameObject.SetActive(true);
+            //pauseButton.gameObject.SetActive(false);
+            playing = false;
         }
     }
 
@@ -94,16 +116,28 @@ public class VideoOperator : MonoBehaviour
         videoPlayer.Pause();
     }
 
-    public void StartVideo()
+    public void LinkSent() //Method called if error with video playback occurs
     {
-        VideoPanel.SetActive(true);
+        if (m_index > -1)
+        {
+            playedOnces[m_index] = true;
+            //StopVideoButton.interactable = true;
+        }
     }
 
     public void ExitVideo()
     {
-        camera_Toggle.ChangeCamForVid(false);
-        VideoPanel.SetActive(false);
-        m_index = -1;
+        if (m_index > -1)
+        {
+            camera_Toggle.ChangeCamForVid(false);
+            VideoPanel.SetActive(false);
+            m_index = -1;
+            playing = false;
+            if (dummyCamera != null)
+            {
+                dummyCamera.enabled = false;
+            }
+        }
     }
 
     public void StopVideo()
@@ -113,8 +147,8 @@ public class VideoOperator : MonoBehaviour
             if (playedOnces[m_index])
             {
                 videoPlayer.Stop();
-                playButton.gameObject.SetActive(true);
-                pauseButton.gameObject.SetActive(false);
+                //playButton.gameObject.SetActive(true);
+                //pauseButton.gameObject.SetActive(false);
             }
         }
     }
@@ -124,41 +158,46 @@ public class VideoOperator : MonoBehaviour
         if (index >= 0 && index < videoClips.Count)
         {
             camera_Toggle.ChangeCamForVid(true);
-            exitImage.sprite = exit;
+            //exitImage.sprite = exit;
             VideoPanel.SetActive(true);
 
             if (!playedOnces[index])
             {
-                StopVideoButton.interactable = false;
-                stopButton.interactable = false;
+                //StopVideoButton.interactable = false;
+                //stopButton.interactable = false;
             }
             else
             {
-                StopVideoButton.interactable = true;
-                stopButton.interactable = true;
+                //StopVideoButton.interactable = true;
+                //stopButton.interactable = true;
 
             }
             if (language)
             {
-                m_index = index;
+                subtitlesReader.Captions = subtitleClips[index];
+                subtitlesReader.LoadSubtitles();
+                youtubePlayer.Play(videoClips[index]);
                 title.text = titles[index];
-                videoPlayer.clip = videoClips[index];
-                videoPlayer.Play();
 
             }
             else
             {
-                m_index = index;
+                subtitlesReader.Captions = subtitleClipsFR[index];
+                subtitlesReader.LoadSubtitles();
+                youtubePlayer.Play(videoClipsFR[index]);
                 title.text = titlesFR[index];
-                videoPlayer.clip = videoClipsFR[index];
-                videoPlayer.Play();
             }
-
+            Debug.Log("Play Youtube Video");
+            m_index = index;
+            playing = true;
+            LinkDisplayer.DisplayLink(language);
+            if (dummyCamera != null)
+            {
+                camera_Toggle.getCurrentCam().enabled = false;
+                dummyCamera.enabled = true;
+            }
         }
     }
-
-
-
 
     public void SwitchLang()
     {

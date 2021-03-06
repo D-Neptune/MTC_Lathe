@@ -25,6 +25,7 @@ public class DialogueOperator : MonoBehaviour
     private string lastSentence;
     private string titleLang;
     private bool controllerPresent;
+    [SerializeField] private Button restartBTN, videoBTN, nextBTN;
     [SerializeField] private GameObject buttonOC;
     [SerializeField] private GameObject open, close, holder;
     [SerializeField] public bool MachiningWait;
@@ -122,20 +123,24 @@ public class DialogueOperator : MonoBehaviour
     {
         if (MachiningWait)
         {
-            if(indexWait[animationController.Index] == sentenceIndex+1)
+            if (animationController != null)
             {
-                if (open != null) { open.SetActive(false); }
-                if (close != null) { close.SetActive(false); }
-                if (buttonOC != null) { buttonOC.SetActive(false); }
-                holder.SetActive(false);
-                
+                if (indexWait[animationController.Index] == sentenceIndex + 1)
+                {
+                    if (open != null) { open.SetActive(false); }
+                    if (close != null) { close.SetActive(false); }
+                    if (buttonOC != null) { buttonOC.SetActive(false); }
+                    holder.SetActive(false);
+
+                }
+                else
+                {
+                    if (open != null) { open.SetActive(false); }
+                    if (close != null) { close.SetActive(true); }
+                    holder.SetActive(true);
+                }
             }
-            else
-            {
-                if (open != null) { open.SetActive(false); }
-                if (close != null) { close.SetActive(true); }
-                holder.SetActive(true);
-            }
+            
         }
         else
         {
@@ -183,10 +188,19 @@ public class DialogueOperator : MonoBehaviour
         DeactivateAtEndDialogue.SetActive(false);
         if(videoOperator != null)
         {
-            if(animationController.Index == OperationIndexVideo)
+            if (controllerPresent)
             {
-                videoOperator.PlayVideoClip(indexVideo);
+                if (animationController.Index == OperationIndexVideo)
+                {
+                    videoOperator.PlayVideoClip(indexVideo);
+                }
             }
+        }
+        if(restartBTN != null)
+        {
+            restartBTN.interactable = true;
+            videoBTN.interactable = true;
+            nextBTN.interactable = true;
         }
         if (controllerPresent)
         {

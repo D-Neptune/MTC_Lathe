@@ -10,6 +10,7 @@ public class ClearPlaceHolderOnClick : MonoBehaviour, ISelectHandler
     public Text placeholderText;
     public void OnSelect(BaseEventData data)
     {
-        placeholderText.text = "";
+        //placeholderText.text = "";
     }
+
 }
