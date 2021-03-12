@@ -30,7 +30,7 @@ public class DialogueOperator : MonoBehaviour
     [SerializeField] private GameObject open, close, holder;
     [SerializeField] public bool MachiningWait;
     [SerializeField] public List<int> indexWait;
-    [SerializeField] private VideoOperator videoOperator;
+    [SerializeField] private VideoManager2 videoOperator;
     [SerializeField] private int indexVideo, OperationIndexVideo;
 
 
@@ -192,7 +192,7 @@ public class DialogueOperator : MonoBehaviour
             {
                 if (animationController.Index == OperationIndexVideo)
                 {
-                    videoOperator.PlayVideoClip(indexVideo);
+                    videoOperator.PlayYoutubePlayer(indexVideo);
                 }
             }
         }

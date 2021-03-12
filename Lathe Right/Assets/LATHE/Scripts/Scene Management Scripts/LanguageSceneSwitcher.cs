@@ -16,8 +16,6 @@ public class LanguageSceneSwitcher : MonoBehaviour
     public ImageToggle imageToggle;
     public AdditionalInfoManager toolHolderManager;
     public ToggleScene toggleScene;
-    public VideoManager videoManager;
-    public VideoOperator videoOperator;
     void Awake()
     {
         if (languageScene.getLanguage())
@@ -58,19 +56,10 @@ public class LanguageSceneSwitcher : MonoBehaviour
         {
             toggleScene.SwitchLang();
         }
-        if(videoManager != null)
-        {
-            videoManager.SwitchLang();
-        }
         if(dialogueOperator != null)
         {
             dialogueOperator.switchLang();
         }
-        if(videoOperator != null)
-        {
-            videoOperator.SwitchLang();
-        }
-
     }
 
     public void updateLanguageState()
