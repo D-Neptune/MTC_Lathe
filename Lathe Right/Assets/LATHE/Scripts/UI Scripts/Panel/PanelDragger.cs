@@ -2,22 +2,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PanelDragger : MonoBehaviour
+public class PanelDragger : MonoBehaviour, IDragHandler
 {
-    private Boolean dragging;
-    // Update is called once per frame
-    void Update()
+    public void OnDrag(PointerEventData eventData)
     {
-        if (dragging)
-        {
-            transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        }
+        RectTransform rect = GetComponent<RectTransform>();
+        rect.position = Input.mousePosition;
     }
 
-    public void enableDragger(Boolean state)
+
+    public void OnGUI()
     {
-        dragging = state;
+        Event e = Event.current;
+        if (e.type == EventType.KeyDown && e.control && e.alt && e.keyCode == KeyCode.R)
+        {
+            GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        }
     }
 
 }

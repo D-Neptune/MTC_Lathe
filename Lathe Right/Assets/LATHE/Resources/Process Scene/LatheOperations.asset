@@ -558,7 +558,7 @@ MonoBehaviour:
     frenchName: "Mise en route - Per\xE7age"
     sentences:
     - Drilling is the operation of producing a hole in solid material by means of
-      a center drill.
+      a drill.
     - To perform the drilling operation, we use the tailstock.
     - The first step just like the previous operations is the workpiece setup
     - 'We open the safety guard
@@ -648,8 +648,7 @@ MonoBehaviour:
       operations before moving on to the next part. '
     sentencesFR:
     - "L\u2019op\xE9ration de per\xE7age est essentiellement la r\xE9alisation en
-      pleine mati\xE8re d\u2019un trou cylindrique \xE0 l\u2019aide du foret \xE0
-      centrer."
+      pleine mati\xE8re d\u2019un trou cylindrique \xE0 l\u2019aide d'un for\xEAt."
     - "Pour effectuer l'op\xE9ration de per\xE7age, nous utilisons la poup\xE9e mobile."
     - "La premi\xE8re \xE9tape, tout comme les op\xE9rations pr\xE9c\xE9dentes, est
       la configuration de la pi\xE8ce."

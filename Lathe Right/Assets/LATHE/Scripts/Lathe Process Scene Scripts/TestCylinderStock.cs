@@ -15,6 +15,7 @@ public class TestCylinderStock : MonoBehaviour
     [SerializeField] private string StockTag;
     [SerializeField] private float speed;
     [SerializeField] private Transform follow;
+    [SerializeField] private Vector3 offset = new Vector3(0, 0, 0);
 
     private void Start()
     {
@@ -30,7 +31,7 @@ public class TestCylinderStock : MonoBehaviour
 
     public void updateStaticRigidBody()
     {
-        transform.localPosition = init_pos;
+        transform.localPosition = init_pos + offset;
         transform.localRotation = init_rot;
     }
 

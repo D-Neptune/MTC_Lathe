@@ -29,16 +29,16 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.33333334
-        value: {x: -1234.0719, y: 1987.1, z: 698.3407}
-        inSlope: {x: 0, y: 0, z: -236.11496}
-        outSlope: {x: 0, y: 0, z: -236.11496}
+        value: {x: -1234.0719, y: 1988.8, z: 698.3407}
+        inSlope: {x: 0, y: 35.399414, z: -236.74493}
+        outSlope: {x: 0, y: 35.399414, z: -236.74493}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.6666667
-        value: {x: -1234.1, y: 1987.1, z: 582}
+        value: {x: -1234.1, y: 1994.7, z: 581.58}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -47,7 +47,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: -1161.7, y: 1987.1, z: 582}
+        value: {x: -1162.5, y: 1988.8, z: 581.58}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -200,6 +200,34 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Turning/Facing/Chuck Assembly/Cylinder Stock Material 3
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
         value: -1256.672
         inSlope: 0
         outSlope: 0
@@ -227,7 +255,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -1161.7
+        value: -1162.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -255,16 +283,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 1987.1
-        inSlope: 0
-        outSlope: 0
+        value: 1988.8
+        inSlope: 35.399414
+        outSlope: 35.399414
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.6666667
-        value: 1987.1
+        value: 1994.7
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -273,7 +301,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 1987.1
+        value: 1988.8
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -302,15 +330,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.33333334
         value: 698.3407
-        inSlope: -236.11496
-        outSlope: -236.11496
+        inSlope: -236.74493
+        outSlope: -236.74493
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.6666667
-        value: 582
+        value: 581.58
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -319,7 +347,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 582
+        value: 581.58
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -332,34 +360,6 @@ AnimationClip:
     attribute: m_LocalPosition.z
     path: Turning/Facing/Chuck Assembly/Cylinder Stock Material 3
     classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Turning/Facing/Chuck Assembly/Cylinder Stock Material 3
-    classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
