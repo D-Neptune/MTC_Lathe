@@ -68,7 +68,7 @@ public class YoutubeSettings : MonoBehaviour
     [Space]
     public bool showThumbnailBeforeVideoLoad = false;
     [DrawIf("showThumbnailBeforeVideoLoad", true)]
-    public Renderer thumbnailObject;
+    public Image thumbnailObject;
     protected string thumbnailVideoID;
 
     [Space]

@@ -41,7 +41,6 @@ public class LatheCollisionVisibility : MonoBehaviour
             if (timerCountDown < 0)
             {
                 timerCountDown = 0;
-                sparks.SetActive(false);
             }
         }
     }
@@ -54,13 +53,9 @@ public class LatheCollisionVisibility : MonoBehaviour
             isColliding = true;
 
             sparks.transform.localPosition = collison.transform.position;
-            if (!gameObject.GetComponent<Renderer>().enabled)
+            if (gameObject.GetComponent<Renderer>().enabled)
             {
-                sparks.SetActive(false);
-            }
-            else
-            {
-                sparks.SetActive(true);
+                CollisionEvent.current.StockMaterialCollision();
             }
         }
     }
@@ -82,13 +77,9 @@ public class LatheCollisionVisibility : MonoBehaviour
                     Destroy(gameObject);
                     Destroy(this);
                 }
-                sparks.SetActive(false);
             }
 
-            if (!renderer.enabled)
-            {
-                sparks.SetActive(false);
-            }
+
 
         }
     }
@@ -102,7 +93,6 @@ public class LatheCollisionVisibility : MonoBehaviour
                 timerCountDown = initialCountdown;
             }
             isColliding = false;
-            sparks.SetActive(false);
             TestCylinderStock testCylinderStock = collision.transform.gameObject.GetComponent<TestCylinderStock>();
             if (testCylinderStock != null)
             {
