@@ -49,10 +49,12 @@ public class AnimController : MonoBehaviour
                 ResetLoopParams();
             }
             bool inRightTransition = animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f;
+            Debug.Log("Transition Resources: " + transition + " vs Transition Parameters: " + parameters[index].name);
+            Debug.Log("Animation Name Resources: " + animationName + " vs Clip Name: " + clipName[index]);
             if (transition == parameters[index].name && inRightTransition && animationName == clipName[index])
             {
                 animator.SetBool(transition, true);
-
+                hintController.AnimPlayed();
                 index++;
                 CheckTransitionEnd();
                 return true;

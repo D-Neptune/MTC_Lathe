@@ -37,5 +37,5 @@ MonoBehaviour:
     animationName:
     - Quill Forward
     - Tighten Bit 2
-    index: 0a00000010000000
-    sentenceIndex: 0f00000015000000
+    index: 0c00000012000000
+    sentenceIndex: 1100000017000000

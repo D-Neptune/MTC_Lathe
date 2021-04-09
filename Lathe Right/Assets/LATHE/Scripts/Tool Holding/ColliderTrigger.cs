@@ -75,10 +75,6 @@ public class ColliderTrigger : MonoBehaviour
         {
             foreach (Trigger trigger in triggers)
             {
-                Debug.Log(trigger.Name);
-                Debug.Log(trigger.SentenceIndex());
-                Debug.Log(controller.name);
-                Debug.Log(dialogueManager.SentenceIndex);
                 if (trigger.Name == controller.name && trigger.SentenceIndex() == dialogueManager.SentenceIndex)
                 {
                     GetComponent<Renderer>().material.color = hoverColor;

@@ -17,11 +17,11 @@ MonoBehaviour:
     frenchName: Lathe Right - Tenir nos outils
     sentences:
     - Welcome to the section dedicated to tool holding and work holding on the lathe.
-    - In this section, we will discuss the different tools available on the lathe
+    - 'In this section, we will discuss the different tools available on the lathe
       and their functions. Some clues will be placed sporadically through this tutorial,
-      follow them to prompt the next step.
+      follow them to prompt the next step. '
     - 'Similarly, to the previous tutorial, the hint button will activate only if
-      you are struggling with steps. '
+      you are struggling with steps. However, in this section. there is no save button. '
     - Well, let us get started!
     - The key difference found in the lathe compared to its counterparts is the fact
       that the machining process is done by turning the workpiece not the tool.
@@ -33,9 +33,6 @@ MonoBehaviour:
     - "The tool holder features a dovetail that allows it to easily slide into the
       tool post. The tool post itself has two faces that the tool holder can slide
       into. \n\nHint: Click on tool holder to place on tool post"
-    - "To lock the tool holder in place, we use the handle on top of the tool post.
-      The main reason we lock the tool holder is so it can withstand the cutting
-      forces. \n\nHint: Click the lock handle to lock the tool holder"
     - "Another very important feature of the tool post is its ability to rotate around
       the compound slide. Essentially by loosening the nut on top of the tool post
       (with a wrench), the user can easily adjust the angle and position of the tools. 
@@ -58,7 +55,7 @@ MonoBehaviour:
       a live center. '
     - 'The live center is a very sharp point which is mainly used to support workpieces.
       However, it can also be used to aid in centering the height of the cutting
-      tool. In the next section, we will go through step by step how to adjust the
+      tool. In this next section, we will go through step by step how to adjust the
       height of the tool cutting tool. '
     - 'The live center is placed inside the tailstock quill. This quill uses what
       is known as morse taper to hold in place. A morse is a tapered spindle used
@@ -66,6 +63,20 @@ MonoBehaviour:
       etc.) will mount perfectly with the quill to keep it in place using pure friction. '
     - "Firstly, we bring the quill out a bit and then we can insert the live center
       \n\nHint: Click on Tailstock Quill Feed Wheel to place inside tailstock"
+    - "Next, let\u2019s bring the tailstock closer to accurately center our tool.
+      \n\nHint: Click on Tailstock to move it closer to tool post"
+    - "We can finally center our tool. You can use the camera controller to get a
+      better view of the cutter and the live center. \n\nHint: Click on thumbscrew
+      on tool holder to adjust height"
+    - "To finish, we lock the tool post at the current height. To lock the tool holder
+      in place, we use the handle on top of the tool post. The main reason we lock
+      the tool holder is so it can withstand the cutting forces. \n\nHint: Click
+      on tool post handle to lock tool holder at current height"
+    - 'Let us bring the tailstock back to its initial location.
+
+
+      Hint: Click
+      on Tailstock to move it back to original position'
     - "To remove a tool from the tailstock, the user simply must retract the quill
       completely and the tool will eventually be forced out of the tailstock. \n\nHint:
       Click on Tailstock Quill Feed Wheel to remove live center"
@@ -77,7 +88,8 @@ MonoBehaviour:
       le tour et leurs fonctions. Certains indices seront plac\xE9s sporadiquement
       dans ce didacticiel, suivez-les pour passer \xE0 l'\xE9tape suivante."
     - "De m\xEAme, pour le didacticiel pr\xE9c\xE9dent, le bouton d'indication ne
-      s'activera que si vous avez des difficult\xE9s avec les \xE9tapes."
+      s'activera que si vous avez des difficult\xE9s avec les \xE9tapes. Par contre,
+      dans cette section, il n'y a pas de boutton d'enrigistrement."
     - "Eh bien, commen\xE7ons!"
     - "La principale diff\xE9rence trouv\xE9e dans le tour par comparer \xE0 la perceuse
       et la fraiseuse est le fait que le processus d'usinage est effectu\xE9 en tournant
@@ -92,10 +104,6 @@ MonoBehaviour:
       facilement dans le montant de l'outil. Le support porte-outil lui-m\xEAme a
       deux faces dans lesquelles le porte-outil peut glisser. \n\nIndice: cliquez
       sur le porte-outil pour le placer sur le support porte-outil"
-    - "Pour verrouiller le porte-outil en place, nous utilisons la poign\xE9e sur
-      le dessus du support porte-outil. La principale raison pour laquelle nous verrouillons
-      le porte-outil est pour qu'il r\xE9siste aux forces de coupe. \n\nIndice: cliquez
-      sur la poign\xE9e de verrouillage pour verrouiller le porte-outil"
     - "Une autre caract\xE9ristique tr\xE8s importante du support porte-outil est
       sa capacit\xE9 \xE0 tourner du chariot pivotant. Essentiellement en desserrant
       l'\xE9crou sur le dessus du support porte-outil (avec une cl\xE9), l'utilisateur
@@ -131,6 +139,19 @@ MonoBehaviour:
     - "En premier nous avan\xE7ons le fourreau un peu et ensuite nos pouvons ins\xE9rer
       la pointe vive\n\nIndice: Cliquez sur la roue de fourreau pour placer la pointe
       vive \xE0 l'int\xE9rieur de la poup\xE9e mobile"
+    - "Ensuite, rapprochons la poup\xE9e mobile du support porte-outil\n\nIndice:
+      Cliquer sur la poup\xE9e mobile pour le rapprocher du support porte-outil"
+    - "Nous pouvons enfin centrer notre outil. Vous pouvez utiliser le contr\xF4leur
+      de cam\xE9ra  ou la vue de cam\xE9ra 3 pour obtenir une meilleure vue de l\u2019outil
+      de coupe et du pointe vive.\n\nIndice: Cliquez sur la vis \xE0 oreilles pour
+      r\xE9gler la hauteur"
+    - "Pour finir, nous verouillons le porte-outil \xE0 cet hauteur. Pour faire ceci,
+      nous utilisons la poign\xE9e sur le dessus du support porte-outil. La principale
+      raison pour laquelle nous verrouillons le porte-outil est pour qu'il r\xE9siste
+      aux forces de coupe. \n\nIndice: cliquez sur la poign\xE9e de verrouillage
+      pour verrouiller le porte-outil"
+    - "Ramenons la poup\xE9e mobile \xE0 son emplacement initial.\n\nIndice: Cliquez
+      sur la poup\xE9e mobile pour la ramener \xE0 sa position d'origine"
     - "Pour retirer un outil de la poup\xE9e mobile, l'utilisateur doit simplement
       r\xE9tracter compl\xE8tement le fourreau et l'outil sera finalement forc\xE9
       hors de la poup\xE9e mobile. \n\nIndice: Cliquez sur la roue de fourreau de
@@ -146,15 +167,18 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 2ea7bf72ecee2aa42950f4e6f14acece, type: 3}
     - {fileID: 21300000, guid: de8108066bc870743abce72e766c0d6a, type: 3}
     - {fileID: 21300000, guid: 4ec47e5f10213ed43a9731d2e65c882b, type: 3}
-    - {fileID: 21300000, guid: 46c7f334d2c4f9c44879ac3519a306b6, type: 3}
     - {fileID: 21300000, guid: 3ddd8aa46e70c7949be84fa36d870a9e, type: 3}
-    - {fileID: 21300000, guid: a9c77bdde295555428ebf3bf6a3d8b92, type: 3}
-    - {fileID: 21300000, guid: cf42fc8e08f2d67499818dda71da35ae, type: 3}
+    - {fileID: 21300000, guid: 7ef65f571e8b45248ab472fc9fbc85a9, type: 3}
+    - {fileID: 21300000, guid: 01d330608e7cadb468c8287b112dd7ae, type: 3}
     - {fileID: 21300000, guid: 2d04543235e01fb458ee4563a1b034fd, type: 3}
     - {fileID: 21300000, guid: de8108066bc870743abce72e766c0d6a, type: 3}
     - {fileID: 21300000, guid: 39eccf760d9801a4b966e066846daf95, type: 3}
     - {fileID: 21300000, guid: 4f8fa6a1879fb114583e8de91f9a1358, type: 3}
     - {fileID: 21300000, guid: 0c9d736ddc3ff2a40ba4155223811ba3, type: 3}
     - {fileID: 21300000, guid: e53627725d80dfd42ba66ada5346c119, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 39eccf760d9801a4b966e066846daf95, type: 3}
+    - {fileID: 21300000, guid: 46c7f334d2c4f9c44879ac3519a306b6, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
     - {fileID: 21300000, guid: 7048341dd9fec3743a2826ac4b6b1cfe, type: 3}
     - {fileID: 21300000, guid: e339feff4d4df90449dc816272659cd2, type: 3}

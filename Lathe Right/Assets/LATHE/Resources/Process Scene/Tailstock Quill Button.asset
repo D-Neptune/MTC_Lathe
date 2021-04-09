@@ -16,12 +16,16 @@ MonoBehaviour:
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:
+    - Remove Live
+    - Insert Chuck
     - Quill Forward
     - Pecking
     - Pecking 2
     animationName:
+    - Close Guard
+    - Remove Live Center
     - Lock Tailstock
     - Turn ON
     - Turn ON 2
-    index: 090000000b00000011000000
-    sentenceIndex: 0e0000001000000016000000
+    index: 04000000050000000b0000000d00000013000000
+    sentenceIndex: 0800000009000000100000001200000018000000

@@ -43,5 +43,5 @@ MonoBehaviour:
     - Move Carriage
     animationName:
     - Tighten Bit
-    index: 06000000
-    sentenceIndex: 0b000000
+    index: 08000000
+    sentenceIndex: 0d000000

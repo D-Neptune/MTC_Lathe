@@ -8,6 +8,7 @@ public class ComponentHint : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<SetupOnHover> parts;
+    public List<SetupOnHover> partsClicked;
     public SetupOnHover hintedPart;
     public int index;
 
@@ -35,7 +36,7 @@ public class ComponentHint : MonoBehaviour
         }
         if (hintedPart.clicked)
         {
-            parts.Remove(hintedPart);
+            RemoveClickedHint(hintedPart);
             index = UnityEngine.Random.Range(0, parts.Count);
             hintedPart = parts[index];
         }
@@ -48,5 +49,6 @@ public class ComponentHint : MonoBehaviour
     public void RemoveClickedHint(SetupOnHover hint)
     {
         parts.Remove(hint);
+        partsClicked.Add(hint);
     }
 }

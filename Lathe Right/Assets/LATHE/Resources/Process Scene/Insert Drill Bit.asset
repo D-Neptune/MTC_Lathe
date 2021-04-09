@@ -18,6 +18,6 @@ MonoBehaviour:
     transitionParams:
     - Insert Drill Bit
     animationName:
-    - Close Guard
-    index: 04000000
-    sentenceIndex: 08000000
+    - Insert Drill Chuck
+    index: 06000000
+    sentenceIndex: 0a000000

@@ -1516,6 +1516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogHolder: {fileID: 1675099336}
   dialogues: {fileID: 11400000, guid: e525b7fed6a8f9d4e872ee0be2aad566, type: 2}
   dialogueManager: {fileID: 155548177}
   sentenceTrigger: 0
@@ -1880,6 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.4811321, g: 0.5962805, b: 1, a: 1}
   detailIndex: 12
   ObjectManager: {fileID: 1041450907}
@@ -1887,6 +1889,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -1914,7 +1917,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -2568,6 +2571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.41937158, g: 0.3070488, b: 0.47058824, a: 1}
   detailIndex: 15
   ObjectManager: {fileID: 1041450907}
@@ -2575,6 +2579,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -2602,7 +2607,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -2658,7 +2663,7 @@ RectTransform:
   - {fileID: 1754423318}
   - {fileID: 1703954035}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -3, y: 0}
   m_AnchorMax: {x: 0, y: 1}
@@ -3496,6 +3501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.61826754, g: 0.46226418, b: 1, a: 1}
   detailIndex: 7
   ObjectManager: {fileID: 1041450907}
@@ -3503,6 +3509,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -3530,7 +3537,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -3913,6 +3920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.15686275, g: 0.6745098, b: 0.4, a: 1}
   detailIndex: 14
   ObjectManager: {fileID: 1041450907}
@@ -3920,6 +3928,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -3947,7 +3956,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -4046,6 +4055,136 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544821738}
+  m_CullTransparentMesh: 0
+--- !u!1 &550658070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 550658071}
+  - component: {fileID: 550658074}
+  - component: {fileID: 550658073}
+  - component: {fileID: 550658072}
+  m_Layer: 5
+  m_Name: Save_Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &550658071
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550658070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1143249028}
+  m_Father: {fileID: 6162113171354923055}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.12, y: 0.2}
+  m_AnchorMax: {x: 0.88, y: 0.27}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &550658072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550658070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 550658073}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1403452347}
+        m_MethodName: SaveInformation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &550658073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550658070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &550658074
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550658070}
   m_CullTransparentMesh: 0
 --- !u!1 &557758744
 GameObject:
@@ -4727,6 +4866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.8113208, g: 0.7898325, b: 0, a: 1}
   detailIndex: 20
   ObjectManager: {fileID: 1041450907}
@@ -4734,6 +4874,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -4761,7 +4902,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -4988,6 +5129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.7735849, g: 0.5911356, b: 0.5911356, a: 1}
   detailIndex: 13
   ObjectManager: {fileID: 1041450907}
@@ -4995,6 +5137,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -5022,7 +5165,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -6038,6 +6181,7 @@ MonoBehaviour:
   dialogueInterface: {fileID: 0}
   animatorIndex: 
   dialogueIndex: 
+  exceptionList: 00
 --- !u!1 &891618599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6500,6 +6644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 1, g: 0.3962264, b: 0.3962264, a: 1}
   detailIndex: 3
   ObjectManager: {fileID: 1041450907}
@@ -6507,6 +6652,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -6545,7 +6691,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -6995,6 +7141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.722374, g: 0.990566, b: 0.495283, a: 1}
   detailIndex: 9
   ObjectManager: {fileID: 1041450907}
@@ -7002,6 +7149,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -7029,7 +7177,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -8101,6 +8249,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128719166}
   m_CullTransparentMesh: 0
+--- !u!1 &1143249027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1143249028}
+  - component: {fileID: 1143249030}
+  - component: {fileID: 1143249029}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1143249028
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143249027}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 550658071}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.15, y: 0.1}
+  m_AnchorMax: {x: 0.85, y: 0.9}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1143249029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143249027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6092379298183394db8108c19ea7149e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1143249030
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143249027}
+  m_CullTransparentMesh: 0
 --- !u!1 &1148544628
 GameObject:
   m_ObjectHideFlags: 0
@@ -8148,6 +8370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 1, g: 0.697773, b: 0.16981131, a: 1}
   detailIndex: 11
   ObjectManager: {fileID: 1041450907}
@@ -8155,6 +8378,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -8182,7 +8406,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -9573,6 +9797,7 @@ GameObject:
   - component: {fileID: 1403452343}
   - component: {fileID: 1403452342}
   - component: {fileID: 1403452346}
+  - component: {fileID: 1403452347}
   m_Layer: 0
   m_Name: SceneDisplayController
   m_TagString: Untagged
@@ -9603,8 +9828,6 @@ MonoBehaviour:
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
-  videoManager: {fileID: 0}
-  videoOperator: {fileID: 0}
 --- !u!114 &1403452343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9658,6 +9881,30 @@ MonoBehaviour:
   tutorialToggle: {fileID: 1403452344}
   seekingProgess:
   - {fileID: 623537656}
+--- !u!114 &1403452347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403452341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5700525fd8740b54ebf9af50609f042f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Discovery Scene
+  languageScene: {fileID: 1403452343}
+  sceneDisplayToggle: {fileID: 1403452344}
+  componentHint: {fileID: 5487113818345643146}
+  loadSceneScript: {fileID: 0}
+  languageSceneSwitcher: {fileID: 1403452342}
+  videoManager: {fileID: 854006876}
+  trigger: {fileID: 155548178}
+  triggerDialogue: {fileID: 0}
+  AnimScene: 0
+  Discover: 1
+  MainMenu: 0
 --- !u!1 &1403667236
 GameObject:
   m_ObjectHideFlags: 0
@@ -10309,6 +10556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.49803922, g: 0.24705882, b: 0.20392157, a: 1}
   detailIndex: 19
   ObjectManager: {fileID: 1041450907}
@@ -10316,6 +10564,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -10343,7 +10592,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -10888,6 +11137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.21477304, g: 0.6886792, b: 0.025987875, a: 1}
   detailIndex: 0
   ObjectManager: {fileID: 1041450907}
@@ -10895,6 +11145,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -10911,7 +11162,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -11155,6 +11406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.9716981, g: 0.65818214, b: 0.33001065, a: 1}
   detailIndex: 16
   ObjectManager: {fileID: 1041450907}
@@ -11162,6 +11414,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -11189,7 +11442,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -11333,6 +11586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.20754719, g: 0.91717523, b: 1, a: 1}
   detailIndex: 1
   ObjectManager: {fileID: 1041450907}
@@ -11340,6 +11594,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -11367,7 +11622,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -11400,13 +11655,14 @@ GameObject:
   - component: {fileID: 1675099337}
   - component: {fileID: 1675099339}
   - component: {fileID: 1675099338}
+  - component: {fileID: 1675099340}
   m_Layer: 5
   m_Name: DialogHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1675099337
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11465,6 +11721,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675099336}
   m_CullTransparentMesh: 0
+--- !u!114 &1675099340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675099336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad94ee3e25387ad47be3ed921c5408e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SaveBTN: {fileID: 550658072}
 --- !u!1 &1691738359
 GameObject:
   m_ObjectHideFlags: 0
@@ -11509,6 +11778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.990566, g: 0.4765931, b: 0.73416704, a: 1}
   detailIndex: 6
   ObjectManager: {fileID: 1041450907}
@@ -11516,6 +11786,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -11543,7 +11814,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -11758,6 +12029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.3679245, g: 0.57906324, b: 1, a: 1}
   detailIndex: 5
   ObjectManager: {fileID: 1041450907}
@@ -11765,6 +12037,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -11803,7 +12076,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -12075,7 +12348,7 @@ RectTransform:
   m_Children:
   - {fileID: 1053042663}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.8435}
   m_AnchorMax: {x: 0.88, y: 0.9135}
@@ -12225,6 +12498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.23137255, g: 0.4441783, b: 0.5377358, a: 1}
   detailIndex: 22
   ObjectManager: {fileID: 1041450907}
@@ -12232,6 +12506,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -12259,7 +12534,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -12801,6 +13076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.509434, g: 1, b: 0.9181738, a: 1}
   detailIndex: 18
   ObjectManager: {fileID: 1041450907}
@@ -12808,6 +13084,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -12835,7 +13112,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -13205,6 +13482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 1, g: 0.6132076, b: 0.80123776, a: 1}
   detailIndex: 21
   ObjectManager: {fileID: 1041450907}
@@ -13212,6 +13490,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -13239,7 +13518,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -13794,6 +14073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0, g: 1, b: 0.61335707, a: 1}
   detailIndex: 10
   ObjectManager: {fileID: 1041450907}
@@ -13801,6 +14081,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -13828,7 +14109,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -14479,6 +14760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.8509804, g: 0.8039216, b: 0, a: 1}
   detailIndex: 17
   ObjectManager: {fileID: 1041450907}
@@ -14486,6 +14768,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -14513,7 +14796,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -15217,6 +15500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.33333334, g: 0.45490196, b: 0.77254903, a: 1}
   detailIndex: 23
   ObjectManager: {fileID: 1041450907}
@@ -15224,6 +15508,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0.1
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -15251,7 +15536,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -16833,6 +17118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.33107865, g: 0.5849056, b: 0.5246755, a: 1}
   detailIndex: 8
   ObjectManager: {fileID: 1041450907}
@@ -16840,6 +17126,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -16867,7 +17154,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -18319,6 +18606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.14117648, g: 1, b: 0.69551677, a: 1}
   detailIndex: 24
   ObjectManager: {fileID: 1041450907}
@@ -18326,6 +18614,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0.1
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -18342,7 +18631,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -21993,7 +22282,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fbb007dea57b047b8ec78cddee9b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parts: []
+  parts:
+  - {fileID: 1627386092}
+  - {fileID: 1670949223}
+  - {fileID: 6188138593418933504}
+  - {fileID: 922094827}
+  - {fileID: 7047293634427543883}
+  - {fileID: 1745102911}
+  - {fileID: 1691738361}
+  - {fileID: 421162625}
+  - {fileID: 1796190587313805872}
+  - {fileID: 983138246}
+  - {fileID: 2032495217}
+  - {fileID: 1148544630}
+  - {fileID: 231228592}
+  - {fileID: 742859896}
+  - {fileID: 337708326}
+  - {fileID: 1658669502}
+  - {fileID: 2131026214}
+  - {fileID: 1820827575}
+  - {fileID: 1955114679}
+  - {fileID: 511486525}
+  - {fileID: 1886193287}
+  - {fileID: 1525508927}
+  - {fileID: 677690046}
+  - {fileID: 2612019417041859190}
+  - {fileID: 522990957290589108}
+  partsClicked: []
   hintedPart: {fileID: 0}
   index: 0
 --- !u!23 &5490451517833626691
@@ -23381,7 +23696,7 @@ RectTransform:
   m_Children:
   - {fileID: 6162113170013790632}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.02}
   m_AnchorMax: {x: 0.88, y: 0.09}
@@ -23705,7 +24020,7 @@ RectTransform:
   m_Children:
   - {fileID: 6162113170092004996}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.02}
   m_AnchorMax: {x: 0.88, y: 0.09}
@@ -24065,17 +24380,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: SwitchLang
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1041450908}
         m_MethodName: ChangeLanguage
         m_Mode: 1
@@ -24100,17 +24404,6 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1403452342}
         m_MethodName: updateLanguageState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24182,7 +24475,7 @@ RectTransform:
   m_Children:
   - {fileID: 6162113171544427777}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.11}
   m_AnchorMax: {x: 0.88, y: 0.18}
@@ -24240,6 +24533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button1: {fileID: 6162113170246996648}
   Button2: {fileID: 6162113170295436518}
+  Button3: {fileID: 550658070}
   tutorial: {fileID: 1403452344}
 --- !u!1 &6162113171354923054
 GameObject:
@@ -24271,6 +24565,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 550658071}
   - {fileID: 6162113171002112927}
   - {fileID: 6162113170246996649}
   - {fileID: 6162113170295436519}
@@ -24637,6 +24932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.9550186, g: 0.6320754, b: 1, a: 1}
   detailIndex: 2
   ObjectManager: {fileID: 1041450907}
@@ -24644,6 +24940,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -24682,7 +24979,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:
@@ -25831,6 +26128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentHint: {fileID: 5487113818345643146}
   onHoverColor: {r: 0.7735495, g: 0.4811321, b: 1, a: 1}
   detailIndex: 4
   ObjectManager: {fileID: 1041450907}
@@ -25838,6 +26136,7 @@ MonoBehaviour:
   FlashDelay: 0.25
   NumOfFlash: 5
   timer: 0
+  savedPartClicked: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -25876,7 +26175,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5487113818345643146}
+      - m_Target: {fileID: 0}
         m_MethodName: RemoveClickedHint
         m_Mode: 2
         m_Arguments:

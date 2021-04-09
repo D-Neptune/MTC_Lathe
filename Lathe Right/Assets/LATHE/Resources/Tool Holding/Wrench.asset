@@ -18,6 +18,6 @@ MonoBehaviour:
     transitionParams:
     - Rotate Tool
     animationName:
-    - Lock Tool Post
-    index: 02000000
-    sentenceIndex: 09000000
+    - Place Tool Holder
+    index: 01000000
+    sentenceIndex: 08000000

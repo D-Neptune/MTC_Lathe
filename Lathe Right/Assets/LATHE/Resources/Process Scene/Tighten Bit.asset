@@ -23,5 +23,5 @@ MonoBehaviour:
     - Insert Drill Bit
     - Turn OFF
     - Switch Bit
-    index: 050000000d0000000f000000
-    sentenceIndex: 090000001200000014000000
+    index: 070000000f00000011000000
+    sentenceIndex: 0b0000001400000016000000

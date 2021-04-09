@@ -24,7 +24,7 @@ public class LanguageSceneSwitcher : MonoBehaviour
         }
     }
 
-    private void toggleOnStart()
+    public void toggleOnStart()
     {
         foreach(ToggleText toggleText in toggleList)
         {

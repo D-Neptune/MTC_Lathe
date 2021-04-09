@@ -10,10 +10,35 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] public GameObject TailstockPanel, ToolPostPanel;
     [SerializeField] public string intro, facing, turning, drilling;
     private bool SequenceDone;
-
+    private anim currentAnim;
     void Awake()
     {
         NoInteraction();
+    }
+
+    public anim CurrentAnim
+    {
+        get => currentAnim;
+    }
+
+    public void SetupAnims(anim savedAnim)
+    {
+        if (savedAnim == anim.Facing)
+        {
+            Transition(intro);
+        }
+        else if (savedAnim == anim.Turning)
+        {
+            Transition(facing);
+        }
+        else if (savedAnim == anim.Turning)
+        {
+            Transition(turning);
+        }
+        else
+        {
+            Transition(drilling);
+        }
     }
 
 
@@ -63,18 +88,24 @@ public class InteractionManager : MonoBehaviour
         else if (dialogueName.Equals(intro))
         {
             Facing.interactable = true;
+            currentAnim = anim.Facing;
         }
 
         else if (dialogueName.Equals(facing))
         {
             Turning.interactable = true;
+            currentAnim = anim.Turning;
+
         }
         else if (dialogueName.Equals(turning))
         {
             Drill.interactable = true;
+            currentAnim = anim.Drilling;
+
         }
         else if (dialogueName.Equals(drilling))
         {
+            currentAnim = anim.Complete;
             Drill.interactable = true;
             Turning.interactable = true;
             Facing.interactable = true;
@@ -121,3 +152,7 @@ public class InteractionManager : MonoBehaviour
         }
     }
 }
+
+public enum anim { Facing, Turning, Drilling, Complete, NA}
+
+

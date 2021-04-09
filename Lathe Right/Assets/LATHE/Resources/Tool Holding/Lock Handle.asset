@@ -18,6 +18,6 @@ MonoBehaviour:
     transitionParams:
     - Lock Tool
     animationName:
-    - Place Tool Holder
-    index: 01000000
-    sentenceIndex: 08000000
+    - Adjust Height
+    index: 05000000
+    sentenceIndex: 13000000

@@ -19,5 +19,5 @@ MonoBehaviour:
     - Switch Bit
     animationName:
     - Untighten Bit
-    index: 0e000000
-    sentenceIndex: 13000000
+    index: 10000000
+    sentenceIndex: 15000000

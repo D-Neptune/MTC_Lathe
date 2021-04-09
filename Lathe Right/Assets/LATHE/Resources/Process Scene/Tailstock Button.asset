@@ -39,5 +39,5 @@ MonoBehaviour:
     - Move Tailstock
     animationName:
     - Move Carriage
-    index: 07000000
-    sentenceIndex: 0c000000
+    index: 09000000
+    sentenceIndex: 0e000000

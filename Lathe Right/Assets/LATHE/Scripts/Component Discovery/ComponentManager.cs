@@ -70,7 +70,7 @@ public class ComponentManager : MonoBehaviour
             toggleInitialText();
         }
 
-        else if (language)
+        else if (language && currentIndex > 0)
         {
 
             namePart.text = details[currentIndex].partNameFR;
@@ -79,7 +79,7 @@ public class ComponentManager : MonoBehaviour
             partsExamined.text = partsExamFR + counter.ToString();
 
         }
-        else
+        else if (currentIndex > 0)
         {
             namePart.text = details[currentIndex].partName;
             info.text = details[currentIndex].sentence;

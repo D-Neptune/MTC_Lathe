@@ -579,11 +579,18 @@ MonoBehaviour:
 
 
       Hint: Click on Guard to close it'
-    - 'Now we have to setup the tailstock and drill chuck. Notice that we replaced
-      the live center with a drill chuck. '
-    - "We will begin by placing a center drill inside the drill chuck. Since we want
-      to use a larger drill bit, we need to use a center drill to create the starting
-      hole before using our larger drill bit. \n\nHint: Click on drill bit 1 in tailstock
+    - 'Notice that we still have the live center inserted inside the quill feed.
+      To perform the drilling operation we need to replace it with a drill chuck. '
+    - "The first step is simply to remove the live center. \n\nHint: Click on Quill
+      Feed Wheel to remove live center"
+    - 'Now that the live center has been removed we can insert the drill chuck
+
+
+      Hint:
+      Click again on Quill Feed Wheel to insert drill chuck'
+    - "We can now place a center drill inside the drill chuck. Since we want to use
+      a larger drill bit, we need to use a center drill to create the starting hole
+      before using our larger drill bit. \n\nHint: Click on drill bit 1 in tailstock
       tools panel to place center drill in the drill chuck"
     - "The next step is to tighten the drill bit and make sure it is secured rigidly
       inside the drill chuck. For that reason, we will use a chuck key specific to
@@ -662,14 +669,18 @@ MonoBehaviour:
     - "Fermez le panneau de s\xE9curit\xE9.\r\n\nIndice: Cliquer sur le panneau de
       s\xE9curit\xE9 pour le fermer"
     - "Nous devons maintenant pr\xE9parer la poup\xE9e mobile pour l'op\xE9ration
-      de per\xE7age. Notez que nous avons remplac\xE9 la pointe vive par un mandrin
-      de per\xE7age."
-    - "Nous commencerons par placer un foret \xE0 centrer \xE0 l'int\xE9rieur du
-      mandrin de per\xE7age. Puisque nous voulons utiliser un foret plus grand, nous
-      devons utiliser un foret \xE0 centrer pour cr\xE9er le trou de d\xE9part avant
-      d'utiliser notre foret plus grand.\n\nIndice: Cliquez sur le foret 1 dans le
-      panneau d'outil de la poup\xE9e fixe pour ins\xE9rer le foret \xE0 centrer
-      dans le mandrin \xE0 per\xE7age"
+      de per\xE7age. Pour accomplir ceci, nous devons remplacer la pointe vive avec
+      le mandrin de per\xE7age."
+    - "La premi\xE8re \xE9tape consiste \xE0 enlever la pointe vive du fourreau.\n\nIndice:
+      Cliquez sr la roue de fourreau pour enlever la pointe vive"
+    - "Maintenant que la pointe vive \xE0 \xE9t\xE9 retir\xE9, nous pouvons ins\xE9rer
+      le mandrin de per\xE7age dans le fourreau.\n\nIndice: Cliquez sr la roue de
+      fourreau pour ins\xE9rer le mandrin"
+    - "Nous pouvons maintenant  placer un foret \xE0 centrer \xE0 l'int\xE9rieur
+      du mandrin de per\xE7age.  Nous devons utiliser un foret \xE0 centrer pour
+      cr\xE9er le trou de d\xE9part avant d'utiliser un foret plus grand.\n\nIndice:
+      Cliquez sur le foret 1 dans le panneau d'outil de la poup\xE9e fixe pour ins\xE9rer
+      le foret \xE0 centrer dans le mandrin \xE0 per\xE7age"
     - "L'\xE9tape suivante consiste \xE0 serrer le foret et \xE0 s'assurer qu'il
       est solidement fix\xE9 \xE0 l'int\xE9rieur du mandrin de per\xE7age. Pour cette
       raison, nous utiliserons une cl\xE9 de mandrin sp\xE9cifique \xE0 ce mandrin
@@ -725,6 +736,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: a30edabb945b9b74aacc425fb22ce76b, type: 3}
     - {fileID: 21300000, guid: 446cec598c9e1c0488d5ecdde08167d8, type: 3}
     - {fileID: 21300000, guid: 55be8e988b4b89549b153ced8f1bf6ac, type: 3}
+    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
+    - {fileID: 21300000, guid: 618d5cad631b61e4f9f559ed230eafaf, type: 3}
     - {fileID: 21300000, guid: 02bbd1ab9368672479c12430cebcd0c5, type: 3}
     - {fileID: 21300000, guid: c6df7c820c244c04387b66835b4a20a7, type: 3}
     - {fileID: 21300000, guid: 860c26a6bfa3760419cbae98aa0fcc18, type: 3}

@@ -79,11 +79,12 @@ public class VideoManager2 : MonoBehaviour
     [SerializeField] private bool[] exceptionList;   
 
     private int m_videoIndex = -1;
+    private bool alreadyWatchedFromSaved = false;
 
 
     void Start()
     {
-        if (PlayOnAwake)
+        if (PlayOnAwake && !VideoWatched)
         {
             PlayYoutubePlayer(VideoIndexOnStart);
         }
@@ -230,7 +231,15 @@ public class VideoManager2 : MonoBehaviour
         get => exceptionList;
         set => exceptionList = value;
     }
+
+    public bool VideoWatched
+    {
+        get => alreadyWatchedFromSaved;
+        set => alreadyWatchedFromSaved = value;
+    }
 }
+
+
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(VideoManager2))]

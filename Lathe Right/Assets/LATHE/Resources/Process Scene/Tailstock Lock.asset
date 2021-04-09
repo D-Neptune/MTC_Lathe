@@ -19,5 +19,5 @@ MonoBehaviour:
     - Lock Tailstock
     animationName:
     - Move Tailstock
-    index: 08000000
-    sentenceIndex: 0d000000
+    index: 0a000000
+    sentenceIndex: 0f000000

@@ -20,6 +20,6 @@ MonoBehaviour:
     - Remove Live
     animationName:
     - Rotate Tool Post
-    - Place Live Center
-    index: 0300000004000000
-    sentenceIndex: 1100000012000000
+    - Move Tailstock Back
+    index: 0200000007000000
+    sentenceIndex: 1000000015000000

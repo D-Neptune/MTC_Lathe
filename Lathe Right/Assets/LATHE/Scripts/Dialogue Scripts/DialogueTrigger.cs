@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    [SerializeField] private GameObject dialogHolder;
     public DialogBox dialogues;
     public DialogueManager dialogueManager;
     private List<Dialogue> gameDialogues;
@@ -20,13 +21,17 @@ public class DialogueTrigger : MonoBehaviour
     void Start(){
         if (!sentenceTrigger)
         {
+            dialogHolder.SetActive(true);
             TriggerDialogue(0);
         }
+        dialogHolder.SetActive(false);
+
 
     }
 
     public void TriggerDialogue (int i)
     {
+        dialogHolder.SetActive(true);
         dialogueManager.StartDialogue(gameDialogues[i]);
         currentIndex = i;
     }
