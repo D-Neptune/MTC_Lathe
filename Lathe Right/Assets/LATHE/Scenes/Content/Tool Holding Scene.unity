@@ -9194,6 +9194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button1: {fileID: 1435974027}
   Button2: {fileID: 1321985123}
+  Button3: {fileID: 0}
   tutorial: {fileID: 274365353}
 --- !u!114 &973710959
 MonoBehaviour:
@@ -13694,7 +13695,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1488279519
 Transform:

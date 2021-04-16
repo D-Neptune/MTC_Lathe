@@ -37,8 +37,8 @@ public class DataHandler
         this.scene = scene;
         this.isTutorial = isTutorial;
         this.currentAnim = curr;
-        this.componentsCompleted.Clear();
         this.componentsCompleted = null;
+        this.currentAnim = curr;
     }
 
     public List<int> DetailIndexes

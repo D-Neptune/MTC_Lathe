@@ -12,7 +12,7 @@ public class ButtonSceneToggle : MonoBehaviour
     {
         if (tutorial.getTutorial())
         {
-            Button1.SetActive(true);
+            //Button1.SetActive(true);
             Button2.SetActive(false);
             if (Button3 != null)
             {

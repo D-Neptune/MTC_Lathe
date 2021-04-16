@@ -44,12 +44,15 @@ public class InformationGatherer : MonoBehaviour
             if (scene.Equals("LatheMainMenu"))
             {
                 languageScene.setName(data.StudentName);
-                languageScene.setNumber(data.StudentName);
+                languageScene.setNumber(data.StudentNumber);
                 languageScene.setLanguage(data.Language);
                 sceneDisplayToggle.setTutorial(data.IsTutorial);
                 levelToLoad = data.savedLevel;
+                Debug.Log(data.StudentName);
+                Debug.Log(data.StudentNumber);
                 if (data.StudentName.Equals("CEED ADMIN") && data.StudentNumber.Equals("1234567"))
                 {
+                    Debug.Log("ADMIN MODE");
                     sceneDisplayToggle.AdminMode = true;
                 }
                 if (languageScene.getLanguage())
@@ -61,9 +64,13 @@ public class InformationGatherer : MonoBehaviour
             {
                 if (sceneDisplayToggle.getTutorial())
                 {
-                    interactionManager.SetupAnims(data.SavedAnim);
-                    videoManager.VideoWatched = true;
-                    triggerDialogue.SentenceTrigger = true;
+                    if (data.SavedAnim != anim.NA)
+                    {
+                        interactionManager.SetupAnims(data.SavedAnim);
+                        videoManager.VideoWatched = true;
+                        triggerDialogue.SentenceTrigger = true;
+                        Debug.Log(sceneDisplayToggle.AdminMode);
+                    }
                 }
             }
             else if(scene.Equals("Discovery Scene"))

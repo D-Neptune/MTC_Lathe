@@ -4149,6 +4149,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6162113170246996662}
+        m_MethodName: loadlevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LatheMainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &550658073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9902,6 +9913,7 @@ MonoBehaviour:
   videoManager: {fileID: 854006876}
   trigger: {fileID: 155548178}
   triggerDialogue: {fileID: 0}
+  interactionManager: {fileID: 0}
   AnimScene: 0
   Discover: 1
   MainMenu: 0

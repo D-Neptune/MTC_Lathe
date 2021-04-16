@@ -13,7 +13,7 @@ public class InteractionManager : MonoBehaviour
     private anim currentAnim;
     void Awake()
     {
-        NoInteraction();
+        //NoInteraction();
     }
 
     public anim CurrentAnim
@@ -31,7 +31,7 @@ public class InteractionManager : MonoBehaviour
         {
             Transition(facing);
         }
-        else if (savedAnim == anim.Turning)
+        else if (savedAnim == anim.Drilling)
         {
             Transition(turning);
         }
@@ -41,41 +41,9 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
-    public void SetInteractionLevel(string dialogueName)
-    {
-        NoInteraction();
-
-        if (dialogueName.Equals(facing))
-        {
-            ON.interactable = true;
-            ToolPost.interactable = true;
-            Tailstock.interactable = false;
-            ControlState(true);
-
-        }
-        else if (dialogueName.Equals(turning))
-        {
-            ON.interactable = true;
-            ToolPost.interactable = true;
-            Tailstock.interactable = false;
-            ControlState(true);
-
-        }
-        else if (dialogueName.Equals(drilling))
-        {
-            ON.interactable = true;
-            ToolPost.interactable = true;
-            Tailstock.interactable = true;
-            ControlState(true);
-        }
-
-    }
-
     public void Transition(string dialogueName)
     {
-
+        Debug.Log("LOADING");
         NoInteraction();
         if (SequenceDone)
         {
@@ -115,6 +83,38 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
+
+
+    // Update is called once per frame
+    public void SetInteractionLevel(string dialogueName)
+    {
+        NoInteraction();
+
+        if (dialogueName.Equals(facing))
+        {
+            ON.interactable = true;
+            ToolPost.interactable = true;
+            Tailstock.interactable = false;
+            ControlState(true);
+
+        }
+        else if (dialogueName.Equals(turning))
+        {
+            ON.interactable = true;
+            ToolPost.interactable = true;
+            Tailstock.interactable = false;
+            ControlState(true);
+
+        }
+        else if (dialogueName.Equals(drilling))
+        {
+            ON.interactable = true;
+            ToolPost.interactable = true;
+            Tailstock.interactable = true;
+            ControlState(true);
+        }
+
+    }
     public void InteractButton(string dialogueName)
     {
         if (dialogueName.Equals(drilling))
