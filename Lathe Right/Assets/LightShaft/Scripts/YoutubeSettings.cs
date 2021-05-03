@@ -435,7 +435,12 @@ public class YoutubeSettings : MonoBehaviour
     public void DisableThumbnailObject()
     {
         if(thumbnailObject != null)
+        {
+            thumbnailObject.material.mainTexture = null;
             thumbnailObject.gameObject.SetActive(false);
+
+
+        }
     }
 
     public void EnableThumbnailObject()

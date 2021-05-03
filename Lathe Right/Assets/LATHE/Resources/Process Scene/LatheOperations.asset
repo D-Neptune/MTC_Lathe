@@ -129,7 +129,7 @@ MonoBehaviour:
       \n\nHint: Click on Tailstock to move it closer to tool post"
     - "We can finally center our tool. You can use the camera controller or the camera
       view 3 to get a better view of the cutter and the live center. \n\nHint: Click
-      on increase height button in tool post panel to adjust height"
+      on thumbscrew on tool holder to adjust height"
     - "Now that we centered our tool, we can lock the tool holder at that position
       using the tool post handle mentioned previously. \n\nHint: Click on tool post
       handle to lock tool holder at current height"
@@ -246,8 +246,8 @@ MonoBehaviour:
       Cliquer sur la poup\xE9e mobile pour le rapprocher du support porte-outil"
     - "Nous pouvons enfin centrer notre outil. Vous pouvez utiliser le contr\xF4leur
       de cam\xE9ra  ou la vue de cam\xE9ra 3 pour obtenir une meilleure vue de l\u2019outil
-      de coupe et du pointe vive.\n\nIndice: Cliquez sur le bouton d'augmentation
-      de la hauteur dans le panneau de support porte-outil pour r\xE9gler la hauteur"
+      de coupe et du pointe vive.\n\r\nIndice: Cliquez sur la vis \xE0 oreilles pour
+      r\xE9gler la hauteur"
     - "Maintenant que nous avons centr\xE9 notre outil, nous pouvons verrouiller
       le porte-outil \xE0 cette position \xE0 l'aide de la poign\xE9e de support
       porte-outil mentionn\xE9e pr\xE9c\xE9demment.\n\nIndice: Cliquez sur la poign\xE9e
@@ -379,8 +379,8 @@ MonoBehaviour:
       3 to get a clear view of centering.
 
 
-      Hint: Click on increase height
-      button in tool post panel to adjust height'
+      Hint: Click on thumbscrew on tool
+      holder to adjust height'
     - Good job! The cutting tool is now centered. Lock the tool holder at that height
       using the tool post handle.
     - 'Now that we centered our cutting tool, we can lock the tool holder at that
@@ -477,8 +477,7 @@ MonoBehaviour:
     - "Maintenant que nous avons une meilleure vue, nous pouvons ajuster l'outil
       de coupe pour l'aligner avec la pointe vive. Utilisez le contr\xF4leur de cam\xE9ra
       ou la vue de la cam\xE9ra pour obtenir une vue claire du centrage.\n\nIndice:
-      Cliquez sur le bouton d'augmentation de la hauteur dans le panneau de support
-      porte-outil pour r\xE9gler la hauteur"
+      Cliquez sur la vis \xE0 oreilles pour r\xE9gler la hauteur"
     - "Bon travail! L'outil de coupe est maintenant centr\xE9. Verrouillez le porte-outil
       \xE0 cette hauteur \xE0 l'aide de la poign\xE9e du support porte-outil."
     - "Maintenant que nous avons centr\xE9 notre outil de coupe, nous pouvons verrouiller

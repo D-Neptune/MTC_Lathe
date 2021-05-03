@@ -93,7 +93,7 @@ public class InteractionManager : MonoBehaviour
         if (dialogueName.Equals(facing))
         {
             ON.interactable = true;
-            ToolPost.interactable = true;
+            ToolPost.interactable = false;
             Tailstock.interactable = false;
             ControlState(true);
 
@@ -101,7 +101,7 @@ public class InteractionManager : MonoBehaviour
         else if (dialogueName.Equals(turning))
         {
             ON.interactable = true;
-            ToolPost.interactable = true;
+            ToolPost.interactable = false;
             Tailstock.interactable = false;
             ControlState(true);
 
