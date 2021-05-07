@@ -215,7 +215,7 @@ public class OperationManager : MonoBehaviour
     public void ContinueAnim()
     {
         TurnOn();
-        animator.SetFloat("Rotational Speed", 0.000000000000000000001f);
+        animator.SetFloat("Rotational Speed", 0.00001f);
     }
 
     public void SetAnimSpeed(float speed)

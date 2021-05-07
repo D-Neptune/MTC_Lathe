@@ -49,6 +49,9 @@ public class ComponentHint : MonoBehaviour
     public void RemoveClickedHint(SetupOnHover hint)
     {
         parts.Remove(hint);
-        partsClicked.Add(hint);
+        if (!partsClicked.Contains(hint))
+        {
+            partsClicked.Add(hint);
+        }
     }
 }

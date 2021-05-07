@@ -1827,6 +1827,13 @@ MonoBehaviour:
   componentHint: {fileID: 0}
   loadSceneScript: {fileID: 392903338}
   languageSceneSwitcher: {fileID: 833299585}
+  videoManager: {fileID: 0}
+  trigger: {fileID: 0}
+  triggerDialogue: {fileID: 0}
+  interactionManager: {fileID: 0}
+  AnimScene: 0
+  Discover: 0
+  MainMenu: 1
 --- !u!114 &833299590
 MonoBehaviour:
   m_ObjectHideFlags: 0
