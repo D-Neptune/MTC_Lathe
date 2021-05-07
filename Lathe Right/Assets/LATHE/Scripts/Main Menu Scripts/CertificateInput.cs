@@ -22,6 +22,7 @@ public class CertificateInput : MonoBehaviour
         tutorialDone.TutorialDone();
         fullNameText.text = InputInformation.Name;
         studentNumberText.text = InputInformation.Number;
+        SaveSystem.DeleteFileExists();
     }
 
     private void toggleOnStart()

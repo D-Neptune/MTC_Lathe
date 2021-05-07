@@ -56,4 +56,13 @@ public static class SaveSystem
         string path = Application.persistentDataPath + "/LatheRight.CEED";
         return File.Exists(path);
     }
+
+    public static void DeleteFileExists()
+    {
+        string path = Application.persistentDataPath + "/LatheRight.CEED";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
 }
