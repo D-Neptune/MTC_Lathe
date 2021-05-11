@@ -198,9 +198,9 @@ MonoBehaviour:
       tourn\xE9e \xE0 grande vitesse pendant le processus d'usinage."
     - "Pour placer la pi\xE8ce \xE0 usiner, notre premi\xE8re \xE9tape consiste \xE0
       ouvrir le panneau de s\xE9curit\xE9 afin de faciliter la mise en place de la
-      pi\xE8ce.\n\nIndice: Cliquer sur le panneau de s\xE9curit\xE9 pour l'ouvrir"
+      pi\xE8ce.\n\nIndice: Cliquez sur le panneau de s\xE9curit\xE9 pour l'ouvrir"
     - "Avec le panneau de s\xE9curit\xE9 ouvert, nous pouvons maintenant placer la
-      pi\xE8ce \xE0 l'int\xE9rieur du mandrin.\n\nIndice: Cliquer sur la pi\xE8ce
+      pi\xE8ce \xE0 l'int\xE9rieur du mandrin.\n\nIndice: Cliquez sur la pi\xE8ce
       \xE0 usinage pour le placer dans le mandrin"
     - "Lors de la mise en place de la pi\xE8ce, nous voulons nous assurer que l'extr\xE9mit\xE9
       de la pi\xE8ce est suffisamment \xE9loign\xE9e pour ne pas finir par usiner
@@ -209,10 +209,10 @@ MonoBehaviour:
       mandrin. Pour r\xE9aliser cet exploit, nous utilisons ce qu'on appelle une
       cl\xE9 de mandrin. Les cl\xE9s de mandrin sont utilis\xE9es pour serrer ou
       desserrer l'\xE9quipement d'usinage. Nous utiliserons la cl\xE9 de mandrin
-      situ\xE9e sur le mandrin pour cela exactement.\n\nIndice: Cliquer sur la cl\xE9
+      situ\xE9e sur le mandrin pour cela exactement.\n\nIndice: Cliquez sur la cl\xE9
       de mandrin pour serrer la pi\xE8ce \xE0 usinage"
     - "Maintenant que nous avons plac\xE9 notre pi\xE8ce, nous pouvons fermer le
-      panneau de s\xE9curit\xE9.\n\nIndice: Cliquer sur le panneau de s\xE9curit\xE9
+      panneau de s\xE9curit\xE9.\n\nIndice: Cliquez sur le panneau de s\xE9curit\xE9
       pour le fermer"
     - "La prochaine chose que nous voulons faire est de configurer l'outil de coupe
       que nous utiliserons pour effectuer cette op\xE9ration. Nous monterons l'outil
@@ -220,7 +220,7 @@ MonoBehaviour:
       Il peut \xEAtre facilement plac\xE9 sur le support porte-outil."
     - "Le support porte-outil a \xE9t\xE9 con\xE7u pour permettre un changement d'outil
       rapide, car le porte-outil peut \xEAtre facilement placer et retir\xE9 du support
-      porte-outil.\n\nIndice: Cliquer sur le porte-outil pour placer le support porte-outil"
+      porte-outil.\n\nIndice: Cliquez sur le porte-outil pour placer le support porte-outil"
     - "Pour placer le porte-outil sur le support porte-outil, nous utilisons la poign\xE9e
       sur le dessus du support porte-outil. Il est utilis\xE9 pour verrouiller et
       d\xE9verrouiller le porte-outil car il est possible de r\xE9gler la hauteur
@@ -238,12 +238,12 @@ MonoBehaviour:
       comparer et centrer avec pr\xE9cision notre outil de coupe. Une cl\xE9 est
       utilis\xE9e pour desserrer le support porte-outil. Selon l'endroit o\xF9 vous
       installez le porte-outil, la rotation du support porte-outil changera.\n\nIndice:
-      Cliquer sur la cl\xE9 de serrage pour desserer le support porte-outil "
+      Cliquez sur la cl\xE9 de serrage pour desserer le support porte-outil "
     - "Maintenant que le support porte-outil n'est pas serr\xE9, faites pivoter le
       support porte-outil de sorte qu'il soit align\xE9 avec la pointe vive\n\nIndice:
-      Cliquer sur le support porte-outil pour le pivoter"
+      Cliquez sur le support porte-outil pour le pivoter"
     - "Ensuite, rapprochons la poup\xE9e mobile du support porte-outil\n\nIndice:
-      Cliquer sur la poup\xE9e mobile pour le rapprocher du support porte-outil"
+      Cliquez sur la poup\xE9e mobile pour le rapprocher du support porte-outil"
     - "Nous pouvons enfin centrer notre outil. Vous pouvez utiliser le contr\xF4leur
       de cam\xE9ra  ou la vue de cam\xE9ra 3 pour obtenir une meilleure vue de l\u2019outil
       de coupe et du pointe vive.\n\r\nIndice: Cliquez sur la vis \xE0 oreilles pour
@@ -262,22 +262,22 @@ MonoBehaviour:
     - "Bon travail! Vous avez termin\xE9 le processus de configuration. Nous allons
       maintenant passer au processus d'usinage de cette op\xE9ration."
     - "Nous commencerons par rapprocher l'outil de coupe de la pi\xE8ce \xE0 usiner.
-      Nous allons accomplir ceci en utilisant le chariot principal.\n\nIndice: Cliquer
+      Nous allons accomplir ceci en utilisant le chariot principal.\n\nIndice: Cliquez
       sur la roue d'alimentation de chariot pour bouger le chariot"
     - "Allumons ensuite la machine. Le bouton d'alimentation est situ\xE9 sur la
       poup\xE9e fixe comme indiqu\xE9 dans le didacticiel pr\xE9c\xE9dent.\n\nIndice:
       Cliquez sur le bouton ON sur la tour pour d\xE9marrer la machine"
     - "La prochaine \xE9tape consiste \xE0 d\xE9finir notre point de contact. Nous
       utiliserons le chariot transversal et le chariot principale pour faire ceci.\n\nIndice:
-      Cliquer sur la roue d'alimentation transversale pour d\xE9finir le point de
+      Cliquez sur la roue d'alimentation transversale pour d\xE9finir le point de
       contact"
     - "Maintenant, reculons l\xE9g\xE8rement notre outil de coupe en utilisant le
       chariot transversal pour que nous puissions d\xE9finir notre profondeur de
-      coupe.\n\nIndice: Cliquer sur la roue d'alimentation pour reculer l'outil de
+      coupe.\n\nIndice: Cliquez sur la roue d'alimentation pour reculer l'outil de
       coupe l\xE9g\xE8rement"
     - "\xC0 l'aide du chariot principale, nous pouvons r\xE9gler notre profondeur
       de coupe. Essentiellement, la profondeur de coupe indiquera la quantit\xE9
-      de mat\xE9riau que nous retirons de la surface de la pi\xE8ce.\n\nIndice: Cliquer
+      de mat\xE9riau que nous retirons de la surface de la pi\xE8ce.\n\nIndice: Cliquez
       sur la roue d'alimentation de chariot pour d\xE9finir la profondeur de coupe"
     - "Avant d'usiner la pi\xE8ce. Nous devons garder certaines choses \xE0 l'esprit.
       Lors de l'usinage, nous devons conserver la m\xEAme vitesse de coupe pour avoir
@@ -286,13 +286,13 @@ MonoBehaviour:
       fait en sorte qu'il suffit d'atteindre la moiti\xE9 de la pi\xE8ce pour usiner
       la surface de la pi\xE8ce."
     - "Nous sommes maintenant pr\xEAts \xE0 commencer l'usinage de la pi\xE8ce \xE0
-      l\u2019aide du chariot transversal.\n\nIndice: Cliquer sur la roue d'alimentation
+      l\u2019aide du chariot transversal.\n\nIndice: Cliquez sur la roue d'alimentation
       transversale pour usiner la surface de la pi\xE8ce"
     - "Avant d'\xE9teindre la machine, retirez l'outil de coupe de la zone d\u2019usinage
-      en utilisant la roue du chariot.\n\nIndice: Cliquer sur la roue d'alimentation
+      en utilisant la roue du chariot.\n\nIndice: Cliquez sur la roue d'alimentation
       de chariot pour \xE9loigner l'outil de coupe de la zone d'usinage"
     - "Nous pouvons maintenant \xE9teindre la machine en toute s\xE9curit\xE9.\n\nIndice:
-      Cliquer sur le bouton d'arr\xEAt sur la tour pour arr\xEAter la machine"
+      Cliquez sur le bouton d'arr\xEAt sur la tour pour arr\xEAter la machine"
     - "Ce processus peut \xEAtre r\xE9p\xE9t\xE9 jusqu'\xE0 ce que la quantit\xE9
       souhait\xE9e de mat\xE9riau est retir\xE9e de la pi\xE8ce."
     - "Bravo! Ensuite, nous apprendrons comment effectuer l'op\xE9ration de tournage.
@@ -446,12 +446,12 @@ MonoBehaviour:
       de corps de r\xE9volution des filetages de tous profils."
     - "Tout comme l'op\xE9ration de surfa\xE7age, nous installerons d'abord la pi\xE8ce
       dans le mandrin."
-    - "Ouvrons d\u2019abord le panneau de s\xE9curit\xE9.\n\nIndice: Cliquer sur
+    - "Ouvrons d\u2019abord le panneau de s\xE9curit\xE9.\n\nIndice: Cliquez sur
       le panneau de s\xE9curit\xE9 pour l'ouvrir"
-    - "Ensuite, pla\xE7ons la pi\xE8ce \xE0 usiner dans le mandrin.\n\nIndice: Cliquer
+    - "Ensuite, pla\xE7ons la pi\xE8ce \xE0 usiner dans le mandrin.\n\nIndice: Cliquez
       sur la pi\xE8ce \xE0 usinage pour le placer dans le mandrin"
     - "Nous utilisons la cl\xE9 de mandrin pour serrer la pi\xE8ce \xE0 l'int\xE9rieur
-      du mandrin.\n\nIndice: Cliquer sur la cl\xE9 de mandrin pour serrer la pi\xE8ce
+      du mandrin.\n\nIndice: Cliquez sur la cl\xE9 de mandrin pour serrer la pi\xE8ce
       \xE0 usinage"
     - "Enfin, nous fermons le panneau de s\xE9curit\xE9.\n\nIndice: Cliquer sur le
       panneau de s\xE9curit\xE9 pour le fermer"
@@ -465,14 +465,14 @@ MonoBehaviour:
       cette position car l'op\xE9ration de tournage usinera la pi\xE8ce longitudinalement
       (l'op\xE9ration de surfa\xE7age usine la pi\xE8ce axialement)."
     - "Ensuite, nous utiliserons la cl\xE9 de serrage pour desserrer le support de
-      porte-outil afin de pouvoir le pivoter.\n\nIndice: Cliquer sur la cl\xE9 de
+      porte-outil afin de pouvoir le pivoter.\n\nIndice: Cliquez sur la cl\xE9 de
       serrage pour desserer le support porte-outil "
     - "Nous pouvons maintenant faire pivoter notre support porte-outil dans la direction
       de la pointe vive. Notez que, comme nous avons plac\xE9 le porte-outil \xE0
       un emplacement diff\xE9rent, il nous suffit de faire pivoter le support porte-outil
-      90 degr\xE9s.\n\nIndice: Cliquer sur le support porte-outil pour le pivoter"
+      90 degr\xE9s.\n\nIndice: Cliquez sur le support porte-outil pour le pivoter"
     - "L'\xE9tape suivante consiste \xE0 rapprocher la poup\xE9e mobile pour ajuster
-      la hauteur de notre outil de coupe.\n\nIndice: Cliquer sur la poup\xE9e mobile
+      la hauteur de notre outil de coupe.\n\nIndice: Cliquez sur la poup\xE9e mobile
       pour rapprocher celle-ci"
     - "Maintenant que nous avons une meilleure vue, nous pouvons ajuster l'outil
       de coupe pour l'aligner avec la pointe vive. Utilisez le contr\xF4leur de cam\xE9ra
@@ -492,10 +492,10 @@ MonoBehaviour:
       la cl\xE9 de serrage pour emp\xEAcher toute rotation pendant l'usinage.\n\nIndice:
       Cliquez sur la cl\xE9 de serrage pour v\xE9rouiller le support porte-outil"
     - "Tr\xE8s bien, nous pouvons maintenant commencer le processus d'usinage."
-    - "Nous commen\xE7ons par rapprocher le chariot de la pi\xE8ce.\n\nIndice: Cliquer
+    - "Nous commen\xE7ons par rapprocher le chariot de la pi\xE8ce.\n\nIndice: Cliquez
       sur la roue d'alimentation du chariot pour bouger le chariot"
     - "Avant d\u2019allumer la machine, rapprochez l\u2019outil de coupe un peu plus
-      de la pi\xE8ce \xE0 l\u2019aide de le chariot transversale.\n\nIndice: Cliquer
+      de la pi\xE8ce \xE0 l\u2019aide de le chariot transversale.\n\nIndice: Cliquez
       sur la roue d'alimentation transversale pour bouger le support porte-outil
       plus pr\xE8s de la pi\xE8ce \xE0 usiner"
     - "Allumez maintenant la machine de tour\n\nIndice: Cliquez sur le bouton ON
@@ -516,7 +516,7 @@ MonoBehaviour:
       coupe de la zone d'usinage \xE0 l'aide du chariot transversal.\r\n\r\nIndice:
       Cliquez sur la roue d'alimentation transversale pour \xE9loigner l'outil de
       coupe"
-    - "Nous pouvons maintenant \xE9teindre la tour.\n\nIndice: Cliquer sur le bouton
+    - "Nous pouvons maintenant \xE9teindre la tour.\n\nIndice: Cliquez sur le bouton
       d'arr\xEAt sur la tour pour arr\xEAter la machine"
     - "Ce processus peut \xEAtre r\xE9p\xE9t\xE9 jusqu'\xE0 ce que la quantit\xE9
       souhait\xE9e de mat\xE9riau soit retir\xE9e de la pi\xE8ce."
@@ -660,12 +660,12 @@ MonoBehaviour:
       la configuration de la pi\xE8ce."
     - "Nous ouvrons le panneau de s\xE9curit\xE9.\n\nIndice: Cliquez sur le panneau
       de s\xE9curit\xE9 pour l'ouvrir"
-    - "Placez la pi\xE8ce \xE0 usiner dans le mandrin\r.\n\nIndice: Cliquer sur la
+    - "Placez la pi\xE8ce \xE0 usiner dans le mandrin\r.\n\nIndice: Cliquez sur la
       pi\xE8ce \xE0 usinage pour le placer dans le mandrin"
     - "Utilisez la cl\xE9 de mandrin et serrez les m\xE2choires du mandrin pour vous
-      assurer qu'elle saisit la pi\xE8ce de mani\xE8re rigide.\r\n\nIndice: Cliquer
+      assurer qu'elle saisit la pi\xE8ce de mani\xE8re rigide.\r\n\nIndice: Cliquez
       sur la cl\xE9 de mandrin pour serrer la pi\xE8ce \xE0 usinage"
-    - "Fermez le panneau de s\xE9curit\xE9.\r\n\nIndice: Cliquer sur le panneau de
+    - "Fermez le panneau de s\xE9curit\xE9.\r\n\nIndice: Cliquez sur le panneau de
       s\xE9curit\xE9 pour le fermer"
     - "Nous devons maintenant pr\xE9parer la poup\xE9e mobile pour l'op\xE9ration
       de per\xE7age. Pour accomplir ceci, nous devons remplacer la pointe vive avec
@@ -707,7 +707,7 @@ MonoBehaviour:
     - "Utilisez un mouvement de picage pendant le per\xE7age du mat\xE9riau avec
       la roue de fourreau.\r\n\nIndice: Cliquez sur la roue de fourreau pour per\xE7er
       la pi\xE8ce \xE0 usiner"
-    - "\xC9teignez la machine et passons \xE0 un foret plus gros.\r\n\nIndice: Cliquer
+    - "\xC9teignez la machine et passons \xE0 un foret plus gros.\r\n\nIndice: Cliquez
       sur le bouton d'arr\xEAt sur la tour pour arr\xEAter la machine"
     - "Desserrez le mandrin de per\xE7age \xE0 l'aide de la cl\xE9 de mandrin\r.\n\nIndice:
       Cliquez sur la cl\xE9 de mandrin pour desserrer le mandrin de per\xE7age"
@@ -721,7 +721,7 @@ MonoBehaviour:
     - "Retirez le mat\xE9riau de la pi\xE8ce par incr\xE9ments en utilisant un mouvement
       de picage\n\nIndice: Cliquez sur la roue de fourreau pour per\xE7er la pi\xE8ce
       \xE0 usiner"
-    - "\xC9teignez la machine\r.\n\nIndice: Cliquer sur le bouton d'arr\xEAt sur
+    - "\xC9teignez la machine\r.\n\nIndice: Cliquez sur le bouton d'arr\xEAt sur
       la tour pour arr\xEAter la machine"
     - "Ce processus peut \xEAtre r\xE9p\xE9t\xE9 jusqu'\xE0 ce que la quantit\xE9
       souhait\xE9e de mat\xE9riau soit retir\xE9e de la pi\xE8ce.\r"
