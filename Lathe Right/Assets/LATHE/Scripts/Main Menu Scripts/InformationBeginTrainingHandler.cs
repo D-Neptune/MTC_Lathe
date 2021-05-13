@@ -29,15 +29,9 @@ public class InformationBeginTrainingHandler : MonoBehaviour
     // Start is called before the first frame update
     public void OnClick(string millScene)
     {
-        if (!firstClick && !sceneDisplay.SubmitDone)
+        if (!sceneDisplay.SubmitDone)
         {
             namePanel.SetActive(true);
-            begin.interactable = false;
-            firstClick = true;
-        }
-        else
-        {
-            loadSceneScript.loadlevel(millScene);
         }
     }
 }

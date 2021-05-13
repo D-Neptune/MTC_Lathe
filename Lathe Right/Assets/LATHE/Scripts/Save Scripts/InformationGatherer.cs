@@ -43,19 +43,21 @@ public class InformationGatherer : MonoBehaviour
         {
             if (scene.Equals("LatheMainMenu"))
             {
+                bool tmpLang = languageScene.getLanguage();
                 languageScene.setName(data.StudentName);
                 languageScene.setNumber(data.StudentNumber);
                 languageScene.setLanguage(data.Language);
                 sceneDisplayToggle.setTutorial(data.IsTutorial);
                 levelToLoad = data.savedLevel;
-                Debug.Log(data.StudentName);
-                Debug.Log(data.StudentNumber);
+                //Debug.Log(data.StudentName);
+                //Debug.Log(data.StudentNumber);
+                Debug.Log(data.Language);
                 if (data.StudentName.Equals("CEED ADMIN") && data.StudentNumber.Equals("1234567"))
                 {
-                    Debug.Log("ADMIN MODE");
+                    //Debug.Log("ADMIN MODE");
                     sceneDisplayToggle.AdminMode = true;
                 }
-                if (languageScene.getLanguage())
+                if (languageScene.getLanguage() && (languageScene.getLanguage() != tmpLang))
                 {
                     languageSceneSwitcher.toggleOnStart();
                 }
@@ -69,7 +71,7 @@ public class InformationGatherer : MonoBehaviour
                         interactionManager.SetupAnims(data.SavedAnim);
                         videoManager.VideoWatched = true;
                         triggerDialogue.SentenceTrigger = true;
-                        Debug.Log(sceneDisplayToggle.AdminMode);
+                        //Debug.Log(sceneDisplayToggle.AdminMode);
                     }
                 }
             }
@@ -81,7 +83,7 @@ public class InformationGatherer : MonoBehaviour
                     {
                         if (data.DetailIndexes.Contains(part.DetailIndex))
                         {
-                            Debug.Log("Contains");
+                            //Debug.Log("Contains");
                             part.savedPartClicked = true;
                         }
                     }

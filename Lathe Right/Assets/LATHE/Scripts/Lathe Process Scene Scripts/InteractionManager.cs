@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InteractionManager : MonoBehaviour
 {
-    [SerializeField] public Button ON, MainMenu, Next, Facing, Turning, Drill, ToolPost, Tailstock;
+    [SerializeField] public Button ON, SaveBTN, MainMenu, Next, Facing, Turning, Drill, ToolPost, Tailstock;
     [SerializeField] public List<Button> controls;
     [SerializeField] public GameObject TailstockPanel, ToolPostPanel;
     [SerializeField] public string intro, facing, turning, drilling;
@@ -81,6 +81,8 @@ public class InteractionManager : MonoBehaviour
             SequenceDone = true;
 
         }
+        SaveBTN.interactable = true;
+
     }
 
 
@@ -109,7 +111,7 @@ public class InteractionManager : MonoBehaviour
         else if (dialogueName.Equals(drilling))
         {
             ON.interactable = true;
-            ToolPost.interactable = true;
+            //ToolPost.interactable = true;
             Tailstock.interactable = true;
             ControlState(true);
         }
@@ -132,6 +134,7 @@ public class InteractionManager : MonoBehaviour
     }
     void NoInteraction()
     {
+        SaveBTN.interactable = false;
         ToolPost.interactable = false;
         Tailstock.interactable = false;
         ON.interactable = false;
