@@ -2686,7 +2686,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleList:
   - {fileID: 2098951582}
-  - {fileID: 0}
+  - {fileID: 323509571}
+  - {fileID: 323509573}
+  - {fileID: 323509572}
   toggleHint: {fileID: 0}
   dialogueOperator: {fileID: 1961898193}
   languageScene: {fileID: 274365352}
@@ -3252,6 +3254,42 @@ VideoPlayer:
     type: 3}
   m_PrefabInstance: {fileID: 323509562}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &323509571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8368972744237780132, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 323509562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &323509572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5909822133956599199, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 323509562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &323509573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6490498605837482760, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 323509562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &325748890
 GameObject:
   m_ObjectHideFlags: 0
@@ -19905,8 +19943,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: SwitchLang
+      - m_Target: {fileID: 323509573}
+        m_MethodName: toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19927,7 +19965,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 323509571}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 323509572}
         m_MethodName: toggle
         m_Mode: 1
         m_Arguments:

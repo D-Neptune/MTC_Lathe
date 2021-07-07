@@ -595,6 +595,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &93241615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8368972744237780132, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 110838496}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &99724118
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +767,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 854006875}
     m_Modifications:
+    - target: {fileID: 637171945174564192, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771068542773988203, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_Name
+      value: Error Dialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771068542773988203, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5566783085008690880, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
         type: 3}
       propertyPath: m_FontData.m_BestFit
@@ -802,6 +829,11 @@ PrefabInstance:
       objectReference: {fileID: 1371068070}
     - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
         type: 3}
+      propertyPath: ErrorDialog
+      value: 
+      objectReference: {fileID: 1148916112}
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
       propertyPath: videoControllerCanvas
       value: 
       objectReference: {fileID: 6162113169864912040}
@@ -843,7 +875,7 @@ PrefabInstance:
     - target: {fileID: 5566783085421040614, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
         type: 3}
@@ -3796,6 +3828,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
+--- !u!114 &473578630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5909822133956599199, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 110838496}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &504613836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4758,6 +4802,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670572337}
   m_CullTransparentMesh: 0
+--- !u!114 &672429018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6490498605837482760, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 110838496}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &676078371
 GameObject:
   m_ObjectHideFlags: 0
@@ -8439,6 +8495,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!1 &1148916112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2771068542773988203, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 110838496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1190316417
 GameObject:
   m_ObjectHideFlags: 0
@@ -9831,6 +9893,9 @@ MonoBehaviour:
   toggleList:
   - {fileID: 6162113171002112923}
   - {fileID: 333150644}
+  - {fileID: 672429018}
+  - {fileID: 93241615}
+  - {fileID: 473578630}
   toggleHint: {fileID: 0}
   dialogueOperator: {fileID: 0}
   languageScene: {fileID: 1403452343}
@@ -24381,39 +24446,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6162113171002112923}
-        m_MethodName: toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1041450908}
-        m_MethodName: ChangeLanguage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 155548177}
-        m_MethodName: switchLang
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1403452342}
         m_MethodName: updateLanguageState
         m_Mode: 1
@@ -24425,7 +24457,62 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 333150644}
+      - m_Target: {fileID: 672429018}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 93241615}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 473578630}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 93241615}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 672429018}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 473578630}
         m_MethodName: toggle
         m_Mode: 1
         m_Arguments:

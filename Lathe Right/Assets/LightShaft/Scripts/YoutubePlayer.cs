@@ -22,17 +22,19 @@ public class YoutubePlayer : YoutubeSettings
             Debug.Log("Here you can call your external video player if you want, passing that two variables:");
             if (videoQuality != YoutubeVideoQuality.STANDARD)
             {
-                videoPlayer.url = urlToUse;
-                audioPlayer.url = audioUrl;
                 Debug.Log("Your video Url: " + urlToUse);
                 Debug.Log("Your audio video Url: " + audioUrl);
             }
             else
             {
-                videoPlayer.url = urlToUse;
                 Debug.Log("You video Url:" + urlToUse);
             }
         }
+    }
+
+    public void NetworkErrorHandler()
+    {
+        OnVideoFinished.Invoke();
     }
 
     ///<summary>Get the video title, but it need to be loaded first.</summary>

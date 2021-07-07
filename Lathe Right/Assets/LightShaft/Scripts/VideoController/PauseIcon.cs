@@ -21,7 +21,6 @@ public class PauseIcon : MonoBehaviour {
         {
             pauseImage.gameObject.SetActive(true);
             playImage.gameObject.SetActive(false);
-
         }
     }
 }

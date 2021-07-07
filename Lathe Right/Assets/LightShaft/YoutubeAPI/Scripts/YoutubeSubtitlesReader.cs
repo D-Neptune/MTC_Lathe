@@ -5,20 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine.Networking;
-
-#if UNITY_EDITOR
-using UnityEditor;
-# endif
-
+using UnityEngine.Events;
+using TMPro;
 public class YoutubeSubtitlesReader : MonoBehaviour
 {
 
     private readonly string[] _delimiters = new string[] { "-->", "- >", "->" };
     public YoutubeSubtitlesReader() { }
+    public string videoID;
 
     /*SOME LANG CODES
      * 
@@ -30,17 +27,18 @@ public class YoutubeSubtitlesReader : MonoBehaviour
      * https://developers.google.com/admin-sdk/directory/v1/languages
      * 
      */
-    public bool LoadOnStart;
-    public string videoID;
 
-    [HideInInspector] [SerializeField] private TextAsset CaptionFile;
     public string langCode;
     public VideoPlayer videoPlayer;
     bool subtitleLoaded = false;
     public string currentTextLine;
     public Text uiSubtitle;
-    [SerializeField] private UnityEvent MissingCaptionEvent, PresentCaptionEvent;
+    public TextMeshProUGUI textMeshSubtitle;
     List<SubtitleItem> subtitleList;
+
+    public bool LoadOnStart;
+    [DrawIf("LoadOnStart", true)] [SerializeField] private TextAsset CaptionFile;
+    [SerializeField] private UnityEvent MissingCaptionEvent, PresentCaptionEvent;
 
     private void Start()
     {
@@ -56,6 +54,22 @@ public class YoutubeSubtitlesReader : MonoBehaviour
         get => CaptionFile;
         set => CaptionFile = value;
     }
+
+    public void LoadSubtitles()
+    {
+        if (CaptionFile != null)
+        {
+            subtitleList = ParseStream(CaptionFile.bytes);
+            WhenSubtitleLoadAreReady(subtitleList);
+            PresentCaptionEvent.Invoke();
+        }
+        else
+        {
+            MissingCaptionEvent.Invoke();
+        }
+    }
+
+
 
 
     public void LoadSubtitle()
@@ -81,20 +95,6 @@ public class YoutubeSubtitlesReader : MonoBehaviour
         WhenSubtitleLoadAreReady(subtitleList);
     }
 
-    public void LoadSubtitles()
-    {
-        if (CaptionFile != null)
-        {
-            subtitleList = ParseStream(CaptionFile.bytes);
-            WhenSubtitleLoadAreReady(subtitleList);
-            PresentCaptionEvent.Invoke();
-        }
-        else
-        {
-            MissingCaptionEvent.Invoke();
-        }
-    }
-
 
     private void FixedUpdate()
     {
@@ -102,16 +102,17 @@ public class YoutubeSubtitlesReader : MonoBehaviour
         {
             foreach (SubtitleItem item in subtitleList)
             {
-                if(videoPlayer.time >= item.StartTime  && videoPlayer.time <= item.EndTime)
+                if (videoPlayer.time >= item.StartTime && videoPlayer.time <= item.EndTime)
                 {
                     currentTextLine = item.text;
-                    uiSubtitle.text = currentTextLine;
+                    textMeshSubtitle.text = "<font=LiberationSans SDF><mark=#000000>" + currentTextLine + "</mark>";
                     break;
                 }
                 else
                 {
                     currentTextLine = "";
-                    uiSubtitle.text = currentTextLine;
+                    textMeshSubtitle.text = "<font=LiberationSans SDF><mark=#000000>" + currentTextLine + "</mark>";
+
                 }
             }
         }
@@ -157,8 +158,8 @@ public class YoutubeSubtitlesReader : MonoBehaviour
                         var success = TryParseTimecodeLine(line, out startTc, out endTc);
                         if (success)
                         {
-                            item.StartTime = startTc/1000;
-                            item.EndTime = endTc/1000;
+                            item.StartTime = startTc / 1000;
+                            item.EndTime = endTc / 1000;
                         }
                     }
                     else
@@ -315,21 +316,3 @@ public class SubtitleItem
     }
 
 }
-
-#if UNITY_EDITOR
-[CustomEditor(typeof(YoutubeSubtitlesReader))]
-public class YoutubeSubtitlesReader_Editor: Editor
-{
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-
-        YoutubeSubtitlesReader subtitlesReader = (YoutubeSubtitlesReader) target;
-        if(subtitlesReader.LoadOnStart)
-        {
-            subtitlesReader.Captions = EditorGUILayout.ObjectField("Caption File", subtitlesReader.Captions, typeof(TextAsset), true) as TextAsset;
-        }
-
-    }
-}
-#endif

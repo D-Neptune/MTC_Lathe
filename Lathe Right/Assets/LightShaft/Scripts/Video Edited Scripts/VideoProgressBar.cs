@@ -9,8 +9,6 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
     public bool SeekingEnabled;
     public YoutubePlayer player;
-
-
     public void OnDrag(PointerEventData eventData)
     {
         if (SeekingEnabled)
@@ -19,27 +17,21 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
             player.TrySkip(Input.mousePosition);
         }
     }
-
     public void OnPointerDown(PointerEventData eventData)
     {
         if (SeekingEnabled)
         {
-
             player.VideoSkipDrag = true;
             player.TrySkip(Input.mousePosition);
-
         }
     }
-
     public void OnPointerUp(PointerEventData eventData)
     {
         if (SeekingEnabled)
         {
-            player.Play();
             player.VideoSkipDrag = false;
         }
     }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (SeekingEnabled)
@@ -47,14 +39,13 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
             player.Pause();
         }
     }
-
     public void OnEndDrag(PointerEventData eventData)
     {
-        /*if (SeekingEnabled) {
+        if (SeekingEnabled)
+        {
             player.Play();
             player.VideoSkipDrag = false;
-        }*/
+        }
+
     }
-
-
 }
