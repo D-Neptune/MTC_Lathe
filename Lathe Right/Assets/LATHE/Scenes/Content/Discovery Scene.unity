@@ -6230,9 +6230,9 @@ MonoBehaviour:
   YoutubeLinkDisplay: {fileID: 110838499}
   numberOfVids: 1
   youtubeLinks:
-  - https://www.youtube.com/watch?v=hw3ApTyIcrw
+  - https://youtu.be/hw3ApTyIcrw
   youtubeLinksFR:
-  - https://www.youtube.com/watch?v=hw3ApTyIcrw
+  - https://youtu.be/hw3ApTyIcrw
   titlesEN:
   - Introduction to Lathe | CEED
   titlesFR:

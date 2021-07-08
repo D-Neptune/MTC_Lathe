@@ -2914,6 +2914,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1831683733}
     m_Modifications:
+    - target: {fileID: 4742384989450419631, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
         type: 3}
       propertyPath: mainCamera
@@ -3173,6 +3178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085466456767, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0, type: 3}
@@ -17241,9 +17251,9 @@ MonoBehaviour:
   YoutubeLinkDisplay: {fileID: 323509566}
   numberOfVids: 1
   youtubeLinks:
-  - https://youtu.be/b4XZjX_X85M?list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO
+  - https://youtu.be/b4XZjX_X85M
   youtubeLinksFR:
-  - https://youtu.be/b4XZjX_X85M?list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO
+  - https://youtu.be/b4XZjX_X85M
   titlesEN:
   - Tool Holding & Work Holding | CEED
   titlesFR:
