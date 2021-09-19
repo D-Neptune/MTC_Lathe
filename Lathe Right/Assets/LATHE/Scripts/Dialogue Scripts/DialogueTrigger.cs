@@ -12,7 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     private List<Dialogue> gameDialogues;
     private int currentIndex;
     private Boolean managerPresent;
-    public Boolean sentenceTrigger;
+    [SerializeField ]public bool sentencetrigger;
     private void Awake()
     {
         gameDialogues = dialogues.dialogues;
@@ -23,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             dialogHolder.SetActive(true);
             TriggerDialogue(0);
+            return;
         }
         dialogHolder.SetActive(false);
 
@@ -34,6 +35,12 @@ public class DialogueTrigger : MonoBehaviour
         dialogHolder.SetActive(true);
         dialogueManager.StartDialogue(gameDialogues[i]);
         currentIndex = i;
+    }
+
+    public bool sentenceTrigger
+    {
+        get => sentencetrigger;
+        set => sentencetrigger = value;
     }
 
 }

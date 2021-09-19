@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEditor;
 
 
@@ -86,11 +87,13 @@ public class RendererTrigger : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         PlaySequence();
     }
 
     private void OnMouseOver()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         OperationManager controller = manager.Operation;
         if (controller != null)
         {

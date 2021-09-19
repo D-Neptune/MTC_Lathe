@@ -69,6 +69,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
+        Debug.Log("Dialog - StartDialogue: " + DeactivateAtEndDialogue.activeSelf);
+
     }
 
     public void DisplayPreviousSentece()
@@ -103,15 +105,10 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(open != null)
-        {
-            open.SetActive(false);
-        }
-        if(close != null)
-        {
-            close.SetActive(true);
-        }
-        holder.SetActive(true);
+        if(open != null) open.SetActive(false);
+        if(close != null) close.SetActive(true);
+        if(holder != null) holder.SetActive(true);
+
         sentenceIndex++;
         if (tracker < count)
         {
@@ -135,6 +132,7 @@ public class DialogueManager : MonoBehaviour
         dialogIndex.text = (sentenceIndex + 1) + "/" + count;
         dialogImage.sprite = images[sentenceIndex];
         tracker--;
+
 
 
     }

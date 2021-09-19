@@ -88,7 +88,7 @@ public class InformationGatherer : MonoBehaviour
                         }
                     }
                     videoManager.VideoWatched = true;
-                    trigger.sentenceTrigger = true;
+                    trigger.sentenceTrigger = false;
                 }
             }
 

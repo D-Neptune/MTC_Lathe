@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class OnHover : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class OnHover : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         ObjectManager.GetComponent<ComponentManager>().SetDetails(detailIndex);
         if (!hasBeenClicked)
         {
@@ -56,6 +59,8 @@ public class OnHover : MonoBehaviour
     // Update is called once per frame
     public void OnMouseOver()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         hovering = true;
     }
 

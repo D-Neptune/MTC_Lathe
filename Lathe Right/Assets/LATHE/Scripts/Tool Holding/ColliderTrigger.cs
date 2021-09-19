@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ColliderTrigger : MonoBehaviour
 {
@@ -66,11 +67,13 @@ public class ColliderTrigger : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         PlaySequence();
     }
 
     private void OnMouseOver()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         if (controller != null)
         {
             foreach (Trigger trigger in triggers)

@@ -16,7 +16,7 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using YoutubeLight;
 
-public class YoutubeSettings : MonoBehaviour
+public class YoutubeSettings : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IBeginDragHandler
 {
     protected string USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 (Chrome)";
     protected bool INTERNALDEBUG = false;
@@ -466,11 +466,11 @@ public class YoutubeSettings : MonoBehaviour
         try
         {
             Texture2D thumb = DownloadHandlerTexture.GetContent(request);
-            thumbnailObject.material.mainTexture = thumb;
+            //thumbnailObject.material.mainTexture = thumb;
         }
         catch (Exception e)
         {
-
+            Debug.LogWarning(e);
             ErrorDialog.SetActive(true);
         }
     }
@@ -488,7 +488,7 @@ public class YoutubeSettings : MonoBehaviour
                 {
                     if (!prepareVideoToPlayLater)
                         ShowLoading();
-                    Debug.Log("Buffering");
+                    //Debug.Log("Buffering");
                 }
                 else//not buffering
                 {
@@ -1530,6 +1530,12 @@ public class YoutubeSettings : MonoBehaviour
     private bool showingVolume = false;
     private bool videoSkipDrag = false;
 
+    public float HideScreenTime
+    {
+        get => hideScreenTime;
+        set => hideScreenTime = value;
+    }
+
     private void Update()
     {
         if (!loadYoutubeUrlsOnly)
@@ -1606,7 +1612,6 @@ public class YoutubeSettings : MonoBehaviour
             videoPlayer.GetComponent<AudioSource>().volume = volumeSlider.value;
             videoPlayer.SetDirectAudioVolume(0, volumeSlider.value);
         }
-
     }
 
     public void Speed()
@@ -1773,13 +1778,37 @@ public class YoutubeSettings : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButtonDown(0))
-                return true;
-            return (Input.GetAxis("Mouse X") != 0) || (Input.GetAxis("Mouse Y") != 0);
+            if (isOverPlayer)
+            {
+                if (Input.GetMouseButtonDown(0))
+                    return true;
+                return (Input.GetAxis("Mouse X") != 0) || (Input.GetAxis("Mouse Y") != 0);
+            }
+            return false;
         }
 
     }
 
+    private bool isOverPlayer = false;
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isOverPlayer = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isOverPlayer = false;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        isOverPlayer = true;
+    }
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        isOverPlayer = true;
+    }
 
 
     #endregion
@@ -2488,10 +2517,12 @@ public class YoutubeSettings : MonoBehaviour
         var videoId = youtubeUrl.Replace("https://youtube.com/watch?v=", "");
         //jsonforHtml
         var player_response = string.Empty;
-        bool tempfix = true;
+        bool tempfix = false;
+
         if (Regex.IsMatch(jsonForHtmlVersion, @"[""\']status[""\']\s*:\s*[""\']LOGIN_REQUIRED") || tempfix)
         {
-            var url = "https://www.youtube.com/get_video_info?video_id=" + videoId + "&eurl=https://youtube.googleapis.com/v/" + videoId + "&html5=1&c=TVHTML5&cver=6.20180913";
+            var url = "https://www.docs.google.com/get_video_info?video_id=" + videoId + "&eurl=https://youtube.googleapis.com/v/" + videoId + "&html5=1&c=TVHTML5&cver=6.20180913";
+            Debug.Log(url);
             UnityWebRequest request = UnityWebRequest.Get(url);
             request.SetRequestHeader("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 (Chrome)");
             yield return request.SendWebRequest();
@@ -2508,16 +2539,24 @@ public class YoutubeSettings : MonoBehaviour
         }
         else
         {
-            var dataRegexOption = new Regex(@"ytplayer\.config\s*=\s*(\{.+?\});", RegexOptions.Multiline);
+            var dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;\s*(?:var\s+meta|</script|\n)", RegexOptions.Multiline);
             var dataMatch = dataRegexOption.Match(jsonForHtmlVersion);
             if (dataMatch.Success)
             {
                 string extractedJson = dataMatch.Result("$1");
                 if (!extractedJson.Contains("raw_player_response:ytInitialPlayerResponse"))
                 {
-                    player_response = JObject.Parse(extractedJson)["args"]["player_response"].ToString();
-
+                    Debug.Log(extractedJson);
+                    player_response = JObject.Parse(extractedJson).ToString();
+                    //player_response = JObject.Parse(extractedJson)["args"]["player_response"].ToString();
                 }
+            }
+
+            dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;\s*(?:var\s+meta|</script|\n)", RegexOptions.Multiline);
+            dataMatch = dataRegexOption.Match(jsonForHtmlVersion);
+            if (dataMatch.Success)
+            {
+                player_response = dataMatch.Result("$1");
             }
 
             dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;\s*(?:var\s+meta|</script|\n)", RegexOptions.Multiline);
@@ -2545,7 +2584,8 @@ public class YoutubeSettings : MonoBehaviour
 
             try
             {
-                var dataRegex = new Regex(@"""jsUrl""\s*:\s*""([^""]+)""");
+                //var dataRegex = new Regex(@"""jsUrl""\s*:\s*""([^""]+)""");
+                var dataRegex = new Regex("\"(?:PLAYER_JS_URL|jsUrl)\"\\s*:\\s*\"([^\"]+)\"");
                 string js = dataRegex.Match(jsonForHtmlVersion).Result("$1").Replace("\\/", "/");
                 jsUrl = "https://www.youtube.com" + js;
 
