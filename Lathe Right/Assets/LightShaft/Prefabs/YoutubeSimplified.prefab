@@ -406,6 +406,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4251007241955996}
   - component: {fileID: 114643942583524530}
+  - component: {fileID: 1692476031}
+  - component: {fileID: 1692476032}
   m_Layer: 0
   m_Name: YoutubePlayer-DontEdit
   m_TagString: Untagged
@@ -439,8 +441,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7418089f4181645b5df8f90e317bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controller: {fileID: 0}
+  _events: {fileID: 0}
   youtubeUrl: https://www.youtube.com/watch?v=uy3KFOykGQc
   videoQuality: 0
+  is360: 0
   autoPlayOnStart: 0
   startFromSecond: 0
   startFromSecondTime: 20
@@ -449,21 +454,6 @@ MonoBehaviour:
   customPlaylist: 0
   autoPlayNextVideo: 0
   youtubeUrls: []
-  OnYoutubeUrlAreReady:
-    m_PersistentCalls:
-      m_Calls: []
-  OnVideoReadyToStart:
-    m_PersistentCalls:
-      m_Calls: []
-  OnVideoStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  OnVideoPaused:
-    m_PersistentCalls:
-      m_Calls: []
-  OnVideoFinished:
-    m_PersistentCalls:
-      m_Calls: []
   videoFormat: 0
   autoPlayOnEnable: 0
   playUsingInternalDevicePlayer: 0
@@ -471,26 +461,16 @@ MonoBehaviour:
   objectsToRenderTheVideoImage: []
   is3DLayoutVideo: 0
   layout3d: 0
-  videoControllerCanvas: {fileID: 0}
   mainCamera: {fileID: 0}
-  loadingContent: {fileID: 0}
   videoPlayer: {fileID: 328868761493553900}
   audioPlayer: {fileID: 0}
   debug: 0
   ignoreTimeout: 0
-  _skipOnDrop: 1
   videoUrl: 
   audioUrl: 
   ForceGetWebServer: 0
-  showPlayerControls: 0
+  progressStartDrag: 0
   pauseCalled: 0
-  autoHideControlsTime: 3
-  mainControllerUi: {fileID: 0}
-  progress: {fileID: 0}
-  volumeSlider: {fileID: 0}
-  playbackSpeed: {fileID: 0}
-  currentTimeString: {fileID: 0}
-  totalTimeString: {fileID: 0}
   isSyncing: 0
   encryptedSignatureVideo: 
   encryptedSignatureAudio: 
@@ -502,3 +482,59 @@ MonoBehaviour:
   EncryptUrlForAudio: 
   jsonForHtmlVersion: 
   checkIfSync: 0
+--- !u!114 &1692476031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791327124803774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fff3c7be5a953945843ab394d52e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showPlayerControl: 0
+  playbackSlider: {fileID: 0}
+  progressRectangle: {fileID: 0}
+  speedSlider: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  currentTime: {fileID: 0}
+  totalTime: {fileID: 0}
+  loading: {fileID: 0}
+  nextVideoButton: {fileID: 0}
+  previousVideoButton: {fileID: 0}
+  controllerMainUI: {fileID: 0}
+  hideScreenControlTime: 0
+  useSliderToProgressVideo: 0
+--- !u!114 &1692476032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791327124803774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b121d95bc3e711f4fad11014675bfd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnYoutubeUrlAreReady:
+    m_PersistentCalls:
+      m_Calls: []
+  OnVideoReadyToStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnVideoStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnVideoResumed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnVideoPaused:
+    m_PersistentCalls:
+      m_Calls: []
+  OnVideoFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  videoTimeEvents: []

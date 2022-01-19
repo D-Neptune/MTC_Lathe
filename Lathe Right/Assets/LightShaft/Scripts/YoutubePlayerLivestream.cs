@@ -2,9 +2,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
+using YoutubeLight;
 
 public class YoutubePlayerLivestream : MonoBehaviour {
 
@@ -90,14 +92,18 @@ public class YoutubePlayerLivestream : MonoBehaviour {
         //string extractedJson = dataRegex.Match(downloadYoutubeUrlResponse.data).Result("$1");
 
         var videoId = _videoID;
+        videoId = videoId.Replace("https://www.youtube.com/watch?v=", "");
+        videoId = videoId.Replace("https://youtube.com/watch?v=", "");
         //jsonforHtml
         var player_response = string.Empty;
-        if (Regex.IsMatch(pageSource, @"[""\']status[""\']\s*:\s*[""\']LOGIN_REQUIRED"))
+        bool tempfix = false;
+        
+        if (Regex.IsMatch(pageSource, @"[""\']status[""\']\s*:\s*[""\']LOGIN_REQUIRED") || tempfix)
         {
-            Debug.Log("MM");
-            var url = "https://www.youtube.com/get_video_info?video_id=" + videoId + "&eurl=https://youtube.googleapis.com/v/" + videoId;
+            var url = "https://www.docs.google.com/get_video_info?video_id=" + videoId + "&eurl=https://youtube.googleapis.com/v/" + videoId + "&html5=1&c=TVHTML5&cver=6.20180913";
+            Debug.Log(url);
             UnityWebRequest request = UnityWebRequest.Get(url);
-            request.SetRequestHeader("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 (Chrome)");
+            request.SetRequestHeader("User-Agent", pageSource);
             yield return request.SendWebRequest();
             if (request.isNetworkError) { Debug.Log("Youtube UnityWebRequest isNetworkError!"); }
             else if (request.isHttpError) { Debug.Log("Youtube UnityWebRequest isHttpError!"); }
@@ -107,30 +113,38 @@ public class YoutubePlayerLivestream : MonoBehaviour {
             }
             else
             { Debug.Log("Youtube UnityWebRequest responseCode:" + request.responseCode); }
-
-            player_response = UnityWebRequest.UnEscapeURL(YoutubeLight.HTTPHelperYoutube.ParseQueryString(request.downloadHandler.text)["player_response"]);
+            Debug.Log(request.downloadHandler.text);
+            player_response = UnityWebRequest.UnEscapeURL(HTTPHelperYoutube.ParseQueryString(request.downloadHandler.text)["player_response"]);
         }
         else
         {
-            var dataRegexOption = new Regex(@"ytplayer\.config\s*=\s*(\{.+?\});", RegexOptions.Multiline);
+            var dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;\s*(?:var\s+meta|</script|\n)", RegexOptions.Multiline);
             var dataMatch = dataRegexOption.Match(pageSource);
             if (dataMatch.Success)
             {
                 string extractedJson = dataMatch.Result("$1");
                 if (!extractedJson.Contains("raw_player_response:ytInitialPlayerResponse"))
                 {
-                    player_response = JObject.Parse(extractedJson)["args"]["player_response"].ToString();
-
+                    //Debug.Log(extractedJson);
+                    player_response = JObject.Parse(extractedJson).ToString();
+                    //player_response = JObject.Parse(extractedJson)["args"]["player_response"].ToString();
                 }
             }
-
+    
             dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;\s*(?:var\s+meta|</script|\n)", RegexOptions.Multiline);
             dataMatch = dataRegexOption.Match(pageSource);
             if (dataMatch.Success)
             {
                 player_response = dataMatch.Result("$1");
             }
-
+    
+            dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;\s*(?:var\s+meta|</script|\n)", RegexOptions.Multiline);
+            dataMatch = dataRegexOption.Match(pageSource);
+            if (dataMatch.Success)
+            {
+                player_response = dataMatch.Result("$1");
+            }
+    
             dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;", RegexOptions.Multiline);
             dataMatch = dataRegexOption.Match(pageSource);
             if (dataMatch.Success)
@@ -139,8 +153,6 @@ public class YoutubePlayerLivestream : MonoBehaviour {
             }
         }
 
-
-
         JObject json = JObject.Parse(player_response);
         //string playerResponseRaw = json["args"]["player_response"].ToString();
         //JObject playerResponseJson = JObject.Parse(playerResponseRaw);
@@ -148,6 +160,7 @@ public class YoutubePlayerLivestream : MonoBehaviour {
 
         if (isLive)
         {
+            //WriteLog("kelvin", player_response);
             string liveUrl = json["streamingData"]["hlsManifestUrl"].ToString();
             callback.Invoke(liveUrl);
         }
@@ -155,8 +168,20 @@ public class YoutubePlayerLivestream : MonoBehaviour {
         {
             Debug.Log("This is not a livestream url");
         }
+
+
         
     }
+
+    public static void WriteLog(string filename, string c)
+    {
+        string filePath = Application.persistentDataPath + "/" + filename + "_" + DateTime.Now.ToString("ddMMyyyyhhmmssffff") + ".txt";
+        Debug.Log("Log written in: " + Application.persistentDataPath);
+        //Debug.Log("DownloadUrl content saved to " + filePath);
+        File.WriteAllText(filePath, c);
+    }
+
+
 
     private class DownloadUrlResponse
     {

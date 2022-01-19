@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-
+using LightShaft.Scripts;
 
 public class VideoOperator : MonoBehaviour
 {

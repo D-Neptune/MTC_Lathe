@@ -26,6 +26,7 @@ public class YoutubeAPIManager : MonoBehaviour {
      * */
 
     private const string APIKey = "AIzaSyCSh8NNjutCdJ3pAMJjWrGFbB8_onIMn1Y";
+    /*AIzaSyCSh8NNjutCdJ3pAMJjWrGFbB8_onIMn1Y*/
         /*"AIzaSyAyctJVli2oEUoXZ8ta_4O0nKyknwXzvaw";*/
 
     public void GetVideoData(string videoId, Action<YoutubeData> callback)

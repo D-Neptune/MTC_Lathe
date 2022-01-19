@@ -19,20 +19,20 @@ half4 _Tex_HDR;
 // - Right (-Z) - maps to left top, tipped to left
 
 // Matrices to orient a [0..+1] square for each side
-static const float3x3 ORIENT_POS_X = float3x3( 0, -1, 1, -1,  0, 1, 0, 0, 1);
-static const float3x3 ORIENT_NEG_X = float3x3(-1,  0, 1,  0, -1, 1, 0, 0, 1);
-static const float3x3 ORIENT_POS_Y = float3x3( 0,  1, 0,  1,  0, 0, 0, 0, 1);
-static const float3x3 ORIENT_NEG_Y = float3x3( 0, -1, 1,  1,  0, 0, 0, 0, 1);
-static const float3x3 ORIENT_POS_Z = float3x3( 0,  1, 0, -1,  0, 1, 0, 0, 1);
-static const float3x3 ORIENT_NEG_Z = float3x3( 0, -1, 1, -1,  0, 1, 0, 0, 1);
+static const float3x3 ORIENT_POS_X = float3x3( 0, 1, 0, 1,  0, 0, 0, 0, 1);
+static const float3x3 ORIENT_NEG_X = float3x3(-1, 0, 1, 0, -1, 1, 0, 0, 1);
+static const float3x3 ORIENT_POS_Y = float3x3(-1, 0, 1, 0,  1, 0, 0, 0, 1);
+static const float3x3 ORIENT_NEG_Y = float3x3(-1, 0, 1, 0, -1, 1, 0, 0, 1);
+static const float3x3 ORIENT_POS_Z = float3x3(-1, 0, 1, 0, -1, 1, 0, 0, 1);
+static const float3x3 ORIENT_NEG_Z = float3x3(-1, 0, 1, 0,  1, 0, 0, 0, 1);
 
 // Vectors to offset a [0..+1/4,0..+1/3] rectangle for each side
-static const float2 OFFSET_POS_X = float2(0.0,  0.33333333);
-static const float2 OFFSET_NEG_X = float2(0.25, 0.33333333);
-static const float2 OFFSET_POS_Y = float2(0.25, 0.66666666);
-static const float2 OFFSET_NEG_Y = float2(0.25, 0.0       );
-static const float2 OFFSET_POS_Z = float2(0.0,  0.0       );
-static const float2 OFFSET_NEG_Z = float2(0.0,  0.66666666);
+static const float2 OFFSET_POS_X = float2(0.33333333,  0.0);
+static const float2 OFFSET_NEG_X = float2(0.33333333,  0.5);
+static const float2 OFFSET_POS_Y = float2(0.66666666,  0.0);
+static const float2 OFFSET_NEG_Y = float2(0.0,         0.0);
+static const float2 OFFSET_POS_Z = float2(0.66666666,  0.5);
+static const float2 OFFSET_NEG_Z = float2(0.0,         0.5);
 
 /**
  * Converts a direction vector to equi-angular cubemap coordinates.
@@ -84,13 +84,13 @@ inline float2 EquiAngularCubemap(float3 coords, float2 edgeSize)
 
     // At the end of that step, the values are still from [0..+1, 0..+1].
     // Now scale to a [0..+1/4, 0..+1/3] range for one cell of the video.
-    tc = mul(float2x2(0.25, 0, 0, 0.33333333), tc);
+    tc = mul(float2x2(0.33333333, 0, 0, 0.5), tc);
 
     // Clamp to edges to avoid seams (changing it in the texture isn't enough,
     // because it only solves the edges of the video, not our divisions inside
     // the video!)
     // This is done after the scaling because that's the units `edgeSize` uses.
-    tc = clamp(tc, edgeSize, float2(0.25, 0.33333333) - edgeSize);
+    tc = clamp(tc, edgeSize, float2(0.33333333, 0.5) - edgeSize);
 
     // Translate to destination.
     float2 offsetVector = 
@@ -101,7 +101,7 @@ inline float2 EquiAngularCubemap(float3 coords, float2 edgeSize)
 
 #if UNITY_SINGLE_PASS_STEREO
     // Finally, if it's for the right eye, shift 0.5 to the right.
-    tc.x += 0.5 * unity_StereoEyeIndex;
+    //tc.x += 0.5 * unity_StereoEyeIndex;
 #endif
 
     return tc;

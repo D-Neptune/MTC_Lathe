@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using SimpleJSON;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
@@ -48,13 +49,11 @@ public class YoutubeSubtitlesReader : MonoBehaviour
             LoadSubtitles();
         }
     }
-
     public TextAsset Captions
     {
         get => CaptionFile;
         set => CaptionFile = value;
     }
-
     public void LoadSubtitles()
     {
         if (CaptionFile != null)
@@ -68,9 +67,6 @@ public class YoutubeSubtitlesReader : MonoBehaviour
             MissingCaptionEvent.Invoke();
         }
     }
-
-
-
 
     public void LoadSubtitle()
     {
@@ -87,14 +83,33 @@ public class YoutubeSubtitlesReader : MonoBehaviour
 
     System.Collections.IEnumerator DownloadSubtitle()
     {
-        UnityWebRequest request = UnityWebRequest.Get("https://www.youtube.com/api/timedtext?lang=" + langCode + "&v=" + videoID + "&fmt=vtt");
+        //This is a url was made to use with this plugin only, please dont share it.
+        UnityWebRequest request = UnityWebRequest.Get("https://lightshaftstream.herokuapp.com/api/subtitle?url=https://www.youtube.com/watch?v="+videoID+"");
         //request.SetRequestHeader("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 (Chrome)");
         Debug.Log(request.url);
+        yield return request.SendWebRequest();
+        JSONNode subtitleList = JSON.Parse(request.downloadHandler.text);
+        JSONNode lang = subtitleList["subtitles"][0][langCode];
+        if (lang.Count > 0)
+        {
+            for (int x = 0; x < lang.Count; x++)
+            {
+                if (lang[x]["ext"] == "vtt")
+                {
+                    StartCoroutine(DownloadSubtitleFile(lang[x]["url"]));
+                    break;
+                }
+            }
+        }
+    }
+
+    System.Collections.IEnumerator DownloadSubtitleFile(string url)
+    {
+        UnityWebRequest request = UnityWebRequest.Get(url);
         yield return request.SendWebRequest();
         subtitleList = ParseStream(request.downloadHandler.data);
         WhenSubtitleLoadAreReady(subtitleList);
     }
-
 
     private void FixedUpdate()
     {
@@ -102,7 +117,7 @@ public class YoutubeSubtitlesReader : MonoBehaviour
         {
             foreach (SubtitleItem item in subtitleList)
             {
-                if (videoPlayer.time >= item.StartTime && videoPlayer.time <= item.EndTime)
+                if(videoPlayer.time >= item.StartTime  && videoPlayer.time <= item.EndTime)
                 {
                     currentTextLine = item.text;
                     textMeshSubtitle.text = "<font=LiberationSans SDF><mark=#000000>" + currentTextLine + "</mark>";
@@ -111,8 +126,8 @@ public class YoutubeSubtitlesReader : MonoBehaviour
                 else
                 {
                     currentTextLine = "";
+                    //uiSubtitle.text = currentTextLine;
                     textMeshSubtitle.text = "<font=LiberationSans SDF><mark=#000000>" + currentTextLine + "</mark>";
-
                 }
             }
         }
@@ -158,8 +173,8 @@ public class YoutubeSubtitlesReader : MonoBehaviour
                         var success = TryParseTimecodeLine(line, out startTc, out endTc);
                         if (success)
                         {
-                            item.StartTime = startTc / 1000;
-                            item.EndTime = endTc / 1000;
+                            item.StartTime = startTc/1000;
+                            item.EndTime = endTc/1000;
                         }
                     }
                     else

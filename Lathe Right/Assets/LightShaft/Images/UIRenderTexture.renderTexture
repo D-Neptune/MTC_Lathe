@@ -4,7 +4,8 @@
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: UIRenderTexture
   m_ImageContentsHash:
     serializedVersion: 2
@@ -17,7 +18,7 @@ RenderTexture:
   m_DepthFormat: 2
   m_ColorFormat: 0
   m_MipMap: 0
-  m_GenerateMips: 1
+  m_GenerateMips: 0
   m_SRGB: 0
   m_UseDynamicScale: 0
   m_BindMS: 0

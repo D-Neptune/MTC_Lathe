@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using LightShaft.Scripts;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
