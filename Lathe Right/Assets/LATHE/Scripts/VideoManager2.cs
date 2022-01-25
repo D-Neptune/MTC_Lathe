@@ -116,6 +116,12 @@ public class VideoManager2 : MonoBehaviour
 
     }
 
+    public void OnGUI()
+    {
+        Event e = Event.current;
+        if (e != null && e.control && e.alt && e.keyCode == KeyCode.RightArrow) youtubePlayer.SkipVideo();
+    }
+
     public void ExitVideo()
     {
         if (VideoIndex > -1 && VideoIndex < NumberOfVideos)

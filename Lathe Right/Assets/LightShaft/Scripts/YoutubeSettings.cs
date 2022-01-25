@@ -211,7 +211,22 @@ namespace LightShaft.Scripts
 
         #endregion
 
+        public void NetworkErrorHandler()
+        {
+            if (_events != null)
+            {
+                ErrorDialog.SetActive(false);
+                _events.OnVideoFinished.Invoke();
+            }
+        }
 
+        public void SkipVideo()
+        {
+            if(videoPlayer.isPlaying || videoPlayer.isPaused)
+            {
+                SkipToPercent(100f);
+            }
+        }
 
         #region BIG CODE HERE - I will redo this in the future
         //Setup the skybox for 3D or VR videos
@@ -257,16 +272,20 @@ namespace LightShaft.Scripts
             yield return request.SendWebRequest();
             if (request.error != null)
             {
+                ErrorDialog.SetActive(true);
                 Debug.Log("Error: " + request.error);
             }
             else
             {
+                ErrorDialog.SetActive(false);
                 requestResult = JObject.Parse(request.downloadHandler.text);
                 IEnumerable<ExtractionInfo> downloadUrls = ExtractDownloadUrls(requestResult);
                 youtubeVideoInfos = GetVideoInfos(downloadUrls, videoTitle).ToList();
                 UrlsLoaded();   //call direct to extract the video infos.
             }
         }
+
+
 
         IEnumerator YoutubeGeneratorSysCall(string _videoUrl, string _formatCode)
         {
@@ -347,6 +366,7 @@ namespace LightShaft.Scripts
 
         public void OnYoutubeError(string errorType)
         {
+            ErrorDialog.SetActive(true);
             Debug.Log("<color=red>" + errorType + "</color>");
         }
 
