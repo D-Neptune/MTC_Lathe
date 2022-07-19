@@ -9,7 +9,7 @@ using LightShaft.Scripts;
 public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDragHandler, IBeginDragHandler, IPointerUpHandler
 {
     public bool SeekingEnabled;
-    public YoutubePlayer player;
+    public VideoManager2 player;
     public void OnDrag(PointerEventData eventData)
     {
         if (SeekingEnabled)
@@ -37,14 +37,14 @@ public class VideoProgressBar : MonoBehaviour, IDragHandler, IPointerDownHandler
     {
         if (SeekingEnabled)
         {
-            player.Pause();
+            player.PlayPause();
         }
     }
     public void OnEndDrag(PointerEventData eventData)
     {
         if (SeekingEnabled)
         {
-            player.Play();
+            player.PlayPause();
             player.VideoSkipDrag = false;
         }
     }

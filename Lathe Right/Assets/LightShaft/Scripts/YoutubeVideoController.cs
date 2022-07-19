@@ -11,7 +11,9 @@ namespace LightShaft.Scripts
 {
     public class YoutubeVideoController : MonoBehaviour
     {
-        private YoutubePlayer _player;
+        //private YoutubePlayer _player;
+        private VideoPlayer _player;
+        public VideoManager2 youtubeController;
         public bool showPlayerControl;
         public Slider playbackSlider;
         public Image progressRectangle;
@@ -22,6 +24,13 @@ namespace LightShaft.Scripts
         public GameObject loading;
         public Button nextVideoButton;
         public Button previousVideoButton;
+        
+        private float totalVideoDuration;
+        private float currentVideoDuration;
+        private bool videoSeekDone = false;
+        private bool videoAudioSeekDone = false;
+        private float hideScreenTime = 0;
+        private float audioDuration;
 
         private bool showingVolume = false;
         private bool showingSpeed = false;
@@ -36,21 +45,17 @@ namespace LightShaft.Scripts
         public bool useSliderToProgressVideo = true;
         private void Awake()
         {
-            _player = GetComponent<YoutubePlayer>();
+            _player = GetComponent<VideoPlayer>();
 
-            if (!showPlayerControl)
-            {
-                controllerMainUI.SetActive(false);
-                return;
-            }
-            if (!_player.customPlaylist)
-            {
-                if (previousVideoButton != null && nextVideoButton != null)
-                {
-                    previousVideoButton.gameObject.SetActive(false);
-                    nextVideoButton.gameObject.SetActive(false);
-                }
-            }
+            if (!showPlayerControl) return;
+            // if (!_player.customPlaylist)
+            // {
+            //     if (previousVideoButton != null && nextVideoButton != null)
+            //     {
+            //         previousVideoButton.gameObject.SetActive(false);
+            //         nextVideoButton.gameObject.SetActive(false);
+            //     }
+            // }
             else
             {
                 if (previousVideoButton != null && nextVideoButton != null)
@@ -69,21 +74,79 @@ namespace LightShaft.Scripts
                 if(playbackSlider == null)
                     Debug.LogWarning("Drag the playback slider to the playbackSlider field, this is necessary to change the video progress.");
             }
-            speedSlider.minValue = 5; // min playback speed is 5/10 = 0.5f
-            speedSlider.maxValue = 20;   //max playback speed is 20/10 = 2f;
+            //speedSlider.maxValue = 3;   //max playback speed is 3;
 
             if (useSliderToProgressVideo)
             {
                 progressRectangle.gameObject.SetActive(false);
-                //playbackSlider.gameObject.SetActive(true);
+                if(playbackSlider != null)
+                    playbackSlider.gameObject.SetActive(true);
             }
             else
             {
-                //playbackSlider.gameObject.SetActive(false);
+                if (playbackSlider != null)
+                    playbackSlider.gameObject.SetActive(false);
                 progressRectangle.gameObject.SetActive(true);
             }
         }
 
+        private void FixedUpdate()
+        {
+             
+                if (showPlayerControl)
+                {
+                    if (_player.isPlaying)
+                    {
+                        totalVideoDuration = Mathf.RoundToInt(_player.frameCount / _player.frameRate);
+                        currentVideoDuration = Mathf.RoundToInt(_player.frame / _player.frameRate);
+                    }
+                }
+
+                if (_player.frameCount > 0)
+                {
+                    if (youtubeController != null && showPlayerControl)
+                    {
+                        if (useSliderToProgressVideo) //use slider
+                        {
+                            playbackSlider.value = (float)_player.time;
+                        }
+                        else //use rectangle sprite.
+                        {
+                            //Debug.Log("Youtube Video Controller: Progress Rectangle Sprite");
+                            if (progressRectangle != null)
+                            {
+                                //Debug.Log("Youtube Video Controller: Progress Rectangle");
+                                progressRectangle.fillAmount = (float)_player.frame / (float)_player.frameCount;
+                            }
+                        }
+                    }
+                }
+
+                if (currentTime != null && totalTime != null)
+                {
+                    currentTime.text = FormatTime(Mathf.RoundToInt(currentVideoDuration));
+                    totalTime.text = FormatTime(Mathf.RoundToInt(totalVideoDuration));
+                }
+        }
+        
+        private string FormatTime(int time)
+        {
+            int hours = time / 3600;
+            int minutes = (time % 3600) / 60;
+            int seconds = (time % 3600) % 60;
+            if (hours == 0 && minutes != 0)
+            {
+                return minutes.ToString("00") + ":" + seconds.ToString("00");
+            }
+            else if (hours == 0 && minutes == 0)
+            {
+                return "00:" + seconds.ToString("00");
+            }
+            else
+            {
+                return hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
+            }
+        }
         public void Play()
         {
             _player.Play();
@@ -96,128 +159,119 @@ namespace LightShaft.Scripts
 
         public void PlayToggle()
         {
-            _player.PlayPause();
+            youtubeController.PlayPause();
         }
 
         public void ChangeVolume(float volume)
         {
-            switch (_player.videoPlayer.audioOutputMode)
+            Debug.Log("WHEN WE START");
+     
+            switch (_player.audioOutputMode)
             {
                 case VideoAudioOutputMode.Direct:
-                    _player.audioPlayer.SetDirectAudioVolume(0, volume);
-                    _player.videoPlayer.SetDirectAudioVolume(0, volume);
+                    // _player.audioPlayer.SetDirectAudioVolume(0, volume);
+                    _player.SetDirectAudioVolume(0, volume);
                     break;
                 case VideoAudioOutputMode.AudioSource:
-                    _player.videoPlayer.GetComponent<AudioSource>().volume = volume;
-                    _player.videoPlayer.SetDirectAudioVolume(0, volume);
+                    _player.GetComponent<AudioSource>().volume = volume;
+                    _player.SetDirectAudioVolume(0, volume);
                     break;
                 default:
-                    _player.videoPlayer.GetComponent<AudioSource>().volume = volume;
-                    _player.videoPlayer.SetDirectAudioVolume(0, volume);
+                    _player.GetComponent<AudioSource>().volume = volume;
+                    _player.SetDirectAudioVolume(0, volume);
                     break;
             }
         }
 
-        public void Volume()
+        public void ChangeVolume()
         {
-            if (_player.videoPlayer.audioOutputMode == VideoAudioOutputMode.Direct)
+            if (volumeSlider != null)
             {
-                _player.audioPlayer.SetDirectAudioVolume(0, volumeSlider.value);
-                _player.videoPlayer.SetDirectAudioVolume(0, volumeSlider.value);
-            }
-            else if (_player.videoPlayer.audioOutputMode == VideoAudioOutputMode.AudioSource)
-            {
-                _player.videoPlayer.GetComponent<AudioSource>().volume = volumeSlider.value;
-                _player.videoPlayer.SetDirectAudioVolume(0, volumeSlider.value);
-            }
-            else
-            {
-                _player.videoPlayer.GetComponent<AudioSource>().volume = volumeSlider.value;
-                _player.videoPlayer.SetDirectAudioVolume(0, volumeSlider.value);
+                ChangeVolume(volumeSlider.value/10);
             }
         }
-
-        public void Speed()
-        {
-            if (_player.videoPlayer.canSetPlaybackSpeed)
-            {
-                if (speedSlider.value == 0)
-                {
-                    _player.videoPlayer.playbackSpeed = 0.5f;
-                    _player.audioPlayer.playbackSpeed = 0.5f;
-                }
-                else
-                {
-                    _player.videoPlayer.playbackSpeed = speedSlider.value / 10;
-                    _player.audioPlayer.playbackSpeed = speedSlider.value / 10;
-                }
-            }
-        }
-
 
         public void ChangePlaybackSpeed(float speed)
         {
-            if(!_player.videoPlayer.canSetPlaybackSpeed) return;
+            if(!_player.canSetPlaybackSpeed) return;
             if (speed <= 0)
             {
-                _player.videoPlayer.playbackSpeed = .5f;
-                _player.audioPlayer.playbackSpeed = .5f;
+                _player.playbackSpeed = .5f;
+                // _player.audioPlayer.playbackSpeed = .5f;
             }
             else
             {
-                _player.videoPlayer.playbackSpeed = speed;
-                _player.audioPlayer.playbackSpeed = speed;
+                _player.playbackSpeed = speed;
+                // _player.audioPlayer.playbackSpeed = speed;
             }
            
         }
-
-        public void PlayNextVideo()
+        public void ChangePlaybackSpeed()
         {
-            if (!NextVideo())
-                Debug.Log("Cannot play the next video.");
-        }
-        
-        public void PlayPreviousVideo()
-        {
-            if(!PreviousVideo())
-                Debug.Log("Cannot play the previous video.");
-        }
-
-        public bool NextVideo()
-        {
-            if (_player.customPlaylist)
+            if (speedSlider != null)
             {
-                _player.CallNextUrl();  return true;
-            }else 
-                return false;
+                ChangePlaybackSpeed(speedSlider.value/10);
+            }
         }
 
-        public bool PreviousVideo()
-        {
-            if (_player.customPlaylist)
-            {
-                _player.CallPreviousUrl();
-                return true;
-            }else return false;
-        }
+        // public void PlayNextVideo()
+        // {
+        //     if (!NextVideo())
+        //         Debug.Log("Cannot play the next video.");
+        // }
+        //
+        // public void PlayPreviousVideo()
+        // {
+        //     if(!PreviousVideo())
+        //         Debug.Log("Cannot play the previous video.");
+        // }
+
+        // public bool NextVideo()
+        // {
+        //     // if (_player.customPlaylist)
+        //     // {
+        //     //     _player.CallNextUrl();  return true;
+        //     // }else 
+        //     //     return false;
+        //     youtubeController.PlayNext();  return true;
+        // }
+
+        // public bool PreviousVideo()
+        // {
+        //     // if (_player.customPlaylist)
+        //     // {
+        //     //     _player.CallPreviousUrl();
+        //     //     return true;
+        //     // }else return false;
+        //     youtubeController.PlayPrevious();
+        //     return true;
+        // }
 
         public void ChangeVideoTime(float value)
         {
             float pctg = (Mathf.RoundToInt(value) * 100) / playbackSlider.maxValue;
             pctg = pctg * 0.01f;
-            _player.SkipToPercent(pctg);
-            _player.progressStartDrag = false;
+            SkipToPercent(pctg);
+            //_player.progressStartDrag = false;
         }
-
-        public void PlaybackSliderStartDrag()
+        
+        public void SkipToPercent(float pct)
         {
-            _player.progressStartDrag = true;
-        }
+            var frame = _player.frameCount * pct;
+            _player.frame = (long)frame;
+            //_player.Pause();
+            progressRectangle.fillAmount = pct;
 
-        public void ToggleFullScreen()
-        {
-            _player.ToogleFullsScreenMode();
         }
+        // public void PlaybackSliderStartDrag()
+        // {
+        //     _player.progressStartDrag = true;
+        // }
+
+        // public void ToggleFullScreen()
+        // {
+        //     _player.ToogleFullsScreenMode();
+        // }
         
         public void HideControllers()
         {
@@ -245,13 +299,13 @@ namespace LightShaft.Scripts
             }
         }
 
-        public void VolumeSlider(bool state)
+        public void SetVolumeSlider(bool state)
         {
             showingVolume = state;
             volumeSlider.gameObject.SetActive(state);
         }
 
-        public void SpeedSlider(bool state)
+        public void SetSpeedSlider(bool state)
         {
             showingSpeed = state;
             speedSlider.gameObject.SetActive(state);
@@ -270,5 +324,34 @@ namespace LightShaft.Scripts
                 speedSlider.gameObject.SetActive(true);
             }
         }
+        
+        public void TrySkip(Vector2 cursorPosition)
+        {
+            Vector2 localPoint;
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                progressRectangle.rectTransform, cursorPosition, null, out localPoint))
+            {
+                //float pct = Mathf.InverseLerp(progress.rectTransform.rect.xMin, progress.rectTransform.rect.xMax, localPoint.x);
+                float pct = (localPoint.x - progressRectangle.rectTransform.rect.x) / progressRectangle.rectTransform.rect.width;
+                Debug.Log("YOU ARE SKIPPING");
+                SkipToPercent(pct);
+            }
+        }
+        
+        public void TrySkip(float pct)
+        {
+            SkipToPercent(pct);
+        }
+        
+        private bool videoSkipDrag = false;
+        
+        public bool VideoSkipDrag
+        {
+            get => videoSkipDrag;
+            set => videoSkipDrag = value;
+        }
+
     }
+    
+    
 }

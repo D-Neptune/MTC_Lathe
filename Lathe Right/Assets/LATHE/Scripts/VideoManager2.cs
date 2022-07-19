@@ -14,9 +14,9 @@ public class VideoManager2 : MonoBehaviour
     [SerializeField] private LanguageSceneSwitcher languageSceneManager;
 
     [Tooltip("Youtube Player from Youtube Video Player + Youtube API from asset store")]
-    [SerializeField] private YoutubePlayer youtubePlayer;
+    // [SerializeField] private YoutubePlayer youtubePlayer;
 
-    [Tooltip("Video Player used by Youtube Player")]
+    // [Tooltip("Video Player used by Youtube Player")]
     [SerializeField] private VideoPlayer videoPlayer;
 
     [Tooltip("Youtube Subtitle Reader from youtube player")]
@@ -24,6 +24,7 @@ public class VideoManager2 : MonoBehaviour
 
     [Tooltip("Panel that displays whole video")]
     [SerializeField] private GameObject VideoPanel;
+    public Image progressRectangle;
 
     [Tooltip("Text Component which holds title")]
     [SerializeField] private Text TitleDisplay;
@@ -83,12 +84,13 @@ public class VideoManager2 : MonoBehaviour
 
 
     void Start()
-    {
-        if (PlayOnAwake && !VideoWatched)
         {
-            PlayYoutubePlayer(VideoIndexOnStart);
+            if (PlayOnAwake && !VideoWatched)
+            {
+                PlayYoutubePlayer(VideoIndexOnStart);
+            }
+            videoPlayer.loopPointReached += EndReached;
         }
-    }
 
     // Update is called once per frame
     public void PlayYoutubePlayer(int index)
@@ -100,7 +102,8 @@ public class VideoManager2 : MonoBehaviour
         {
             youtubeSubtitlesReader.Captions = Subtitles[index];
             youtubeSubtitlesReader.LoadSubtitles();
-            youtubePlayer.Play(Links[index]);
+            videoPlayer.url = Links[index];
+            videoPlayer.Play();
             TitleDisplay.text = Titles[index];
             YoutubeLinkDisplay.text = LinkMessage + " " + Links[index];
         }
@@ -108,20 +111,44 @@ public class VideoManager2 : MonoBehaviour
         {
             youtubeSubtitlesReader.Captions = SubtitlesFR[index];
             youtubeSubtitlesReader.LoadSubtitles();
-            youtubePlayer.Play(LinksFR[index]);
+            videoPlayer.url = LinksFR[index];
+            videoPlayer.Play();
             TitleDisplay.text = TitlesFR[index];
             YoutubeLinkDisplay.text = LinkMessageFR + " " + LinksFR[index];
         }
         m_videoIndex = index;
 
     }
-
-    public void OnGUI()
+     public void OnGUI()
     {
         Event e = Event.current;
-        if (e != null && e.control && e.alt && e.keyCode == KeyCode.RightArrow) youtubePlayer.SkipVideo();
+        if (e != null && e.control && e.alt && e.keyCode == KeyCode.RightArrow) SkipToPercent(100);
+    }
+    public void SkipToPercent(float pct)
+    {
+        var frame = videoPlayer.frameCount * pct;
+        videoPlayer.frame = (long)frame;
+        progressRectangle.fillAmount = pct;
     }
 
+
+    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    {
+        ExitVideo();
+    }
+
+     public void TrySkip(Vector2 cursorPosition)
+    {
+        Vector2 localPoint;
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            progressRectangle.rectTransform, cursorPosition, null, out localPoint))
+        {
+            //float pct = Mathf.InverseLerp(progress.rectTransform.rect.xMin, progress.rectTransform.rect.xMax, localPoint.x);
+            float pct = (localPoint.x - progressRectangle.rectTransform.rect.x) / progressRectangle.rectTransform.rect.width;
+            Debug.Log("YOU ARE SKIPPING");
+            SkipToPercent(pct);
+        }
+    }
     public void ExitVideo()
     {
         if (VideoIndex > -1 && VideoIndex < NumberOfVideos)
@@ -136,17 +163,39 @@ public class VideoManager2 : MonoBehaviour
         }
     }
 
+    private bool videoSkipDrag = false;
+        
+    public bool VideoSkipDrag
+    {
+        get => videoSkipDrag;
+        set => videoSkipDrag = value;
+    }
+
+    public void PlayPause()
+    {
+        
+        if (!videoPlayer.isPaused)
+        {
+            videoPlayer.Pause();
+        }
+        else
+        {
+            videoPlayer.Play();
+        }
+    }
+
+
     public int VideoIndex
     {
         get => m_videoIndex;
     }
 
-    public YoutubePlayer Player
-    {
-        get => youtubePlayer;
-        set => youtubePlayer = value;
+    // public YoutubePlayer Player
+    // {
+    //     get => youtubePlayer;
+    //     set => youtubePlayer = value;
 
-    }
+    // }
 
     public string[] Titles
     {
