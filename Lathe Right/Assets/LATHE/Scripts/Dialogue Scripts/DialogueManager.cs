@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private Button backButton;
     private int counter;
     public GameObject DeactivateAtEndDialogue;
     public DialogueTrigger trigger;
-    public Text nameText;
-    public Text dialogueText;
-    public Text dialogIndex;
+    public TMP_Text nameText;
+    public TMP_Text dialogueText;
+    public TMP_Text dialogIndex;
     [SerializeField] private Image dialogImage;
     public Boolean language = true;
 
@@ -67,10 +67,27 @@ public class DialogueManager : MonoBehaviour
         {
             currentLangSentence = sentencesFR;
         }
-
+        AutoSizeDialog();
         DisplayNextSentence();
         Debug.Log("Dialog - StartDialogue: " + DeactivateAtEndDialogue.activeSelf);
 
+    }
+
+    public void AutoSizeDialog()
+    {
+        string[] allSentences = new string[sentences.Length + sentencesFR.Length];
+        string[] headers = new string[] { nameText.text, titleLang };
+        sentences.CopyTo(allSentences, 0);
+        sentencesFR.CopyTo(allSentences, sentences.Length);
+        int num = (sentences.Length > sentencesFR.Length) ? sentences.Length : sentencesFR.Length;
+
+        AutomaticDialogTextAutoSize.AutosizeDialog(dialogueText, allSentences);
+        AutomaticDialogTextAutoSize.AutosizeDialog(nameText, headers);
+        AutomaticDialogTextAutoSize.AutoSizeIndex(dialogIndex, (num + "/" + num));
+
+        dialogIndex.fontSize =  (nameText.fontSize < dialogIndex.fontSize) ? nameText.fontSize : dialogIndex.fontSize ;
+        nameText.fontSize =  (nameText.fontSize < dialogIndex.fontSize) ? nameText.fontSize : dialogIndex.fontSize ;
+        if (dialogueText.fontSize > nameText.fontSize) dialogueText.fontSize = nameText.fontSize - 1;
     }
 
     public void DisplayPreviousSentece()
@@ -165,6 +182,14 @@ public class DialogueManager : MonoBehaviour
     public int SentenceIndex
     {
         get => sentenceIndex;
+    }
+
+    private void OnRectTransformDimensionsChange()
+    {
+        if (currentLangSentence != null)
+        {
+            AutoSizeDialog();
+        }
     }
 
 }

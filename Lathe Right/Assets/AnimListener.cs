@@ -20,7 +20,8 @@ public class AnimListener : MonoBehaviour
 
     public void ActivateAnimator(VideoPlayer videoPlayer)
     {
-        if(counter == 0)
+        Debug.Log("ActovateAnim");
+        if (counter == 0)
         {
             controller.ResetHint();
             animator.enabled = true;

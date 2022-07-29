@@ -80,7 +80,7 @@ namespace LightShaft.Scripts
         [Space]
         public bool showThumbnailBeforeVideoLoad = false;
         [DrawIf("showThumbnailBeforeVideoLoad", true)]
-        public Renderer thumbnailObject;
+        public Image thumbnailObject;
         public GameObject ErrorDialog;
         protected string thumbnailVideoID;
 
@@ -272,12 +272,10 @@ namespace LightShaft.Scripts
             yield return request.SendWebRequest();
             if (request.error != null)
             {
-                ErrorDialog.SetActive(true);
                 Debug.Log("Error: " + request.error);
             }
             else
             {
-                ErrorDialog.SetActive(false);
                 requestResult = JObject.Parse(request.downloadHandler.text);
                 IEnumerable<ExtractionInfo> downloadUrls = ExtractDownloadUrls(requestResult);
                 youtubeVideoInfos = GetVideoInfos(downloadUrls, videoTitle).ToList();
@@ -556,7 +554,8 @@ namespace LightShaft.Scripts
             try
             {
                 Texture2D thumb = DownloadHandlerTexture.GetContent(request);
-                thumbnailObject.material.mainTexture = thumb;
+                //thumbnailObject.material.mainTexture = thumb;
+                ErrorDialog.SetActive(false);
             } catch (Exception e)
             {
                 Debug.LogWarning(e);

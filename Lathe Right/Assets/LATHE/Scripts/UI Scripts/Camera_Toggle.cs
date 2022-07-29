@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
+using TMPro;
 public class Camera_Toggle : MonoBehaviour
 {
     public Camera cam_main_scene;
@@ -11,7 +10,7 @@ public class Camera_Toggle : MonoBehaviour
     public Camera cam_sm1; // sm == side milling perspective
     public Camera cam_fm1; // fm == face milling perspective 
     //public Camera cam_5;
-    public Text myText;
+    public TMP_Text myText;
     private Camera currentCam;
 
     private int clickCounter;
@@ -22,7 +21,7 @@ public class Camera_Toggle : MonoBehaviour
         clickCounter = 1;
         cam_main_scene.enabled = true;
         currentCam = cam_main_scene;
-
+        AutomaticDialogTextAutoSize.AutosizeDialog(myText, new string[] { "1", "2", "3", "4", "5" }) ;
     }
 
     public void switchcam() {

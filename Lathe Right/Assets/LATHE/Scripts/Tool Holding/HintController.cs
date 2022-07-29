@@ -69,6 +69,7 @@ public class HintController : MonoBehaviour
         react = false;
         foreach (HintFlash.ObjectTriggerInfo info in tool_holding_info)
         {
+            Debug.Log(info.SenteceIndex + " vs " + sentenceIndex);
             if (sentenceIndex == info.SenteceIndex)
             {
                 proceedBTN.interactable = false;
